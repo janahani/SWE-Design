@@ -1,0 +1,29 @@
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\bin\Debug\net8.0\appsettings.Development.json
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\bin\Debug\net8.0\appsettings.json
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\bin\Debug\net8.0\Gym Web Application.staticwebassets.runtime.json
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\bin\Debug\net8.0\Gym Web Application.exe
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\bin\Debug\net8.0\Gym Web Application.deps.json
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\bin\Debug\net8.0\Gym Web Application.runtimeconfig.json
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\bin\Debug\net8.0\Gym Web Application.dll
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\bin\Debug\net8.0\Gym Web Application.pdb
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.AssemblyInfoInputs.cache
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.AssemblyInfo.cs
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.MvcApplicationPartsAssemblyInfo.cache
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.RazorAssemblyInfo.cache
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.RazorAssemblyInfo.cs
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.sourcelink.json
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\staticwebassets.build.json
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\staticwebassets.development.json
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\staticwebassets\msbuild.Gym Web Application.Microsoft.AspNetCore.StaticWebAssets.props
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\staticwebassets\msbuild.build.Gym Web Application.props
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Gym Web Application.props
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Gym Web Application.props
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\staticwebassets.pack.json
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\scopedcss\bundle\Gym Web Application.styles.css
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.dll
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\refint\Gym Web Application.dll
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.pdb
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.genruntimeconfig.cache
+C:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application\obj\Debug\net8.0\ref\Gym Web Application.dll
