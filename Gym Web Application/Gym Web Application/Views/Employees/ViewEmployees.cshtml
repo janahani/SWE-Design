@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Employees";
+}
+<div class="container-fluid pt-3">
+    <div class="row removable">
+        <div class="col-lg">
+            <div class="card">
+                <div class="card-header border-0">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h1 class="mb-0">Employees</h1>
+                        </div>
+                        <div class="col text-right">
+                            <input class="table-search-bar" placeholder="Search for Employee">
+                        </div>
+                        <div class="col text-right">
+                            <a class="btn-add" asp-controller="Employees" asp-action="AddEmployees">Add Employee</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Job Title</th>
+                                <th scope="col">Action</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Fatemah Hatem</td>
+                                <td>fatemahhatem@gmail.com</td>
+                                <td>01091119866</td>
+                                <td>Sales Representative</td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary">Edit</a>
+                                    <form method="post" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-delete">Delete</button>
+                                    </form>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

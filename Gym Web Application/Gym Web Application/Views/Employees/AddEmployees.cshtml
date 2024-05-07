@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<div class="container-fluid pt-3">
+    <div class="row removable">
+        <div class="col-lg">
+            <div class="user-form">
+                <h1>Add an Employee</h1>
+                <form class="add-client" onsubmit="return validateForm()">
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Name" />
+                    </div>
+                    <span id="name-error" class="error-message"></span>
+                    <br>
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Email" />
+                    </div>
+                    <span id="email-error" class="error-message"></span>
+                    <br>
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Phone Number" />
+                    </div>
+                    <span id="phoneno-error" class="error-message"></span>
+                    <br>
+                    <label for="jobTitle">Job Title</label>
+                    <div>
+                        <select class="add-user-input" name="jobTitle">
+                            <option value="Admin">Admin</option>
+                            <option value="Receptionist">Receptionist</option>
+                            <option value="Sales Representative">Sales Representative</option>
+                        </select>
+                    </div>
+                    <span id="jobTitle-error" class="error-message"> </span>
+                    <input type="hidden" id="jobTitleHidden" name="jobTitleHidden" />
+                    <br>
+                    <div><input class="add-user-input" type="text" placeholder="Salary" /></div>
+                    <span id="salary-error" class="error-message"></span>
+                    <br>
+                    <div><input class="add-user-input" type="text" placeholder="Address" /></div>
+                    <span id="address-error" class="error-message"></span>
+                    <br>
+
+                    <button class="btn btn-add-form" type="submit">
+                        Add Employee
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/addEmployee.js"></script>

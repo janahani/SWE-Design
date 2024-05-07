@@ -38,8 +38,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xWaWV3Q2xpZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Employees/AddEmployees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEFkZEVtcGxveWVlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Employees/ViewEmployees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXFZpZXdFbXBsb3llZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Home/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Packages/AddPackages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNcQWRkUGFja2FnZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Packages/ViewPackages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNcVmlld1BhY2thZ2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Shared/Error.cshtml]

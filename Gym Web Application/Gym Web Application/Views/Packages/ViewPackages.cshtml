@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Packages";
+}
+
+<div class="container-fluid pt-3">
+    <div class="row removable">
+        <div class="col-lg">
+            <h1 class="centeredHeader">Available Packages <div class="">
+                    <a class="btn-add" asp-controller="Packages" asp-action="AddPackages">Add Package</a>
+            </h1>
+            <div class="packageContainer">
+                <div class="packageBox">
+                    <h3>1 MONTH</h3>
+                    <div class="packageContent">
+                        <div class="packageText">
+                            <p> <span>Visits Limited</span></p>
+                            <p> <span>20 Visits</span></p>
+                            <p> <span>2 Invitations</span></p>
+                            <p> <span>1 Inbody Session</span></p>
+                            <p> <span>1 Private Training Session</span></p>
+                            <p>
+                                <bold>For: <span>700 L.E</span></bold>
+                            </p>
+
+                            <!-- Check if package is activated -->
+                            <button class="btn-package">Deactivate</button>
+                            @* <button class="btn-package">Activate</button> *@
+                        </div>
+                    </div>
+                </div>
+                <div class="packageBox">
+                    <h3>2 MONTHS</h3>
+                    <div class="packageContent">
+                        <div class="packageText">
+                            <p> <span>Visits Limited</span></p>
+                            <p> <span>40 Visits</span></p>
+                            <p> <span>3 Invitations</span></p>
+                            <p> <span>2 Inbody Session</span></p>
+                            <p> <span>2 Private Training Session</span></p>
+                            <p>
+                                <bold>For: <span>1200 L.E</span></bold>
+                            </p>
+
+                            <!-- Check if package is activated -->
+                            <button class="btn-package">Deactivate</button>
+                            @* <button class="btn-package">Activate</button> *@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
