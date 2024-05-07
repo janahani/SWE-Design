@@ -4,21 +4,26 @@ using Gym_Web_Application.Models;
 
 namespace Gym_Web_Application.Controllers;
 
-public class ClientsController : Controller
+public class ClassesController : Controller
 {
-    private readonly ILogger<ClientsController> _logger;
+    private readonly ILogger<ClassesController> _logger;
 
-    public ClientsController(ILogger<ClientsController> logger)
+    public ClassesController(ILogger<ClassesController> logger)
     {
         _logger = logger;
     }
 
-    public IActionResult ViewClients()
+    public IActionResult AddClasses()
     {
         return View();
     }
 
-    public IActionResult AddClients()
+    public IActionResult ViewClasses()
+    {
+        return View();
+    }
+
+        public IActionResult AssignClasses()
     {
         return View();
     }

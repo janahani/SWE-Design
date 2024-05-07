@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = c:\xampp\htdocs\SWE-Design-1\Gym Web Application\Gym Web Application
 build_property._RazorSourceGeneratorDebug = 
 
+[c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Classes/AddClasses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xBZGRDbGFzc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Classes/AssignClasses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xBc3NpZ25DbGFzc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Classes/ViewClasses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xWaWV3Q2xhc3Nlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Clients/AddClients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xBZGRDbGllbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/xampp/htdocs/SWE-Design-1/Gym Web Application/Gym Web Application/Views/Clients/ViewClients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xWaWV3Q2xpZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Classes";
+}
+
+<div class="container-fluid pt-3">
+    <div class="row removable">
+        <div class="col-lg">
+            <div class="card">
+                <div class="card-header border-0">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h1 class="mb-0">Classes</h1>
+                        </div>
+                        <div class="col text-right">
+                            <input class="table-search-bar" placeholder="Search for Class">
+                        </div>
+                        <div class="col text-right">
+                            <a class="btn-add" asp-controller="Classes" asp-action="AddClasses">Add a Class</a>
+                             <a class="btn-add" asp-controller="Classes" asp-action="AssignClasses">Assign a Class</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Actions</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    01
+                                </th>
+                                <td>
+                                    Yoga
+                                </td>
+                                <td>
+                                    200
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-sm btn-deactivate">Deactivate</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    02
+                                </th>
+                                <td>
+                                    Zumba
+                                </td>
+                                <td>
+                                    250
+                                </td>
+                                <td>
+                                    <button href="" class="btn btn-sm btn-deactivate">Deactivate</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
