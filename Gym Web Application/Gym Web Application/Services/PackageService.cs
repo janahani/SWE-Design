@@ -1,17 +1,18 @@
+using Gym_Web_Application.Data;
 using Gym_Web_Application.Models;
 
 public class PackageService
 {
-    private readonly List<PackageModel> _packages;
+    private readonly AppDbContext _context;
 
-    public PackageService()
+    public PackageService(AppDbContext context)
     {
-        _packages = new List<PackageModel>();
+        _context = context;
     }
 
     public IEnumerable<PackageModelDto> GetAllPackages()
     {
-        return _packages.Select(p => new PackageModelDto
+        return _context.Packages.Select(p => new PackageModelDto
         {
             ID = p.ID,
             Title = p.Title,
@@ -20,35 +21,37 @@ public class PackageService
             NumOfInbodySessions = p.NumOfInbodySessions,
             NumOfPrivateTrainingSessions = p.NumOfPrivateTrainingSessions,
             Price = p.Price
-        });
+        }).ToList();
     }
 
     public void AddPackage(PackageModel package)
     {
-        _packages.Add(package);
+        _context.Packages.Add(package);
+        _context.SaveChanges();
     }
 
     public PackageModel FindById(int id)
     {
-        return _packages.FirstOrDefault(p => p.ID == id);
+        return _context.Packages.FirstOrDefault(p => p.ID == id);
     }
 
     public void ActivatePackage(int id)
     {
-        var package = _packages.FirstOrDefault(p => p.ID == id);
+        var package = _context.Packages.FirstOrDefault(p => p.ID == id);
         if (package != null)
         {
             package.IsActivated = "Activated";
+            _context.SaveChanges();
         }
     }
 
     public void DeactivatePackage(int id)
     {
-        var package = _packages.FirstOrDefault(p => p.ID == id);
+        var package = _context.Packages.FirstOrDefault(p => p.ID == id);
         if (package != null)
         {
             package.IsActivated = "Deactivated";
+            _context.SaveChanges();
         }
     }
 }
-
