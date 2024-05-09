@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PteLaAnZKK4v07qwnOqufK9YxHw/x13PtpKkmiPO4NQ=",
+  "Hash": "pakockFwK3GqVocLvmVyyER9N6mtVThdSx7atrOoMX4=",
   "Source": "Gym Web Application",
   "BasePath": "_content/Gym Web Application",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-2\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\loginEmp.css",
+      "SourceId": "Gym Web Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-2\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "BasePath": "_content/Gym Web Application",
+      "RelativePath": "css/loginEmp.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\loginEmp.css"
+    },
     {
       "Identity": "c:\\xampp\\htdocs\\SWE-Design-2\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\site.css",
       "SourceId": "Gym Web Application",

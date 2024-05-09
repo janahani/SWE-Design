@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "c:\\xampp\\htdocs\\SWE-Design-2\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\loginEmp.css",
+      "PackagePath": "staticwebassets\\css\\loginEmp.css"
+    },
+    {
       "Id": "c:\\xampp\\htdocs\\SWE-Design-2\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
