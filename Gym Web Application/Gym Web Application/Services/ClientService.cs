@@ -1,13 +1,14 @@
 using Gym_Web_Application.Data;
 using Gym_Web_Application.Models;
+using Microsoft.EntityFrameworkCore;
 
 public class ClientService
 {
     private readonly AppDbContext _dbContext;
 
-    public ClientService(AppDbContext dbContext)
+    public ClientService(DbContextOptions<AppDbContext> options)
     {
-        _dbContext = dbContext;
+        _dbContext = AppDbContext.GetInstance(options);
     }
 
     public void AddClient(ClientModel client)

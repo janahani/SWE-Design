@@ -2,10 +2,20 @@ namespace Gym_Web_Application.Data;
 
 using Gym_Web_Application.Models;
 using Microsoft.EntityFrameworkCore;
-public class AppDbContext :DbContext
+public class AppDbContext : DbContext
 {
-     public AppDbContext(DbContextOptions<AppDbContext> options):base(options){
+     private static AppDbContext _instance;
+     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+     {
 
+     }
+     public static AppDbContext GetInstance(DbContextOptions<AppDbContext> options)
+     {
+          if (_instance == null)
+          {
+               _instance = new AppDbContext(options);
+          }
+          return _instance;
      }
      public DbSet<ClientModel> Clients { get; set; }
      public DbSet<PackageModel> Packages { get; set; }

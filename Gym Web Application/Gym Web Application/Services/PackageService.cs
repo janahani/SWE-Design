@@ -1,18 +1,19 @@
 using Gym_Web_Application.Data;
 using Gym_Web_Application.Models;
+using Microsoft.EntityFrameworkCore;
 
 public class PackageService
 {
-    private readonly AppDbContext _context;
+    private readonly AppDbContext _dbContext;
 
-    public PackageService(AppDbContext context)
+    public PackageService(DbContextOptions<AppDbContext> options)
     {
-        _context = context;
+        _dbContext = AppDbContext.GetInstance(options);
     }
 
     public IEnumerable<PackageModelDto> GetAllPackages()
     {
-        return _context.Packages.Select(p => new PackageModelDto
+        return _dbContext.Packages.Select(p => new PackageModelDto
         {
             ID = p.ID,
             Title = p.Title,
@@ -26,32 +27,32 @@ public class PackageService
 
     public void AddPackage(PackageModel package)
     {
-        _context.Packages.Add(package);
-        _context.SaveChanges();
+        _dbContext.Packages.Add(package);
+        _dbContext.SaveChanges();
     }
 
     public PackageModel FindById(int id)
     {
-        return _context.Packages.FirstOrDefault(p => p.ID == id);
+        return _dbContext.Packages.FirstOrDefault(p => p.ID == id);
     }
 
     public void ActivatePackage(int id)
     {
-        var package = _context.Packages.FirstOrDefault(p => p.ID == id);
+        var package = _dbContext.Packages.FirstOrDefault(p => p.ID == id);
         if (package != null)
         {
             package.IsActivated = "Activated";
-            _context.SaveChanges();
+            _dbContext.SaveChanges();
         }
     }
 
     public void DeactivatePackage(int id)
     {
-        var package = _context.Packages.FirstOrDefault(p => p.ID == id);
+        var package = _dbContext.Packages.FirstOrDefault(p => p.ID == id);
         if (package != null)
         {
             package.IsActivated = "Deactivated";
-            _context.SaveChanges();
+            _dbContext.SaveChanges();
         }
     }
 }
