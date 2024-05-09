@@ -1,36 +1,40 @@
+using Gym_Web_Application.Data;
 using Gym_Web_Application.Models;
 
 public class ClientService
 {
-    private readonly List<ClientModel> _clients;
+    private readonly AppDbContext _dbContext;
 
-    public ClientService()
+    public ClientService(AppDbContext dbContext)
     {
-        _clients = new List<ClientModel>();
+        _dbContext = dbContext;
     }
 
     public void AddClient(ClientModel client)
     {
-        _clients.Add(client);
+        _dbContext.Clients.Add(client);
+        _dbContext.SaveChanges();
     }
 
     public List<ClientModelDto> GetAllClients()
     {
-        return _clients.Select(c => new ClientModelDto
-        {
-            ID = c.ID,
-            FirstName = c.FirstName,
-            LastName = c.LastName,
-            Age = c.Age,
-            Gender = c.Gender,
-            Email = c.Email,
-            PhoneNumber = c.PhoneNumber
-        }).ToList();
+        return _dbContext.Clients
+            .Select(c => new ClientModelDto
+            {
+                ID = c.ID,
+                FirstName = c.FirstName,
+                LastName = c.LastName,
+                Age = c.Age,
+                Gender = c.Gender,
+                Email = c.Email,
+                PhoneNumber = c.PhoneNumber
+            })
+            .ToList();
     }
 
     public void EditClient(int clientId, ClientModel updatedClient)
     {
-        var client = _clients.FirstOrDefault(c => c.ID == clientId);
+        var client = _dbContext.Clients.FirstOrDefault(c => c.ID == clientId);
         if (client != null)
         {
             client.FirstName = updatedClient.FirstName;
@@ -41,26 +45,28 @@ public class ClientService
             client.Password = updatedClient.Password;
             client.PhoneNumber = updatedClient.PhoneNumber;
             client.CreatedAt = updatedClient.CreatedAt;
+
+            _dbContext.SaveChanges();
         }
     }
 
     public void DeleteClient(int clientId)
     {
-        var client = _clients.FirstOrDefault(c => c.ID == clientId);
+        var client = _dbContext.Clients.FirstOrDefault(c => c.ID == clientId);
         if (client != null)
         {
-            _clients.Remove(client);
+            _dbContext.Clients.Remove(client);
+            _dbContext.SaveChanges();
         }
     }
 
     public ClientModel FindById(int clientId)
     {
-        return _clients.FirstOrDefault(c => c.ID == clientId);
+        return _dbContext.Clients.FirstOrDefault(c => c.ID == clientId);
     }
 
     public ClientModel FindByEmail(string email)
     {
-        return _clients.FirstOrDefault(c => c.Email == email);
+        return _dbContext.Clients.FirstOrDefault(c => c.Email == email);
     }
 }
-
