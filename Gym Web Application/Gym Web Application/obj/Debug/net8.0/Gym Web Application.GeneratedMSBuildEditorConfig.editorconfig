@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = c:\xampp\htdocs\SWE-Design-2\Gym Web Application\Gym Web Application
 build_property._RazorSourceGeneratorDebug = 
 
+[c:/xampp/htdocs/SWE-Design-2/Gym Web Application/Gym Web Application/Views/Attendance/viewAttendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVx2aWV3QXR0ZW5kYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/xampp/htdocs/SWE-Design-2/Gym Web Application/Gym Web Application/Views/Classes/AddClasses.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xBZGRDbGFzc2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
