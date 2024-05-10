@@ -1,6 +1,7 @@
 @{
     ViewData["Title"] = "Clients";
 }
+@model List<Gym_Web_Application.Models.ClientModel>
 
 <div class="container-fluid pt-3">
     <div class="row removable">
@@ -35,62 +36,41 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach(var client in Model)
+                            {
                             <tr>
                                 <th scope="row">
-                                    01
+                                    @client.ID
                                 </th>
                                 <td>
-                                    Sahwa Amr
+                                    @client.FirstName + " " + @client.LastName
                                 </td>
                                 <td>
-                                    sahwaamr@gmail.com
+                                    @client.Email
                                 </td>
                                 <td>
-                                    20
+                                    @client.Age
                                 </td>
                                 <td>
-                                    female
+                                    @client.Gender
                                 </td>
                                 <td>
-                                    01127897625
+                                    @client.PhoneNumber
                                 </td>
                                 <td>
                                     <a class="btn btn-sm btn-activate" asp-controller="Packages"
                                         asp-action="Packages">Activate</a>
                                 </td>
                                 <td>
-                                    <a href="#!" class="btn btn-sm btn-primary">Edit</a>
-                                    <a href="#!" class="btn btn-sm btn-delete">Delete</a>
+                                    @Html.ActionLink("Edit","EditClients", new{id = client.ID},new{@class="btn btn-sm btn-primary"})
+                                    @using(Html.BeginForm("DeleteClients","Clients",FormMethod.Post))
+                                    {
+                                        @Html.Hidden("id",client.ID)
+                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                    }
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">
-                                    01
-                                </th>
-                                <td>
-                                    Sahwa Amr
-                                </td>
-                                <td>
-                                    sahwaamr@gmail.com
-                                </td>
-                                <td>
-                                    20
-                                </td>
-                                <td>
-                                    female
-                                </td>
-                                <td>
-                                    01127897625
-                                </td>
-                                <td>
-                                    <a class="btn btn-sm btn-activate" asp-controller="Packages" asp-action="Packages"
-                                        disabled>Activate</a>
-                                </td>
-                                <td>
-                                    <a href="#!" class="btn btn-sm btn-primary">Edit</a>
-                                    <a href="#!" class="btn btn-sm btn-delete">Delete</a>
-                                </td>
-                            </tr>
+                            }
                         </tbody>
                     </table>
                 </div>
