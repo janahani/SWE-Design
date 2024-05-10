@@ -9,9 +9,11 @@
             <h1 class="centeredHeader">Available Packages <div class="">
                     <a class="btn-add" asp-controller="Packages" asp-action="AddPackages">Add Package</a>
             </h1>
+
+            <div class="packageContainer">
             @foreach(var package in Model)
             {
-               <div class="packageContainer">
+               
                 <div class="packageBox">
                     <h3>@package.Title</h3>
                     <div class="packageContent">
@@ -39,9 +41,10 @@
                         </div>
                     </div>
                 </div>
-               </div>
+              
             }
             
+             </div>
 
         </div>
     </div>

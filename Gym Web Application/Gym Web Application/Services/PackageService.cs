@@ -24,6 +24,7 @@ public class PackageService
             NumOfInbodySessions=addPackageRequest.NumOfInbodySessions,
             NumOfMonths=addPackageRequest.NumOfMonths,
             NumOfPrivateTrainingSessions=addPackageRequest.NumOfPrivateTrainingSessions,
+            NumOfInvitations=addPackageRequest.NumOfInvitations,
             FreezeLimit=addPackageRequest.FreezeLimit,
             VisitsLimit=addPackageRequest.VisitsLimit,
             Price=addPackageRequest.Price,
