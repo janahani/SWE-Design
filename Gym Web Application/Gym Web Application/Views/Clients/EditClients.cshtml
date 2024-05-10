@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Clients";
+}
+@model Gym_Web_Application.Models.ClientModel
+
+<div class="container-fluid pt-3">
+    <div class="row removable">
+        <div class="col-lg">
+            <div class="user-form">
+                <h1>Edit a Client</h1>
+                <form method="POST" class="EditClients">
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="First Name" name="FirstName" asp-for="FirstName"/>
+                    </div>
+                    <span id="fname-error" class="error-message"></span>
+                    <br>
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Last Name" name="LastName" asp-for="LastName"/>
+                    </div>
+                    <span id="lname-error" class="error-message"></span>
+                    <br>
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Phone Number" name="PhoneNumber" asp-for="PhoneNumber"/>
+                    </div>
+                    <span id="phoneno-error" class="error-message"></span>
+                    <br>
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Email" name="Email" asp-for=" Email"/>
+                    </div>
+                    <span id="email-error" class="error-message"></span>
+                    <br>
+                    <button class="btn btn-add-form" type="submit">Edit Client</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        clearInputFields();
+    });
+
+    function clearInputFields() {
+        var inputFields = document.querySelectorAll('.add-user-input');
+        inputFields.forEach(function (input) {
+            input.value = '';
+        });
+    }
+</script>
