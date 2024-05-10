@@ -1,28 +1,43 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Gym_Web_Application.Models;
+using Gym_Web_Application.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Gym_Web_Application.Controllers;
 
 public class PackagesController : Controller
 {
     private readonly ILogger<PackagesController> _logger;
+    private readonly PackageService _packageService;
 
-    public PackagesController(ILogger<PackagesController> logger)
+
+    public PackagesController(ILogger<PackagesController> logger, PackageService packageService )
     {
         _logger = logger;
+
+        this._packageService=packageService;
     }
 
     [HttpGet]
-    public IActionResult ViewPackages()
+    public async Task<IActionResult> ViewPackages()
+    {
+        
+        var packages = await _packageService.GetAllPackages();
+        return View(packages);
+    }
+    
+    [HttpGet]
+     public IActionResult AddPackages()
     {
         return View();
     }
 
-    [HttpGet]
-    public IActionResult AddPackages()
+    [HttpPost]
+    public async Task<IActionResult> AddPackages(PackageModel addPackageRequest)
     {
-        return View();
+        await _packageService.AddPackages(addPackageRequest);
+        return RedirectToAction("ViewPackages");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

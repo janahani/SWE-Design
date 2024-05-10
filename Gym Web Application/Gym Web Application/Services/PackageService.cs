@@ -11,25 +11,29 @@ public class PackageService
         _dbContext = AppDbContext.GetInstance(options);
     }
 
-    public IEnumerable<PackageModel> GetAllPackages()
+    public async Task<List<PackageModel>> GetAllPackages()
     {
-        return _dbContext.Packages.Select(p => new PackageModel
-        {
-            ID = p.ID,
-            Title = p.Title,
-            VisitsLimit = p.VisitsLimit,
-            NumOfInvitations = p.NumOfInvitations,
-            NumOfInbodySessions = p.NumOfInbodySessions,
-            NumOfPrivateTrainingSessions = p.NumOfPrivateTrainingSessions,
-            Price = p.Price
-        }).ToList();
+        return await _dbContext.Packages.ToListAsync();
     }
 
-    public void AddPackage(PackageModel package)
+ public async Task AddPackages(PackageModel addPackageRequest)
     {
-        _dbContext.Packages.Add(package);
-        _dbContext.SaveChanges();
+        var package = new PackageModel()
+        {
+            Title = addPackageRequest.Title,
+            NumOfInbodySessions=addPackageRequest.NumOfInbodySessions,
+            NumOfMonths=addPackageRequest.NumOfMonths,
+            NumOfPrivateTrainingSessions=addPackageRequest.NumOfPrivateTrainingSessions,
+            FreezeLimit=addPackageRequest.FreezeLimit,
+            VisitsLimit=addPackageRequest.VisitsLimit,
+            Price=addPackageRequest.Price,
+            IsActivated=addPackageRequest.IsActivated
+        };
+
+        await _dbContext.Packages.AddAsync(package);
+        await _dbContext.SaveChangesAsync();
     }
+
 
     public PackageModel FindById(int id)
     {
