@@ -11,59 +11,70 @@ public class ClientService
         _dbContext = AppDbContext.GetInstance(options);
     }
 
-    public void AddClient(ClientModel client)
+    public async Task AddClientAsync(ClientModel clientRequest)
     {
-        _dbContext.Clients.Add(client);
-        _dbContext.SaveChanges();
+        var client = new ClientModel()
+        {
+            FirstName = clientRequest.FirstName,
+            LastName = clientRequest.LastName,
+            Age = clientRequest.Age,
+            Gender = clientRequest.Gender,
+            Email = clientRequest.Email,
+            PhoneNumber = clientRequest.PhoneNumber,
+            CreatedAt = DateTime.Now
+        };
+        await _dbContext.Clients.AddAsync(client);
+        await _dbContext.SaveChangesAsync();
     }
 
-    public List<ClientModel> GetAllClients()
+    public async Task<List<ClientModel>> GetAllClients()
     {
-        return _dbContext.Clients
-            .Select(c => new ClientModel
-            {
-                ID = c.ID,
-                FirstName = c.FirstName,
-                LastName = c.LastName,
-                Age = c.Age,
-                Gender = c.Gender,
-                Email = c.Email,
-                PhoneNumber = c.PhoneNumber
-            })
-            .ToList();
+        return await _dbContext.Clients.ToListAsync();
     }
 
-    public void EditClient(int clientId, ClientModel updatedClient)
+    public async Task EditClient(ClientModel updatedClient)
     {
-        var client = _dbContext.Clients.FirstOrDefault(c => c.ID == clientId);
+        var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.ID == updatedClient.ID);
         if (client != null)
         {
             client.FirstName = updatedClient.FirstName;
             client.LastName = updatedClient.LastName;
-            client.Age = updatedClient.Age;
-            client.Gender = updatedClient.Gender;
             client.Email = updatedClient.Email;
-            client.Password = updatedClient.Password;
             client.PhoneNumber = updatedClient.PhoneNumber;
-            client.CreatedAt = updatedClient.CreatedAt;
 
-            _dbContext.SaveChanges();
+           await _dbContext.SaveChangesAsync();
         }
     }
 
-    public void DeleteClient(int clientId)
+    public async Task DeleteClient(int clientId)
     {
-        var client = _dbContext.Clients.FirstOrDefault(c => c.ID == clientId);
+        var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.ID == clientId);
         if (client != null)
         {
             _dbContext.Clients.Remove(client);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
+
     }
 
-    public ClientModel FindById(int clientId)
+    public async Task<ClientModel> GetClientById(int clientId)
     {
-        return _dbContext.Clients.FirstOrDefault(c => c.ID == clientId);
+        var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.ID == clientId);
+
+        if (client == null)
+        {
+            return null;
+        }
+
+        var clientModel = new ClientModel
+        {
+            FirstName = client.FirstName,
+            LastName = client.LastName,
+            Email = client.Email,
+            PhoneNumber = client.PhoneNumber
+        };
+
+        return clientModel;
     }
 
     public ClientModel FindByEmail(string email)
