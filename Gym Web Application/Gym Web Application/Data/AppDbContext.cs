@@ -18,10 +18,19 @@ public class AppDbContext : DbContext
           return _instance;
      }
      public DbSet<ClientModel> Clients { get; set; }
+     public DbSet<EmployeeModel> Employees { get; set; }
      public DbSet<PackageModel> Packages { get; set; }
      public DbSet<SalesReportModel> SalesReport { get; set; }
      public DbSet<ClassModel> Classes { get; set; }
      public DbSet<MembershipModel> Memberships { get; set; }
+     public DbSet<AssignedClassModel> AssignedClasses { get; set; }
+     public DbSet<ReservedClassModel> ReservedClasses { get; set; }
+     public DbSet<ClassDaysModel> ClassDays { get; set; }
+     public DbSet<AuthorityModel> Authorities { get; set; }
+     public DbSet<AttendanceModel> Attendance { get; set; }
+     public DbSet<EmployeeAuthorityModel> EmployeeAuthorities { get; set; }
+     public DbSet<JobTitlesModel> JobTitles { get; set; }
+     public DbSet<ScheduledUnfreezeModel> ScheduledUnfreeze { get; set; }
 
 
 }
