@@ -13,6 +13,7 @@ public class AttendanceController : Controller
         _logger = logger;
     }
 
+    [HttpGet]
     public IActionResult ViewAttendance()
     {
         return View();

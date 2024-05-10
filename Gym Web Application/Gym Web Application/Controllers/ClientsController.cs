@@ -13,11 +13,13 @@ public class ClientsController : Controller
         _logger = logger;
     }
 
+    [HttpGet]
     public IActionResult ViewClients()
     {
         return View();
     }
 
+    [HttpGet]
     public IActionResult AddClients()
     {
         return View();

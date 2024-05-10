@@ -13,11 +13,13 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    [HttpGet]
     public IActionResult Dashboard()
     {
         return View();
     }
 
+    [HttpGet]
     public IActionResult Login()
     {
         return View();

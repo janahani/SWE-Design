@@ -12,7 +12,8 @@ public class MembershipsController : Controller
     {
         _logger = logger;
     }
-
+    
+    [HttpGet]
     public IActionResult ViewMemberships()
     {
         return View();

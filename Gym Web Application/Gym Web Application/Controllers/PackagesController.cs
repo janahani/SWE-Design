@@ -13,11 +13,13 @@ public class PackagesController : Controller
         _logger = logger;
     }
 
+    [HttpGet]
     public IActionResult ViewPackages()
     {
         return View();
     }
 
+    [HttpGet]
     public IActionResult AddPackages()
     {
         return View();

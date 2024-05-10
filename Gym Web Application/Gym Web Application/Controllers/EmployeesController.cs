@@ -13,11 +13,13 @@ public class EmployeesController : Controller
         _logger = logger;
     }
 
+    [HttpGet]
     public IActionResult ViewEmployees()
     {
         return View();
     }
 
+    [HttpGet]
     public IActionResult AddEmployees()
     {
         return View();

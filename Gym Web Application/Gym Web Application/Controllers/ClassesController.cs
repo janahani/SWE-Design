@@ -13,17 +13,20 @@ public class ClassesController : Controller
         _logger = logger;
     }
 
+    [HttpGet]
     public IActionResult AddClasses()
     {
         return View();
     }
 
+    [HttpGet]
     public IActionResult ViewClasses()
     {
         return View();
     }
 
-        public IActionResult AssignClasses()
+    [HttpGet]
+    public IActionResult AssignClasses()
     {
         return View();
     }
