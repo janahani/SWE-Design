@@ -1,12 +1,5 @@
-using System;
 namespace Gym_Web_Application.Models;
-namespace Gym_Web_Application.Models.EmployeeModel;
-namespace Gym_Web_Application.Models.SalesReportModel;
-
-
-namespace Gym_Web_Application.ObserverDP;
-using System.Collections.Generic;
-
+using global::Gym_Web_Application.ObserverDP;
 
 public class SalesEmployee : ISalesEmployeeObserver
 {
@@ -17,7 +10,7 @@ public class SalesEmployee : ISalesEmployeeObserver
         Sales_Employee = employee;
     }
 
-    public void Update(SalesReport latestReport)
+    public void Update(SalesReportModel latestReport)
     {
         //im assuming en el sales report job title id is 3 lehad ma tables are mapped
         if (Sales_Employee.JobTitleID == 3)

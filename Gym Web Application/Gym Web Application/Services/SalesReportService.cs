@@ -1,5 +1,4 @@
-using System;
-using System.Threading.Tasks;
+using Gym_Web_Application.Data;
 using Gym_Web_Application.Models;
 using Gym_Web_Application.ObserverDP;
 using Microsoft.EntityFrameworkCore;
@@ -22,14 +21,14 @@ using Microsoft.EntityFrameworkCore;
             //will generate new sales report every 25th day of month
             if (DateTime.Now.Day == 25)
             {
-                SalesReport newReport = GenerateReport(); 
+                SalesReportModel newReport = GenerateReport(); 
 
                 //setting the latest report in the observable
                 _salesReportObservable.LatestReport = newReport;
             }
         }
 
-        private SalesReport GenerateReport()
+        private SalesReportModel GenerateReport()
         {
 
             DateTime today = DateTime.Today;
@@ -42,7 +41,7 @@ using Microsoft.EntityFrameworkCore;
             int totalClassesAttended = SalesReportData.Sum(s => s.ClassesAttended);
 
 
-            SalesReport report = new SalesReport
+            SalesReportModel report = new SalesReportModel
             {
                 CreatedAt = today,
                 TotalRevenue = totalRevenue,
