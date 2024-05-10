@@ -15,17 +15,18 @@ public class SalesReportService
         _salesReportObservable = salesReportObservable;
     }
 
-    public async Task GenerateMonthlySalesReport()
+    public void GenerateMonthlySalesReport()
     {
         //will generate new sales report every 25th day of month
+
         if (DateTime.Now.Day == 25)
         {
             SalesReportModel newReport = GenerateReport();
-
             //setting the latest report in the observable
-            _salesReportObservable.LatestReport = newReport;
+            _salesReportObservable.NotifyObservers(newReport);
         }
     }
+
 
     private SalesReportModel GenerateReport()
     {
@@ -34,10 +35,21 @@ public class SalesReportService
         DateTime _25thDayOfMonth = new DateTime(today.Year, today.Month, 25);
 
         var SalesReportData = _dbContext.SalesReport.Where(s => s.CreatedAt >= _25thDayOfMonth && s.CreatedAt <= today).ToList();
+        var packages = _dbContext.Packages
+                             .Where(p => p.IsActivated == "Activated")
+                             .ToList();
 
-        decimal totalRevenue = SalesReportData.Sum(s => s.Amount);
-        int totalMembershipsSold = SalesReportData.Count(s => s.MembershipType == MembershipType.Sold);
-        int totalClassesAttended = SalesReportData.Sum(s => s.ClassesAttended);
+        var classes = _dbContext.Classes
+                           .Where(c => c.ID > 0) 
+                           .ToList();
+
+        var memberships = _dbContext.Memberships
+                                .Where(m => m.StartDate >= _25thDayOfMonth && m.StartDate <= today)
+                                .ToList();
+
+            decimal totalRevenue = CalculateTotalRevenue(memberships, packages);
+            int totalMembershipsSold = CalculateTotalMembershipsSold(memberships);
+            int totalClassesAttended = CalculateTotalClassesAttended(classes);
 
 
         SalesReportModel report = new SalesReportModel
@@ -48,8 +60,40 @@ public class SalesReportService
             TotalClassesAttended = totalClassesAttended
         };
 
+        _dbContext.SalesReport.Add(report);
+        _dbContext.SaveChanges();
         return report;
 
 
     }
+
+     private int CalculateTotalMembershipsSold(IEnumerable<MembershipModel> memberships)
+        {
+            return memberships.Count();
+        }
+
+        private int CalculateTotalClassesAttended(IEnumerable<ClassModel> classes)
+        {
+            return classes.Count();
+        }
+
+        private decimal CalculateTotalRevenue(IEnumerable<MembershipModel> memberships, IEnumerable<PackageModel> packages)
+        {
+        DateTime _25thDayOfMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 25);
+
+            var latestMonthMemberships = memberships.Where(m => m.StartDate >= _25thDayOfMonth);
+
+            decimal totalRevenue = 0;
+            foreach (var membership in latestMonthMemberships)
+    {
+        var package = packages.FirstOrDefault(p => p.ID == membership.PackageID);
+        if (package != null)
+        {
+            totalRevenue += (decimal)package.Price;
+        }
+    }
+             return totalRevenue;
+        }
+
+
 }

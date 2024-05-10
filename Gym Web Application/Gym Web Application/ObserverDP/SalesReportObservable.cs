@@ -12,7 +12,7 @@ public class SalesReportObservable : ISalesReportObservable
         {
 
             latestReport = value;
-            NotifyObservers();
+            NotifyObservers(latestReport);
         }
     }
 
@@ -28,12 +28,12 @@ public class SalesReportObservable : ISalesReportObservable
         Console.WriteLine("an observer is removed");
     }
 
-    public void NotifyObservers()
+     public void NotifyObservers(SalesReportModel latestReport)
     {
-        Console.WriteLine("notifying sales reporters of new release of monthly sales report");
+        Console.WriteLine("Notifying sales reporters of new release of monthly sales report");
         foreach (var observer in observers)
         {
-            observer.Update(LatestReport);
+            observer.Update(latestReport);
         }
     }
 }

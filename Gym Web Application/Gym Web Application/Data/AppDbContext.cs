@@ -20,4 +20,8 @@ public class AppDbContext : DbContext
      public DbSet<ClientModel> Clients { get; set; }
      public DbSet<PackageModel> Packages { get; set; }
      public DbSet<SalesReportModel> SalesReport { get; set; }
+     public DbSet<ClassModel> Classes { get; set; }
+     public DbSet<MembershipModel> Memberships { get; set; }
+
+
 }
