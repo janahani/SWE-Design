@@ -34,7 +34,7 @@ using Microsoft.EntityFrameworkCore;
             DateTime today = DateTime.Today;
             DateTime _25thDayOfMonth = new DateTime(today.Year, today.Month, 25);
 
-            var SalesReportData = _dbContext.SalesReport.Where(s => s.Date >= _25thDayOfMonth && s.Date <= today).ToList();
+            var SalesReportData = _dbContext.SalesReport.Where(s => s.CreatedAt >= _25thDayOfMonth && s.CreatedAt <= today).ToList();
             
             decimal totalRevenue = SalesReportData.Sum(s => s.Amount);
             int totalMembershipsSold = SalesReportData.Count(s => s.MembershipType == MembershipType.Sold);
