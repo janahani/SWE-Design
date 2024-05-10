@@ -11,9 +11,9 @@ public class PackageService
         _dbContext = AppDbContext.GetInstance(options);
     }
 
-    public IEnumerable<PackageModelDto> GetAllPackages()
+    public IEnumerable<PackageModel> GetAllPackages()
     {
-        return _dbContext.Packages.Select(p => new PackageModelDto
+        return _dbContext.Packages.Select(p => new PackageModel
         {
             ID = p.ID,
             Title = p.Title,

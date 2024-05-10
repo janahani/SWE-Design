@@ -17,10 +17,10 @@ public class ClientService
         _dbContext.SaveChanges();
     }
 
-    public List<ClientModelDto> GetAllClients()
+    public List<ClientModel> GetAllClients()
     {
         return _dbContext.Clients
-            .Select(c => new ClientModelDto
+            .Select(c => new ClientModel
             {
                 ID = c.ID,
                 FirstName = c.FirstName,
