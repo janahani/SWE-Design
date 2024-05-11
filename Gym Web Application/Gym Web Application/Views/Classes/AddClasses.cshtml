@@ -1,57 +1,38 @@
 @{
-    ViewData["Title"] = "Classes";
+    ViewData["Title"] = "Add Class";
 }
+
+@model Gym_Web_Application.Models.ClassModel
 
 <div class="container-fluid pt-3">
     <div class="row removable">
         <div class="col-lg">
             <div class="user-form">
                 <h1>Add a Class</h1>
-                <form class="add-user">
-                    <input class="add-user-input" type="text" placeholder="Class name">
+                <form method="post" enctype="multipart/form-data" class="AddClass"> 
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Class name" asp-for="Name"> 
+                    </div>
                     <br>
-                    <textarea class="add-user-input" type="text" placeholder="Description"></textarea>
+                    <div>
+                        <textarea class="add-user-input" placeholder="Description" asp-for="Description"></textarea> 
+                    </div>
                     <br>
-                    <br>
-                    <input class="add-user-input" type="file" id="myFile" name="filename">
+                    <div>
+                        <input class="add-user-input" type="file" id="myFile" name="ImageFile"> 
+                    </div>
                     <br>
                     <div class="select-days">
                         <p>Select Day(s)</p>
-                        <div>
-                            <input type="checkbox" id="monday" name="week-days[]" value="Monday">
-                            <label for="monday">Monday</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="tuesday" name="week-days[]" value="Tuesday">
-                            <label for="tuesday">Tuesday</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="wednesday" name="week-days[]" value="Wednesday">
-                            <label for="wednesday">Wednesday</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="thursday" name="week-days[]" value="Thursday">
-                            <label for="thursday">Thursday</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="friday" name="week-days[]" value="Friday">
-                            <label for="friday">Friday</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="saturday" name="week-days[]" value="Saturday">
-                            <label for="saturday">Saturday</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="sunday" name="week-days[]" value="Sunday">
-                            <label for="sunday">Sunday</label>
-                        </div>
+                        @foreach (var day in Enum.GetValues(typeof(DayOfWeek)))
+                        {
+                            <div>
+                                <input type="checkbox" id="@day" name="SelectedDays" value="@day">
+                                <label for="@day">@day</label>
+                            </div>
+                        }
                     </div>
+                    <br>
                     <button class="btn btn-add-form" type="submit">Add Class</button>
                 </form>
             </div>
