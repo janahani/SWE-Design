@@ -22,11 +22,10 @@ public class ClassesController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddClass(ClassModel classModel, IFormFile ImageFile, List<string> selectedDays)
+    public async Task<IActionResult> AddClass(ClassModel classModel, IFormFile ImageFile, List<string> SelectedDays)
     {
-
-        await _classService.AddClass(classModel, ImageFile, selectedDays);
-        return RedirectToAction("AddClass");
+        await _classService.AddClass(classModel, ImageFile, SelectedDays);
+        return RedirectToAction("AddClasses");
     }
 
     [HttpGet]
