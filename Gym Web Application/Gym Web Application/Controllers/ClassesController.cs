@@ -23,7 +23,7 @@ public class ClassesController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddClasses(ClassModel classModel, IFormFile ImageFile, List<string> SelectedDays)
+    public async Task<IActionResult> AddClass(ClassModel classModel, IFormFile ImageFile, List<string> SelectedDays)
     {
         await _classService.AddClass(classModel, ImageFile, SelectedDays);
         return RedirectToAction("AddClasses");
@@ -41,8 +41,10 @@ public class ClassesController : Controller
     {
         var assignedClass = new AssignedClassModel();
         var classes = await _classService.GetAllClasses();
+        //var ecoaches = await _employeeService.GetAllCoaches();
 
         ViewBag.Classes = classes;
+        //ViewBag.Coaches = coaches;
 
         return View(assignedClass);
     }
