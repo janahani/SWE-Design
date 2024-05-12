@@ -9,6 +9,7 @@ public class ClassesController : Controller
     private readonly ILogger<ClassesController> _logger;
     private readonly ClassService _classService;
 
+
     public ClassesController(ILogger<ClassesController> logger, ClassService classService)
     {
         _logger = logger;
@@ -56,10 +57,24 @@ public class ClassesController : Controller
     [HttpPost]
     public async Task<IActionResult> AssignClasses(AssignedClassModel assignedClassRequest)
     {
-        await _classService.AddAssignedClasses(assignedClassRequest);
+        await _classService.AddAssignedClass(assignedClassRequest);
         return RedirectToAction("AssignClasses");
     }
 
+    [HttpGet]
+    public async Task<IActionResult> ReserveClasses(int clientId)
+    {
+        var assignedClasses = await _classService.GetAllAssignedClasses();
+        ViewBag.ClientId = clientId;
+
+        return View(assignedClasses);
+    }
+    [HttpPost]
+    public async Task<IActionResult> ReserveClass(int AssignedClassID, int ClientID, int CoachID)
+    {
+        await _classService.AddReservedClass(AssignedClassID, ClientID, CoachID);
+        return RedirectToAction("ReserveClass");
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
