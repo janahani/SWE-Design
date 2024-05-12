@@ -1,0 +1,88 @@
+@{
+    ViewData["Title"] = "Classes";
+}
+@model List<Gym_Web_Application.Models.AssignedClassModel>
+@inject ClassService _classService
+@* @inject EmployeeService _employeeService*@
+
+<div class="container-fluid pt-3">
+    <div class="row removable">
+        <div class="col-lg">
+            <div class="card">
+                <div class="card-header border-0">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h1 class="mb-0">Classes</h1>
+                        </div>
+                        <div class="col text-right">
+                            <input class="table-search-bar" placeholder="Search for Class">
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Class Name</th>
+                                <th scope="col">Coach Name</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Start Time</th>
+                                <th scope="col">End Time</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var assignedClass in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@assignedClass.ID</th>
+                                    <td>
+                                        @{
+                                            var classModel = await _classService.GetClassById(assignedClass.ClassID);
+                                            if (classModel != null)
+                                            {
+                                                @classModel.Name
+                                            }
+                                            else
+                                            {
+                                                <text>Class not found</text>
+                                            }
+                                        }
+                                    </td>
+                                    <td>
+                                        @* @{
+                                    var coachModel = await _employeeService.GetEmployeeById(assignedClass.CoachID);
+                                    if (coachModel != null)
+                                    {
+                                    @coachModel.Name
+                                    }
+                                    else
+                                    {
+                                    <text>Coach not found</text>
+                                    }
+                                    } *@
+                                    </td>
+                                    <td>@assignedClass.Date</td>
+                                    <td>@assignedClass.StartTime</td>
+                                    <td>@assignedClass.EndTime</td>
+                                    <td>@assignedClass.Price</td>
+                                    <td>
+                                        <form method="post" asp-controller="Classes" asp-action="ReserveClasses">
+                                            <input type="hidden" name="AssignedClassID" value="@assignedClass.ID" />
+                                            <input type="hidden" name="ClientID" value="@ViewBag.ClientId" />
+                                            <input type="hidden" name="CoachID" value="@assignedClass.CoachID" />
+                                            <button type="submit" class="btn btn-primary">Reserve</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
