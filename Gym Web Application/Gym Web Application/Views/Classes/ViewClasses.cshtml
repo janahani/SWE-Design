@@ -1,6 +1,7 @@
 @{
     ViewData["Title"] = "Classes";
 }
+@model List<Gym_Web_Application.Models.ClassModel>
 
 <div class="container-fluid pt-3">
     <div class="row removable">
@@ -26,40 +27,25 @@
                             <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Name</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Actions</th>
+                                <th scope="col">Description</th>
 
                             </tr>
                         </thead>
                         <tbody>
+                             @foreach(var Class in Model)
+                            {
                             <tr>
                                 <th scope="row">
-                                    01
+                                    @Class.ID
                                 </th>
                                 <td>
-                                    Yoga
+                                    @Class.Name
                                 </td>
                                 <td>
-                                    200
-                                </td>
-                                <td>
-                                    <a href="" class="btn btn-sm btn-deactivate">Deactivate</a>
+                                    @Class.Description
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">
-                                    02
-                                </th>
-                                <td>
-                                    Zumba
-                                </td>
-                                <td>
-                                    250
-                                </td>
-                                <td>
-                                    <button href="" class="btn btn-sm btn-deactivate">Deactivate</button>
-                                </td>
-                            </tr>
+                            }
                         </tbody>
                     </table>
                 </div>

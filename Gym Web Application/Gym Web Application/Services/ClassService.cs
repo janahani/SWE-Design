@@ -57,4 +57,9 @@ public class ClassService
 
         }
     }
+    
+    public async Task<List<ClassModel>> GetAllClasses()
+    {
+        return await _dbContext.Classes.ToListAsync();
+    }
 }

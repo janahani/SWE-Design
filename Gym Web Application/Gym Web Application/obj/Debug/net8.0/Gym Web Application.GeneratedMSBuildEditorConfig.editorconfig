@@ -9,87 +9,87 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Gym_Web_Application
 build_property.RootNamespace = Gym_Web_Application
-build_property.ProjectDir = C:\Users\YASSMIN\GitHub\SWE-Design\Gym Web Application\Gym Web Application\
+build_property.ProjectDir = c:\xampp\htdocs\SWE-Design-6\Gym Web Application\Gym Web Application\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\YASSMIN\GitHub\SWE-Design\Gym Web Application\Gym Web Application
+build_property.MSBuildProjectDirectory = c:\xampp\htdocs\SWE-Design-6\Gym Web Application\Gym Web Application
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Attendance/viewAttendance.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Attendance/viewAttendance.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVx2aWV3QXR0ZW5kYW5jZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Classes/AddClasses.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Classes/AddClasses.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xBZGRDbGFzc2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Classes/AssignClasses.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Classes/AssignClasses.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xBc3NpZ25DbGFzc2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Classes/ViewClasses.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Classes/ViewClasses.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xWaWV3Q2xhc3Nlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Clients/AddClients.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Clients/AddClients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xBZGRDbGllbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Clients/EditClients.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Clients/EditClients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xFZGl0Q2xpZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Clients/ViewClients.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Clients/ViewClients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xWaWV3Q2xpZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Employees/AddEmployees.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Employees/AddEmployees.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEFkZEVtcGxveWVlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Employees/ViewEmployees.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Employees/ViewEmployees.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXFZpZXdFbXBsb3llZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Home/Dashboard.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Home/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Home/Login.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Memberships/ViewMemberships.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Memberships/ViewMemberships.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc2hpcHNcVmlld01lbWJlcnNoaXBzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Packages/AddPackages.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Packages/AddPackages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNcQWRkUGFja2FnZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Packages/ViewPackages.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Packages/ViewPackages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNcVmlld1BhY2thZ2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Shared/Error.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Shared/_AdminSide&NavBar.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Shared/_AdminSide&NavBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pblNpZGUmTmF2QmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/_ViewImports.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/YASSMIN/GitHub/SWE-Design/Gym Web Application/Gym Web Application/Views/_ViewStart.cshtml]
+[c:/xampp/htdocs/SWE-Design-6/Gym Web Application/Gym Web Application/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

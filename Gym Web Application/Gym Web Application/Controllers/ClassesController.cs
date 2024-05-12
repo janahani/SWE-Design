@@ -29,9 +29,10 @@ public class ClassesController : Controller
     }
 
     [HttpGet]
-    public IActionResult ViewClasses()
+    public async Task<IActionResult> ViewClasses()
     {
-        return View();
+        var classes = await _classService.GetAllClasses();
+        return View(classes);
     }
 
     [HttpGet]
