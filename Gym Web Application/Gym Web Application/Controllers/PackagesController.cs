@@ -40,6 +40,24 @@ public class PackagesController : Controller
         return RedirectToAction("ViewPackages");
     }
 
+    [HttpPost]
+    public async Task<IActionResult> Activation(string activationStatus, int packageId)
+    {
+        if (activationStatus == "Activated")
+        {
+            await _packageService.DeactivatePackage(packageId);      
+        }
+        else if (activationStatus == "Not Activated")
+        {
+             await _packageService.ActivatePackage(packageId);
+
+        }
+
+         
+         return RedirectToAction("ViewPackages");
+
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
