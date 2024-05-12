@@ -9,7 +9,7 @@
         <div class="col-lg">
             <div class="user-form">
                 <h1>Add a Class</h1>
-                <form method="post" enctype="multipart/form-data" class="AddClass"> 
+                <form method="post" asp-controller="Classes" asp-action="AddClass" enctype="multipart/form-data" class="AddClass"> 
                     <div>
                         <input class="add-user-input" type="text" placeholder="Class name" asp-for="Name"> 
                     </div>
