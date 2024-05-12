@@ -24,42 +24,92 @@ public class ClassService
         if (imageFile != null && imageFile.Length > 0)
         {
 
-                string originalFileName = Path.GetFileName(imageFile.FileName);
-                string filePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", originalFileName);
+            string originalFileName = Path.GetFileName(imageFile.FileName);
+            string filePath = Path.Combine(_hostingEnvironment.WebRootPath, "images", originalFileName);
 
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await imageFile.CopyToAsync(fileStream);
-                }
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await imageFile.CopyToAsync(fileStream);
+            }
 
-                ClassModel classEntity = new ClassModel
+            ClassModel classEntity = new ClassModel
+            {
+                Name = classModel.Name,
+                Description = classModel.Description,
+                ImgPath = "/images/" + originalFileName
+            };
+
+            await _dbContext.Classes.AddAsync(classEntity);
+            await _dbContext.SaveChangesAsync();
+
+            foreach (var day in selectedDays)
+            {
+                ClassDaysModel classDay = new ClassDaysModel
                 {
-                    Name = classModel.Name,
-                    Description = classModel.Description,
-                    ImgPath = "/images/" + originalFileName
+                    ClassID = classEntity.ID,
+                    Days = day
                 };
 
-                await _dbContext.Classes.AddAsync(classEntity);
-                await _dbContext.SaveChangesAsync();
+                await _dbContext.ClassDays.AddAsync(classDay);
+            }
 
-                foreach (var day in selectedDays)
-                {
-                    ClassDaysModel classDay = new ClassDaysModel
-                    {
-                        ClassID = classEntity.ID,
-                        Days = day
-                    };
-
-                    await _dbContext.ClassDays.AddAsync(classDay);
-                }
-
-                await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
 
         }
     }
-    
+
     public async Task<List<ClassModel>> GetAllClasses()
     {
         return await _dbContext.Classes.ToListAsync();
+    }
+
+    public async Task<List<string>> GetClassDays(int classId)
+    {
+        var classDays = await _dbContext.ClassDays
+            .Where(cd => cd.ClassID == classId)
+            .Select(cd => cd.Days)
+            .ToListAsync();
+
+        List<string> upcomingDates = new List<string>();
+        foreach (var day in classDays)
+        {
+            upcomingDates.Add(CalculateNextOccurrenceDate(day).ToString("MM/dd/yyyy"));
+        }
+
+        return upcomingDates;
+    }
+
+    private DateTime CalculateNextOccurrenceDate(string day)
+    {
+        DateTime currentDate = DateTime.Today;
+
+        DayOfWeek selectedDay;
+        if (!Enum.TryParse(day, out selectedDay))
+        {
+            throw new ArgumentException("Invalid day");
+        }
+
+        int daysUntilNextOccurrence = ((int)selectedDay - (int)currentDate.DayOfWeek + 7) % 7;
+
+        return currentDate.AddDays(daysUntilNextOccurrence);
+    }
+
+
+    public async Task AddAssignedClasses(AssignedClassModel assignedClassRequest)
+    {
+        var assignedClass = new AssignedClassModel()
+        {
+            ClassID = assignedClassRequest.ClassID,
+            CoachID = assignedClassRequest.CoachID,
+            Date = assignedClassRequest.Date,
+            StartTime = assignedClassRequest.StartTime,
+            EndTime = assignedClassRequest.EndTime,
+            IsFree = assignedClassRequest.IsFree,
+            Price = assignedClassRequest.Price,
+            NumOfAttendants = assignedClassRequest.NumOfAttendants,
+            AvailablePlaces = assignedClassRequest.NumOfAttendants
+        };
+        await _dbContext.AssignedClasses.AddAsync(assignedClass);
+        await _dbContext.SaveChangesAsync();
     }
 }

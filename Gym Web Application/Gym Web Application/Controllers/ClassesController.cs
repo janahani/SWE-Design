@@ -9,7 +9,7 @@ public class ClassesController : Controller
     private readonly ILogger<ClassesController> _logger;
     private readonly ClassService _classService;
 
-    public ClassesController(ILogger<ClassesController> logger,ClassService classService)
+    public ClassesController(ILogger<ClassesController> logger, ClassService classService)
     {
         _logger = logger;
         _classService = classService;
@@ -22,7 +22,7 @@ public class ClassesController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddClass(ClassModel classModel, IFormFile ImageFile, List<string> SelectedDays)
+    public async Task<IActionResult> AddClasses(ClassModel classModel, IFormFile ImageFile, List<string> SelectedDays)
     {
         await _classService.AddClass(classModel, ImageFile, SelectedDays);
         return RedirectToAction("AddClasses");
@@ -36,10 +36,30 @@ public class ClassesController : Controller
     }
 
     [HttpGet]
-    public IActionResult AssignClasses()
+    public async Task<IActionResult> AssignClasses()
     {
-        return View();
+        var assignedClass = new AssignedClassModel();
+        var classes = await _classService.GetAllClasses();
+
+        ViewBag.Classes = classes;
+
+        return View(assignedClass);
     }
+
+    [HttpGet]
+    public async Task<IActionResult> GetClassDays(int classId)
+    {
+        var classDays = await _classService.GetClassDays(classId);
+        return Json(classDays);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> AssignClasses(AssignedClassModel assignedClassRequest)
+    {
+        await _classService.AddAssignedClasses(assignedClassRequest);
+        return RedirectToAction("AssignClasses");
+    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

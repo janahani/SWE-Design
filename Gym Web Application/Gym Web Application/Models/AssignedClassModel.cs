@@ -30,9 +30,9 @@ public class AssignedClassModel
     [Required(ErrorMessage = "isFree is required")]
     public bool IsFree { get; set; }
     
-    [Required(ErrorMessage = "Price is required")]
-    [Range(50, double.MaxValue, ErrorMessage = "Price must be a positive number")]
-    public double Price { get; set; }
+   [Required(ErrorMessage = "Price is required")]
+    [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive number")]
+    public double Price { get; set; } = 0; 
     
     [Required(ErrorMessage = "Number of attendants is required")]
     [Range(5, int.MaxValue, ErrorMessage = "Number of attendants must be a non-negative number")]

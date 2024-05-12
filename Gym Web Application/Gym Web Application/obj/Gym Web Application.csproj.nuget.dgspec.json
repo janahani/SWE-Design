@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\xampp\\htdocs\\SWE-Design-6\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj": {}
+    "C:\\xampp\\htdocs\\SWE-Design-6\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj": {}
   },
   "projects": {
-    "c:\\xampp\\htdocs\\SWE-Design-6\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj": {
+    "C:\\xampp\\htdocs\\SWE-Design-6\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\xampp\\htdocs\\SWE-Design-6\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\SWE-Design-6\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
         "projectName": "Gym Web Application",
-        "projectPath": "c:\\xampp\\htdocs\\SWE-Design-6\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
+        "projectPath": "C:\\xampp\\htdocs\\SWE-Design-6\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
         "packagesPath": "C:\\Users\\HANI\\.nuget\\packages\\",
-        "outputPath": "c:\\xampp\\htdocs\\SWE-Design-6\\Gym Web Application\\Gym Web Application\\obj\\",
+        "outputPath": "C:\\xampp\\htdocs\\SWE-Design-6\\Gym Web Application\\Gym Web Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HANI\\AppData\\Roaming\\NuGet\\NuGet.Config",

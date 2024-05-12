@@ -1,88 +1,119 @@
-  @{
+@{
     ViewData["Title"] = "Classes";
 }
-  
-  <div class="container-fluid pt-3">
-            <div class="row removable">
-                <div class="col-lg">
-                    <div class="user-form">
-                        <h1>Assign Class to Coach</h1>
-                        <form class="add-user" method="POST">
-                            <label for="class">Class</label>
-                            <select class="add-user-input" name="ClassID">
-                                <option value="Zumba">Zumba</option>
-                                <option value="Yoga">Yoga</option>
-                            </select>
-                            <span class="error-message" id="classID-error"></span>
-                            <hr>
-                        
-                            <label for="coach">Coach</label>
-                            <select class="add-user-input" name="CoachID">
-                                <option value="Jana Hani"> Jana Hani</option>
-                                <option value="Malak Helmy"> Malak Helmy</option>
-                            </select>
-                            <span class="error-message" id="coachID-error"></span>
-                            <hr>
-                        
-                            <label for="start-time">Start Time</label>
-                            <input class="add-user-input" type="time" name="startTime" id="">
-                            <span class="error-message" id="startTime-error"></span>
-                            <br>
-                        
-                            <label for="end-time">End Time</label>
-                            <input class="add-user-input" type="time" name="endTime" id="">
-                            <span class="error-message" id="endTime-error"></span>
-                            <br>
-                            <hr>
-                        
-                            <br>
-                        
-                            <label for="free">Free</label>
-                            <select class="add-user-input" id="free-select" onchange="togglePriceField()" name="isFree">
-                                <option value="yes" >Yes</option>
-                                <option value="no">No</option>
-                            </select>
-                            <span class="error-message" id="price-error"></span>
-                            <br>
-                        
-                            <div id="price-field" style="display:none;">
-                                <label for="price">Price</label>
-                                <input class="add-user-input" type="number" name="price" placeholder="Price">
-                                <span class="error-message" id="price-error"></span>
-                            </div>
-                            <br>
-                        
-                            <label for="num-of-attendants">Number Of Attendants</label>
-                            <input class="add-user-input" type="number" name="no-of-attendants" id="">
-                            <span class="error-message" id="numOfAttendants-error"></span>
-                            <br>
-                        
-                            <label for="class-day">Days</label>
-                            <select class="add-user-input" name="ClassDay">
-                                <option value="12-05-2024"></option>
-                                <option value="15-05-2024"></option>
-                            </select>
-                            <span class="error-message" id="classDay-error"></span>
-                        
-                            <hr>
-                            <br>
-                        
-                            <button class="btn btn-add-form" type="submit">Assign Class</button>
-                        </form>                        
-                        <script>
-                            function togglePriceField() {
-                                var freeSelect = document.getElementById("free-select");
-                                var priceField = document.getElementById("price-field");
+@model Gym_Web_Application.Models.AssignedClassModel
 
-                                if (freeSelect.value === "yes") {
-                                    priceField.style.display = "none";
-                                } else {
-                                    priceField.style.display = "block";
-                                }
-                            }
-                        </script>
+<div class="container-fluid pt-3">
+    <div class="row removable">
+        <div class="col-lg">
+            <div class="user-form">
+                <h1>@ViewData["Title"]</h1>
+                <form class="add-user" method="POST">
+                    <label for="class">Class</label>
+                    <select class="add-user-input" name="ClassID" asp-for="ClassID">
+                        @foreach (var classModel in ViewBag.Classes)
+                        {
+                            <option value="@classModel.ID">@classModel.Name</option>
+                        }
+                    </select>
+                    <span class="error-message" id="classID-error"></span>
+                    <hr>
+
+
+                    @* <label for="coach">Coach</label>
+                    <select class="add-user-input" name="CoachID">
+                    <option value="Jana Hani"> Jana Hani</option>
+                    <option value="Malak Helmy"> Malak Helmy</option>
+                    </select>
+                    <span class="error-message" id="coachID-error"></span>
+                    <hr> *@
+
+                    <label for="start-time">Start Time</label>
+                    <input class="add-user-input" type="time" name="startTime" id="" asp-for="StartTime">
+                    <span class="error-message" id="startTime-error"></span>
+                    <br>
+
+                    <label for="end-time">End Time</label>
+                    <input class="add-user-input" type="time" name="endTime" id="" asp-for="EndTime">
+                    <span class="error-message" id="endTime-error"></span>
+                    <br>
+                    <hr>
+
+                    <br>
+
+                    <label for="free">Free</label>
+                    <select class="add-user-input" id="free-select" onchange="togglePriceField()" name="IsFree">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <span class="error-message" id="isFree-error"></span>
+                    <br>
+
+                    <div id="price-field" style="display:none;">
+                        <label for="price">Price</label>
+                        <input class="add-user-input" type="number" name="price" id="price-input" placeholder="Price">
+                        <span class="error-message" id="price-error"></span>
                     </div>
-                </div>
+                    <br>
+
+                    <label for="num-of-attendants">Number Of Attendants</label>
+                    <input class="add-user-input" type="number" name="no-of-attendants" id="" asp-for="NumOfAttendants">
+                    <span class="error-message" id="numOfAttendants-error"></span>
+                    <br>
+
+                    <label for="class-day">Days</label>
+                    <select id="classDayDropdown" class="add-user-input" name="ClassDay" asp-for="Date">
+
+                    </select>
+                    <span class="error-message" id="classDay-error"></span>
+
+                    <hr>
+                    <br>
+
+                    <button class="btn btn-add-form" type="submit">Assign Class</button>
+                </form>
+                <script>
+                    function togglePriceField() {
+                        var freeSelect = document.getElementById("free-select");
+                        var priceInput = document.getElementById("price-input");
+
+                        if (freeSelect.value === "yes") {
+                            priceInput.value = "0";
+                            priceInput.disabled = true;
+                            priceInput.required = false;
+                            priceInput.parentElement.style.display = "none";
+                        } else {
+                            priceInput.disabled = false;
+                            priceInput.required = true;
+                            priceInput.parentElement.style.display = "block";
+                        }
+                    }
+
+                    $(document).ready(function () {
+                        $('#classDropdown').change(function () {
+                            var classId = $(this).val();
+                            if (classId !== '') {
+                                $.ajax({
+                                    url: '@Url.Action("GetClassDays", "Class")',
+                                    type: 'GET',
+                                    data: { classId: classId },
+                                    success: function (data) {
+                                        var classDayDropdown = $('#classDayDropdown');
+                                        classDayDropdown.empty();
+                                        $.each(data, function (index, item) {
+                                            classDayDropdown.append($('<option>', {
+                                                value: item,
+                                                text: item
+                                            }));
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    });
+                </script>
             </div>
         </div>
-        <script src="~/js/assignClass.js"></script>
+    </div>
+</div>
+<script src="~/js/assignClass.js"></script>
