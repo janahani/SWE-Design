@@ -63,6 +63,11 @@ public class ClassService
         return await _dbContext.Classes.ToListAsync();
     }
 
+    public async Task<List<AssignedClassModel>> GetAllAssignedClasses()
+    {
+        return await _dbContext.AssignedClasses.ToListAsync();
+    }
+
     public async Task<List<string>> GetClassDays(int classId)
     {
         var classDays = await _dbContext.ClassDays
@@ -95,7 +100,7 @@ public class ClassService
     }
 
 
-    public async Task AddAssignedClasses(AssignedClassModel assignedClassRequest)
+    public async Task AddAssignedClass(AssignedClassModel assignedClassRequest)
     {
         var assignedClass = new AssignedClassModel()
         {
@@ -112,4 +117,35 @@ public class ClassService
         await _dbContext.AssignedClasses.AddAsync(assignedClass);
         await _dbContext.SaveChangesAsync();
     }
+
+    public async Task AddReservedClass(int AssignedClassID, int ClientID, int CoachID)
+
+    {
+        var reservedClass = new ReservedClassModel()
+        {
+            AssignedClassID = AssignedClassID,
+            CoachID = CoachID,
+            ClientID = ClientID
+        };
+        await _dbContext.ReservedClasses.AddAsync(reservedClass);
+        await _dbContext.SaveChangesAsync();
+    }
+
+    public async Task<ClassModel> GetClassById(int classId)
+    {
+        var classObject = await _dbContext.Classes.FirstOrDefaultAsync(c => c.ID == classId);
+
+        if (classObject == null)
+        {
+            return null;
+        }
+
+        var classModel = new ClassModel
+        {
+            Name = classObject.Name
+        };
+
+        return classModel;
+    }
+
 }
