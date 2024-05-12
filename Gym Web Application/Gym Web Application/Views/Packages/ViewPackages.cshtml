@@ -26,16 +26,20 @@
                             <p>
                                 <bold>For: <span>@package.Price</span></bold>
                             </p>
-
+                            <form method="Post" asp-controller="Packages" asp-action="Activation">
                             <!-- Check if package is activated -->
                             @if(package.IsActivated=="Activated")
                             {
-                                <button class="btn-package">Deactivate</button> 
+                                <button name="activationStatus" value="Activated" class="btn-package">Deactivate</button> 
                             }
                             else
                             {
-                                <button class="btn-package">Activate</button>
+                                <button name="activationStatus" value="Not Activated" class="btn-package">Activate</button>
                             }
+                            
+                                <input type="hidden" name="packageId" value="@package.ID" />
+
+                            </form>
 
                               
                         </div>
