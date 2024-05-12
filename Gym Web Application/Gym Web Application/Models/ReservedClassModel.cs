@@ -14,10 +14,4 @@ public class ReservedClassModel
     
     [Required(ErrorMessage = "Client ID is required")]
     public int ClientID { get; set; }
-    
-    [Required(ErrorMessage = "Attended is required")]
-    public bool Attended { get; set; }
-   
-    [Required(ErrorMessage = "Activation status is required")]
-    public string IsActivated { get; set; }
 }
