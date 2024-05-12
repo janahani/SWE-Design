@@ -41,23 +41,23 @@ public class PackageService
         return _dbContext.Packages.FirstOrDefault(p => p.ID == id);
     }
 
-    public void ActivatePackage(int id)
+    public async Task ActivatePackage(int id)
     {
         var package = _dbContext.Packages.FirstOrDefault(p => p.ID == id);
         if (package != null)
         {
             package.IsActivated = "Activated";
-            _dbContext.SaveChanges();
+           await _dbContext.SaveChangesAsync();
         }
     }
 
-    public void DeactivatePackage(int id)
+    public async Task DeactivatePackage(int id)
     {
         var package = _dbContext.Packages.FirstOrDefault(p => p.ID == id);
         if (package != null)
         {
             package.IsActivated = "Deactivated";
-            _dbContext.SaveChanges();
+           await _dbContext.SaveChangesAsync();
         }
     }
 }
