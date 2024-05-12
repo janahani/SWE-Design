@@ -31,6 +31,7 @@
                                 <th scope="col">Gender</th>
                                 <th scope="col">Phone</th>
                                 <th scope="col">Memberships</th>
+                                <th scope="col">Classes</th>
                                 <th scope="col">Action</th>
 
                             </tr>
@@ -59,7 +60,10 @@
                                 </td>
                                 <td>
                                     <a class="btn btn-sm btn-activate" asp-controller="Packages"
-                                        asp-action="Packages">Activate</a>
+                                        asp-action="ViewPackages">Activate</a>
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Reserve", "ReserveClasses", "Classes", new { id = client.ID }, new { @class = "btn btn-sm btn-primary" })
                                 </td>
                                 <td>
                                     @Html.ActionLink("Edit","EditClients", new{id = client.ID},new{@class="btn btn-sm btn-primary"})
