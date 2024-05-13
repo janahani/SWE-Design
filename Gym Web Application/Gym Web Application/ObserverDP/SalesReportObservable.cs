@@ -1,5 +1,5 @@
 using Gym_Web_Application.Models;
-namespace Gym_Web_Application.ObserverDP;
+using Gym_Web_Application.ObserverDP;
 public class SalesReportObservable : ISalesReportObservable
 {
     private List<ISalesEmployeeObserver> observers = new List<ISalesEmployeeObserver>();

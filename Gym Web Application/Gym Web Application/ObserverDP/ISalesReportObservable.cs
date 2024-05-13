@@ -1,5 +1,6 @@
 using Gym_Web_Application.Models;
-namespace Gym_Web_Application.ObserverDP;
+using Gym_Web_Application.ObserverDP;
+
 
 public interface ISalesReportObservable
 {

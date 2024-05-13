@@ -16,6 +16,10 @@ builder.Services.AddScoped<ClientService>();
 builder.Services.AddScoped<PackageService>();
 builder.Services.AddScoped<ClassService>();
 builder.Services.AddScoped<AttendanceService>();
+builder.Services.AddScoped<SalesReportService>();
+builder.Services.AddScoped<ISalesReportObservable, SalesReportObservable>();
+
+
 
 
 var app = builder.Build();

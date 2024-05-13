@@ -1,0 +1,36 @@
+@model Gym_Web_Application.Models.SalesReportModel
+
+<div class="container-fluid pt-3">
+    <div class="row removable">
+        <div class="col-lg">
+            <div class="user-form">
+                <h1>@ViewData["Title"]</h1>
+                @if (Model != null)
+                {
+                    <div class="sales-report">
+                        <div class="report-item">
+                            <label for="createdAt">Date:</label>
+                            <span>@Model.CreatedAt.ToString("yyyy-MM-dd")</span>
+                        </div>
+                        <div class="report-item">
+                            <label for="totalRevenue">Total Revenue:</label>
+                            <span>@Model.TotalRevenue</span>
+                        </div>
+                        <div class="report-item">
+                            <label for="totalMemberships">Total Memberships Sold:</label>
+                            <span>@Model.TotalMembershipsSold</span>
+                        </div>
+                        <div class="report-item">
+                            <label for="totalClasses">Total Classes Attended:</label>
+                            <span>@Model.TotalClassesAttended</span>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <p>No sales report available.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
