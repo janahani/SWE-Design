@@ -1,495 +1,495 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\loginEmp.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\loginEmp.css",
       "PackagePath": "staticwebassets\\css\\loginEmp.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\theme.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\theme.css",
       "PackagePath": "staticwebassets\\css\\theme.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01012876231.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01012876231.jpg",
       "PackagePath": "staticwebassets\\images\\01012876231.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01026782390.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01026782390.jpg",
       "PackagePath": "staticwebassets\\images\\01026782390.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01045213489.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01045213489.jpg",
       "PackagePath": "staticwebassets\\images\\01045213489.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01045456789.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01045456789.png",
       "PackagePath": "staticwebassets\\images\\01045456789.png"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01072347856.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01072347856.jpg",
       "PackagePath": "staticwebassets\\images\\01072347856.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01091119866.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01091119866.jpg",
       "PackagePath": "staticwebassets\\images\\01091119866.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Capture.PNG",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Capture.PNG",
       "PackagePath": "staticwebassets\\images\\Capture.PNG"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-HD-Desktop.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-HD-Desktop.jpg",
       "PackagePath": "staticwebassets\\images\\Gym-HD-Desktop.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-High-Quality-Wallpapers.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-High-Quality-Wallpapers.jpg",
       "PackagePath": "staticwebassets\\images\\Gym-High-Quality-Wallpapers.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-Images - Copy.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-Images - Copy.jpg",
       "PackagePath": "staticwebassets\\images\\Gym-Images - Copy.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-Images.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-Images.jpg",
       "PackagePath": "staticwebassets\\images\\Gym-Images.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-full-HD.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-full-HD.jpg",
       "PackagePath": "staticwebassets\\images\\Gym-full-HD.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aerial.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aerial.jpg",
       "PackagePath": "staticwebassets\\images\\aerial.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aerobics1.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aerobics1.jpg",
       "PackagePath": "staticwebassets\\images\\aerobics1.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aqua.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aqua.jpg",
       "PackagePath": "staticwebassets\\images\\aqua.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\athletic-man-woman-with-dumbbells.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\athletic-man-woman-with-dumbbells.jpg",
       "PackagePath": "staticwebassets\\images\\athletic-man-woman-with-dumbbells.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\background2.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\background2.png",
       "PackagePath": "staticwebassets\\images\\background2.png"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd.PNG",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd.PNG",
       "PackagePath": "staticwebassets\\images\\bckgrnd.PNG"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd.jpg",
       "PackagePath": "staticwebassets\\images\\bckgrnd.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd2.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd2.jpg",
       "PackagePath": "staticwebassets\\images\\bckgrnd2.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bodybuilder-training-arm-with-resistance-band_7502-4758.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bodybuilder-training-arm-with-resistance-band_7502-4758.jpg",
       "PackagePath": "staticwebassets\\images\\bodybuilder-training-arm-with-resistance-band_7502-4758.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\cardio_area.jpeg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\cardio_area.jpeg",
       "PackagePath": "staticwebassets\\images\\cardio_area.jpeg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\circuit.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\circuit.jpg",
       "PackagePath": "staticwebassets\\images\\circuit.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach1.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach1.jpg",
       "PackagePath": "staticwebassets\\images\\coach1.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach2.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach2.jpg",
       "PackagePath": "staticwebassets\\images\\coach2.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach3.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach3.jpg",
       "PackagePath": "staticwebassets\\images\\coach3.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\dumbbells-pic.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\dumbbells-pic.jpg",
       "PackagePath": "staticwebassets\\images\\dumbbells-pic.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\elevation-series-treadmill-gym-l-data.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\elevation-series-treadmill-gym-l-data.jpg",
       "PackagePath": "staticwebassets\\images\\elevation-series-treadmill-gym-l-data.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\email.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\email.png",
       "PackagePath": "staticwebassets\\images\\email.png"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\equipments.jpeg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\equipments.jpeg",
       "PackagePath": "staticwebassets\\images\\equipments.jpeg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\free_weight.webp",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\free_weight.webp",
       "PackagePath": "staticwebassets\\images\\free_weight.webp"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\image1.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\image1.jpg",
       "PackagePath": "staticwebassets\\images\\image1.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\infopic.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\infopic.jpg",
       "PackagePath": "staticwebassets\\images\\infopic.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\infopic2.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\infopic2.jpg",
       "PackagePath": "staticwebassets\\images\\infopic2.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\location.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\location.png",
       "PackagePath": "staticwebassets\\images\\location.png"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\lockers.jpeg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\lockers.jpeg",
       "PackagePath": "staticwebassets\\images\\lockers.jpeg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\mind.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\mind.jpg",
       "PackagePath": "staticwebassets\\images\\mind.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\parkour.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\parkour.jpg",
       "PackagePath": "staticwebassets\\images\\parkour.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\phone.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\phone.png",
       "PackagePath": "staticwebassets\\images\\phone.png"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\pilates.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\pilates.jpg",
       "PackagePath": "staticwebassets\\images\\pilates.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\reviewer1.jpeg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\reviewer1.jpeg",
       "PackagePath": "staticwebassets\\images\\reviewer1.jpeg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\reviewer2.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\reviewer2.jpg",
       "PackagePath": "staticwebassets\\images\\reviewer2.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\spa.jpeg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\spa.jpeg",
       "PackagePath": "staticwebassets\\images\\spa.jpeg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\user icon.png",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\user icon.png",
       "PackagePath": "staticwebassets\\images\\user icon.png"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\user.jpeg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\user.jpeg",
       "PackagePath": "staticwebassets\\images\\user.jpeg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\yoga.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\yoga.jpg",
       "PackagePath": "staticwebassets\\images\\yoga.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\yogaclass.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\yogaclass.jpg",
       "PackagePath": "staticwebassets\\images\\yogaclass.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\young-man-sportswear-exercise-class-gym_1150-12372.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\young-man-sportswear-exercise-class-gym_1150-12372.jpg",
       "PackagePath": "staticwebassets\\images\\young-man-sportswear-exercise-class-gym_1150-12372.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba class.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba class.jpg",
       "PackagePath": "staticwebassets\\images\\zumba class.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba1.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba1.jpg",
       "PackagePath": "staticwebassets\\images\\zumba1.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba2.jpg",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba2.jpg",
       "PackagePath": "staticwebassets\\images\\zumba2.jpg"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addClass.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addClass.js",
       "PackagePath": "staticwebassets\\js\\addClass.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addClientAdminDash.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addClientAdminDash.js",
       "PackagePath": "staticwebassets\\js\\addClientAdminDash.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addEmployee.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addEmployee.js",
       "PackagePath": "staticwebassets\\js\\addEmployee.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addPackage.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addPackage.js",
       "PackagePath": "staticwebassets\\js\\addPackage.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addclient_validation.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addclient_validation.js",
       "PackagePath": "staticwebassets\\js\\addclient_validation.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\assignClass.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\assignClass.js",
       "PackagePath": "staticwebassets\\js\\assignClass.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\attendance.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\attendance.js",
       "PackagePath": "staticwebassets\\js\\attendance.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\login_validation.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\login_validation.js",
       "PackagePath": "staticwebassets\\js\\login_validation.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\membershipAdminDash.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\membershipAdminDash.js",
       "PackagePath": "staticwebassets\\js\\membershipAdminDash.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\userprofsettings.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\userprofsettings.js",
       "PackagePath": "staticwebassets\\js\\userprofsettings.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
