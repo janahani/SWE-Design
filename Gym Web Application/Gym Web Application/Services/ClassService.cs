@@ -63,6 +63,11 @@ public class ClassService
         return await _dbContext.Classes.ToListAsync();
     }
 
+    public async Task<List<ClassDaysModel>> GetAllClassDays()
+    {
+        return await _dbContext.ClassDays.ToListAsync();
+    }
+
     public async Task<List<AssignedClassModel>> GetAllAssignedClasses()
     {
         return await _dbContext.AssignedClasses.ToListAsync();
@@ -142,10 +147,45 @@ public class ClassService
 
         var classModel = new ClassModel
         {
-            Name = classObject.Name
+            Name = classObject.Name,
+            Description = classObject.Description
         };
 
         return classModel;
     }
+    public async Task<List<ClassDaysModel>> GetClassDaysByClassId(int classId)
+    {
+        return await _dbContext.ClassDays.Where(cd => cd.ClassID == classId).ToListAsync();
+    }
+
+    public async Task UpdateClass(ClassModel updatedClass)
+    {
+        var classObject = await _dbContext.Classes.FirstOrDefaultAsync(c => c.ID == updatedClass.ID);
+        if (classObject != null)
+        {
+            classObject.Name = updatedClass.Name;
+            classObject.Description = updatedClass.Description;
+
+           await _dbContext.SaveChangesAsync();
+        }
+    }
+    
+
+    public async Task AddClassDay(ClassDaysModel classDay)
+    {
+        await _dbContext.ClassDays.AddAsync(classDay);
+        await _dbContext.SaveChangesAsync();
+    }
+
+    public async Task RemoveClassDay(int classDayId)
+    {
+        var classDayToRemove = await _dbContext.ClassDays.FindAsync(classDayId);
+        if (classDayToRemove != null)
+        {
+            _dbContext.ClassDays.Remove(classDayToRemove);
+            await _dbContext.SaveChangesAsync();
+        }
+    }
+
 
 }
