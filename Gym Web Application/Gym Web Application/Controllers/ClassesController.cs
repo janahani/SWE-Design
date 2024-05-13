@@ -33,8 +33,53 @@ public class ClassesController : Controller
     public async Task<IActionResult> ViewClasses()
     {
         var classes = await _classService.GetAllClasses();
+        var classDays = await _classService.GetAllClassDays();
+        ViewData["ClassDays"] = classDays;
         return View(classes);
     }
+
+    [HttpGet]
+    public async Task<IActionResult> EditClasses(int id)
+    {
+        var classObject = await _classService.GetClassById(id);
+        var classDays = await _classService.GetClassDaysByClassId(id);
+        ViewData["ClassDays"] = classDays.Select(cd => cd.Days).ToList();
+        return View(classObject);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> EditClasses(ClassModel updatedClass, List<string> SelectedDays)
+    {
+        await _classService.UpdateClass(updatedClass);
+
+        var existingClassDays = await _classService.GetClassDaysByClassId(updatedClass.ID);
+
+        if (SelectedDays != null)
+        {
+            foreach (var day in Enum.GetValues(typeof(DayOfWeek)).Cast<DayOfWeek>())
+            {
+                var dayString = day.ToString();
+                if (SelectedDays.Contains(dayString))
+                {
+                    if (!existingClassDays.Any(cd => cd.Days == dayString))
+                    {
+                        await _classService.AddClassDay(new ClassDaysModel { ClassID = updatedClass.ID, Days= dayString });
+                    }
+                }
+                else
+                {
+                    var classDayToRemove = existingClassDays.FirstOrDefault(cd => cd.Days == dayString);
+                    if (classDayToRemove != null)
+                    {
+                        await _classService.RemoveClassDay(classDayToRemove.ID);
+                    }
+                }
+            }
+        }
+
+        return RedirectToAction("ViewClasses");
+    }
+
 
     [HttpGet]
     public async Task<IActionResult> AssignClasses()

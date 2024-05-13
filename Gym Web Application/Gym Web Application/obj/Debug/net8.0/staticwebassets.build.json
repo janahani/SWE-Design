@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7NbDG737w/Q5oLv/Gtj9gFrhpoTOoRtez4WmsyBd+2w=",
+  "Hash": "DeR1GjYdoTdgaRBkeYGPnqMnyXmbyaF8Jpi8/rzNGsc=",
   "Source": "Gym Web Application",
   "BasePath": "_content/Gym Web Application",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Gym Web Application\\wwwroot",
       "Source": "Gym Web Application",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\loginEmp.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\loginEmp.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "css/loginEmp.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\css\\loginEmp.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\site.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\site.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\theme.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\css\\theme.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "css/theme.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\theme.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\favicon.ico",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\favicon.ico",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01012876231.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01012876231.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/01012876231.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\images\\01012876231.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01026782390.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01026782390.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/01026782390.jpg",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\images\\01026782390.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01045213489.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01045213489.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/01045213489.jpg",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\images\\01045213489.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01045456789.png",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01045456789.png",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/01045456789.png",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\images\\01045456789.png"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01072347856.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01072347856.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/01072347856.jpg",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\images\\01072347856.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01091119866.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\01091119866.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/01091119866.jpg",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\images\\01091119866.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aerial.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aerial.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/aerial.jpg",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\images\\aerial.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aerobics1.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aerobics1.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/aerobics1.jpg",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\images\\aerobics1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aqua.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\aqua.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/aqua.jpg",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\images\\aqua.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\athletic-man-woman-with-dumbbells.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\athletic-man-woman-with-dumbbells.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/athletic-man-woman-with-dumbbells.jpg",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\images\\athletic-man-woman-with-dumbbells.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\background2.png",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\background2.png",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/background2.png",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\images\\background2.png"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/bckgrnd.jpg",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bckgrnd.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd.PNG",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd.PNG",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/bckgrnd.PNG",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bckgrnd.PNG"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd2.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bckgrnd2.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/bckgrnd2.jpg",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bckgrnd2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bodybuilder-training-arm-with-resistance-band_7502-4758.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\bodybuilder-training-arm-with-resistance-band_7502-4758.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/bodybuilder-training-arm-with-resistance-band_7502-4758.jpg",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bodybuilder-training-arm-with-resistance-band_7502-4758.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Capture.PNG",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Capture.PNG",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/Capture.PNG",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Capture.PNG"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\cardio_area.jpeg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\cardio_area.jpeg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/cardio_area.jpeg",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\images\\cardio_area.jpeg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\circuit.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\circuit.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/circuit.jpg",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\images\\circuit.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach1.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach1.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/coach1.jpg",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\images\\coach1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach2.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach2.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/coach2.jpg",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\images\\coach2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach3.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\coach3.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/coach3.jpg",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\images\\coach3.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\dumbbells-pic.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\dumbbells-pic.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/dumbbells-pic.jpg",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\images\\dumbbells-pic.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\elevation-series-treadmill-gym-l-data.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\elevation-series-treadmill-gym-l-data.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/elevation-series-treadmill-gym-l-data.jpg",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\images\\elevation-series-treadmill-gym-l-data.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\email.png",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\email.png",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/email.png",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\images\\email.png"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\equipments.jpeg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\equipments.jpeg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/equipments.jpeg",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\images\\equipments.jpeg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\free_weight.webp",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\free_weight.webp",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/free_weight.webp",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\images\\free_weight.webp"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-full-HD.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-full-HD.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/Gym-full-HD.jpg",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Gym-full-HD.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-HD-Desktop.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-HD-Desktop.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/Gym-HD-Desktop.jpg",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Gym-HD-Desktop.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-High-Quality-Wallpapers.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-High-Quality-Wallpapers.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/Gym-High-Quality-Wallpapers.jpg",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Gym-High-Quality-Wallpapers.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-Images - Copy.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-Images - Copy.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/Gym-Images - Copy.jpg",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Gym-Images - Copy.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-Images.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\Gym-Images.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/Gym-Images.jpg",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Gym-Images.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\image1.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\image1.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/image1.jpg",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\images\\image1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\infopic.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\infopic.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/infopic.jpg",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\images\\infopic.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\infopic2.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\infopic2.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/infopic2.jpg",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\images\\infopic2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\location.png",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\location.png",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/location.png",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\images\\location.png"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\lockers.jpeg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\lockers.jpeg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/lockers.jpeg",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\images\\lockers.jpeg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\mind.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\mind.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/mind.jpg",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mind.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\parkour.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\parkour.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/parkour.jpg",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\images\\parkour.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\phone.png",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\phone.png",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/phone.png",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\images\\phone.png"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\pilates.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\pilates.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/pilates.jpg",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\images\\pilates.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\reviewer1.jpeg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\reviewer1.jpeg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/reviewer1.jpeg",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\images\\reviewer1.jpeg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\reviewer2.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\reviewer2.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/reviewer2.jpg",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\images\\reviewer2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\spa.jpeg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\spa.jpeg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/spa.jpeg",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\images\\spa.jpeg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\user icon.png",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\user icon.png",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/user icon.png",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\images\\user icon.png"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\user.jpeg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\user.jpeg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/user.jpeg",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\images\\user.jpeg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\yoga.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\yoga.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/yoga.jpg",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\images\\yoga.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\yogaclass.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\yogaclass.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/yogaclass.jpg",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\images\\yogaclass.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\young-man-sportswear-exercise-class-gym_1150-12372.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\young-man-sportswear-exercise-class-gym_1150-12372.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/young-man-sportswear-exercise-class-gym_1150-12372.jpg",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\images\\young-man-sportswear-exercise-class-gym_1150-12372.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba class.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba class.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/zumba class.jpg",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\images\\zumba class.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba1.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba1.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/zumba1.jpg",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\images\\zumba1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba2.jpg",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\images\\zumba2.jpg",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "images/zumba2.jpg",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\images\\zumba2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addClass.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addClass.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/addClass.js",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\js\\addClass.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addclient_validation.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addclient_validation.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/addclient_validation.js",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\js\\addclient_validation.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addClientAdminDash.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addClientAdminDash.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/addClientAdminDash.js",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\js\\addClientAdminDash.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addEmployee.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addEmployee.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/addEmployee.js",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\js\\addEmployee.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addPackage.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\addPackage.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/addPackage.js",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\js\\addPackage.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\assignClass.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\assignClass.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/assignClass.js",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\js\\assignClass.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\attendance.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\attendance.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/attendance.js",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\js\\attendance.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\login_validation.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\login_validation.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/login_validation.js",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\js\\login_validation.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\membershipAdminDash.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\membershipAdminDash.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/membershipAdminDash.js",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\js\\membershipAdminDash.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\site.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\site.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\userprofsettings.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\js\\userprofsettings.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "js/userprofsettings.js",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\js\\userprofsettings.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1442,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1461,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1480,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1499,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1518,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1537,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1556,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1575,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1594,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1651,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1670,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1689,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1708,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1727,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1746,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1765,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1784,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1803,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1822,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1841,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1860,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1879,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1898,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1917,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1936,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1974,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1993,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2012,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2031,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2050,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2069,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2088,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2107,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2126,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2145,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2164,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -2183,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2202,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2221,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2240,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2259,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2297,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2316,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2335,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Gym Web Application",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\wwwroot\\",
+      "ContentRoot": "c:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\wwwroot\\",
       "BasePath": "_content/Gym Web Application",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
