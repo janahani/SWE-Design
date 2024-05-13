@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Add Class";
+}
+
+@model Gym_Web_Application.Models.ClassModel
+@{
+    var selectedDays = ViewData["ClassDays"] as List<string>;
+}
+
+<div class="container-fluid pt-3">
+    <div class="row removable">
+        <div class="col-lg">
+            <div class="user-form">
+                <h1>Add a Class</h1>
+                <form method="post" asp-controller="Classes" asp-action="EditClasses" enctype="multipart/form-data" class="EditClass"> 
+                    <div>
+                        <input class="add-user-input" type="text" asp-for="Name"> 
+                    </div>
+                    <br>
+                    <div>
+                        <textarea class="add-user-input" type="text" asp-for="Description"></textarea> 
+                    </div>
+                    <br>
+                    <div class="select-days">
+                        <p>Select Day(s)</p>
+                        @foreach (var day in Enum.GetValues(typeof(DayOfWeek)))
+                        {
+                            var checkedStatus = selectedDays != null && selectedDays.Contains(day.ToString()) ? "checked" : "";
+                            <div>
+                                <input type="checkbox" id="@day" name="SelectedDays" value="@day" @checkedStatus>
+                                <label for="@day">@day</label>
+                            </div>
+                        }
+                    </div>
+                    <br>
+                    <button class="btn btn-add-form" type="submit">Edit Class</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
