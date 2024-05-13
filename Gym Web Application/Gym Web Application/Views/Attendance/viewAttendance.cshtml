@@ -1,3 +1,5 @@
+@model List<Gym_Web_Application.Models.EmployeeModel> 
+
 @{
     ViewData["Title"] = "Attendance";
 }
@@ -15,71 +17,41 @@
                             <input class="table-search-bar" placeholder="Search for Employee">
                         </div>
                         <div class="col text-right">
-                            <h3 class="btn-add">Attendance for 5/9/2024</a>
+                            <h3 class="btn-add">Attendance for @DateTime.Today.ToString("MM/dd/yyyy")</h3>
                         </div>
                     </div>
                 </div>
                 <div class="table-responsive">
-                    <table class="table align-items-center table-flush">
-                        <thead class="thead-light">
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Phone</th>
-                                <th scope="col">Action</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    01
-                                </th>
-                                <td>
-                                    Sahwa Amr
-                                </td>
-                                <td>
-                                    sahwaamr@gmail.com
-                                </td>
-                                <td>
-                                    20
-                                </td>
-                                <td>
-                                    female
-                                </td>
-                                <td>
-                                    01127897625
-                                </td>
-                                <td>
-                                    <input type="checkbox" id="Checkbox" class="btn-check" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    01
-                                </th>
-                                <td>
-                                    Sahwa Amr
-                                </td>
-                                <td>
-                                    sahwaamr@gmail.com
-                                </td>
-                                <td>
-                                    20
-                                </td>
-                                <td>
-                                    female
-                                </td>
-                                <td>
-                                    01127897625
-                                </td>
-                                <td>
-                                    <input type="checkbox" id="Checkbox" class="btn-check" />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <form method="post" action="/Attendance/MarkAttendance">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Attendance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var employee in Model)
+                                {
+                                    <tr>
+                                        <th scope="row">@employee.ID</th>
+                                        <td>@employee.Name</td>
+                                        <td>@employee.Email</td>
+                                        <td>@employee.PhoneNumber</td>
+                                        <td>
+                    <input type="checkbox" name="attendedEmployees[@employee.ID]" value="true" class="btn-check" />
+                    <input type="hidden" name="attendedEmployees[@employee.ID]" value="false" />
+               
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-primary">Submit Attendance</button>
+                    </form>
                 </div>
             </div>
         </div>

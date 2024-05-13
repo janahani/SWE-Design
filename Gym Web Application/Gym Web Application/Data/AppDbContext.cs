@@ -17,6 +17,16 @@ public class AppDbContext : DbContext
           }
           return _instance;
      }
+
+     protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<SalesReportModel>()
+        .Property(s => s.TotalRevenue)
+        .HasColumnType("decimal(18, 2)");
+
+
+    base.OnModelCreating(modelBuilder);
+}
      public DbSet<ClientModel> Clients { get; set; }
      public DbSet<EmployeeModel> Employees { get; set; }
      public DbSet<PackageModel> Packages { get; set; }

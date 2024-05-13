@@ -1,27 +1,40 @@
-using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using Gym_Web_Application.Models;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 
-namespace Gym_Web_Application.Controllers;
-
-public class AttendanceController : Controller
+namespace Gym_Web_Application.Controllers
 {
-    private readonly ILogger<AttendanceController> _logger;
-
-    public AttendanceController(ILogger<AttendanceController> logger)
+    public class AttendanceController : Controller
     {
-        _logger = logger;
+        private readonly AttendanceService _attendanceService;
+
+        public AttendanceController(AttendanceService attendanceService)
+        {
+            _attendanceService = attendanceService;
+        }
+
+        [HttpPost]
+      [HttpPost]
+public IActionResult MarkAttendance(Dictionary<int, bool> attendedEmployees)
+{
+    if (attendedEmployees != null)
+    {
+        foreach (var (employeeId, attended) in attendedEmployees)
+        {
+            _attendanceService.MarkAttendance(employeeId, attended, DateTime.Today);
+        }
     }
 
-    [HttpGet]
-    public IActionResult ViewAttendance()
-    {
-        return View();
-    }
+    return RedirectToAction("ViewAttendance");
+}
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
+        [HttpGet]
+        public IActionResult ViewAttendance()
+        {
+            List<EmployeeModel> employees = _attendanceService.GetAllEmployees(); 
+            return View(employees);
+        }
     }
 }

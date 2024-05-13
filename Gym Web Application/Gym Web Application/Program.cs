@@ -15,6 +15,8 @@ IServiceCollection serviceCollection = builder.Services.AddSingleton<IWebHostEnv
 builder.Services.AddScoped<ClientService>();
 builder.Services.AddScoped<PackageService>();
 builder.Services.AddScoped<ClassService>();
+builder.Services.AddScoped<AttendanceService>();
+
 
 var app = builder.Build();
 
