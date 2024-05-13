@@ -67,6 +67,14 @@ public class SalesReportService
 
     }
 
+    public SalesReportModel GetLatestSalesReport()
+    {
+        // Retrieve the latest sales report from the database
+        return _dbContext.SalesReport
+            .OrderByDescending(s => s.CreatedAt)
+            .FirstOrDefault();
+    }
+
      private int CalculateTotalMembershipsSold(IEnumerable<MembershipModel> memberships)
         {
             return memberships.Count();
