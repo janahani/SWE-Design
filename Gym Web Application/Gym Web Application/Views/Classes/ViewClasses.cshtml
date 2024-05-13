@@ -17,7 +17,7 @@
                         </div>
                         <div class="col text-right">
                             <a class="btn-add" asp-controller="Classes" asp-action="AddClasses">Add a Class</a>
-                             <a class="btn-add" asp-controller="Classes" asp-action="AssignClasses">Assign a Class</a>
+                            <a class="btn-add" asp-controller="Classes" asp-action="AssignClasses">Assign a Class</a>
                         </div>
                     </div>
                 </div>
@@ -28,23 +28,34 @@
                                 <th scope="col">ID</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Description</th>
-
+                                <th scope="col">Class Days</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                             @foreach(var Class in Model)
+                            @foreach (var Class in Model)
                             {
-                            <tr>
-                                <th scope="row">
-                                    @Class.ID
-                                </th>
-                                <td>
-                                    @Class.Name
-                                </td>
-                                <td>
-                                    @Class.Description
-                                </td>
-                            </tr>
+                                <tr>
+                                    <th scope="row">
+                                        @Class.ID
+                                    </th>
+                                    <td>
+                                        @Class.Name
+                                    </td>
+                                    <td>
+                                        @Class.Description
+                                    </td>
+                                    <td>
+                                        @{
+                                            var classDaysForClass = ((List<ClassDaysModel>)ViewData["ClassDays"]).Where(cd => cd.ClassID == Class.ID).Select(cd => cd.Days);
+                                            var classDaysString = string.Join(", ", classDaysForClass);
+                                        }
+                                        @classDaysString
+                                    </td>
+                                    <td>
+                                      @Html.ActionLink("Edit","EditClasses", new{id = Class.ID},new{@class="btn btn-sm btn-primary"})
+                                    </td>
+                                </tr>
                             }
                         </tbody>
                     </table>
