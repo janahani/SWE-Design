@@ -1,43 +1,45 @@
 @{
     ViewData["Title"] = "Employees";
 }
+@model Gym_Web_Application.Models.EmployeeModel
 
 <div class="container-fluid pt-3">
     <div class="row removable">
         <div class="col-lg">
             <div class="user-form">
                 <h1>Add an Employee</h1>
-                <form class="add-client" onsubmit="return validateForm()">
+                <form class="add-client" method="post" asp-controller="Employees" asp-action="AddEmployees">
                     <div>
-                        <input class="add-user-input" type="text" placeholder="Name" />
+                        <input class="add-user-input" type="text" placeholder="Name" asp-for="Name">
                     </div>
                     <span id="name-error" class="error-message"></span>
                     <br>
                     <div>
-                        <input class="add-user-input" type="text" placeholder="Email" />
+                        <input class="add-user-input" type="text" placeholder="Email" asp-for="Email">
                     </div>
                     <span id="email-error" class="error-message"></span>
                     <br>
                     <div>
-                        <input class="add-user-input" type="text" placeholder="Phone Number" />
+                        <input class="add-user-input" type="text" placeholder="Phone Number" asp-for="PhoneNumber">
                     </div>
                     <span id="phoneno-error" class="error-message"></span>
                     <br>
                     <label for="jobTitle">Job Title</label>
                     <div>
-                        <select class="add-user-input" name="jobTitle">
-                            <option value="Admin">Admin</option>
-                            <option value="Receptionist">Receptionist</option>
-                            <option value="Sales Representative">Sales Representative</option>
+
+                        <select class="add-user-input" asp-for="JobTitleID" asp-items="@(new SelectList(ViewBag.JobTitles, "ID", "Name"))">
                         </select>
                     </div>
                     <span id="jobTitle-error" class="error-message"> </span>
-                    <input type="hidden" id="jobTitleHidden" name="jobTitleHidden" />
                     <br>
-                    <div><input class="add-user-input" type="text" placeholder="Salary" /></div>
+                    <div> 
+                        <input class="add-user-input" type="text" placeholder="Salary" asp-for="Salary" >
+                        </div>
                     <span id="salary-error" class="error-message"></span>
                     <br>
-                    <div><input class="add-user-input" type="text" placeholder="Address" /></div>
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Address" asp-for="Address">
+                        </div>
                     <span id="address-error" class="error-message"></span>
                     <br>
 

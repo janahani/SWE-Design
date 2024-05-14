@@ -4662,19 +4662,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HANI\\.nuget\\packages\\": {}
+    "C:\\Users\\YASSMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
+      "projectUniqueName": "C:\\Users\\YASSMIN\\GitHub\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
       "projectName": "Gym Web Application",
-      "projectPath": "C:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
-      "packagesPath": "C:\\Users\\HANI\\.nuget\\packages\\",
-      "outputPath": "C:\\xampp\\htdocs\\SWE-Design-7\\Gym Web Application\\Gym Web Application\\obj\\",
+      "projectPath": "C:\\Users\\YASSMIN\\GitHub\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
+      "packagesPath": "C:\\Users\\YASSMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\YASSMIN\\GitHub\\SWE-Design\\Gym Web Application\\Gym Web Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HANI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\YASSMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
