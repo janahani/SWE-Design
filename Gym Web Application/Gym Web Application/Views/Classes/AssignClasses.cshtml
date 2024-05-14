@@ -10,7 +10,7 @@
                 <h1>@ViewData["Title"]</h1>
                 <form class="add-user" method="POST">
                     <label for="class">Class</label>
-                    <select class="add-user-input" name="ClassID" asp-for="ClassID">
+                    <select class="add-user-input" name="ClassID" asp-for="ClassID" id="classDropdown">
                         @foreach (var classModel in ViewBag.Classes)
                         {
                             <option value="@classModel.ID">@classModel.Name</option>
@@ -20,13 +20,15 @@
                     <hr>
 
 
-                    @* <label for="coach">Coach</label>
-                    <select class="add-user-input" name="CoachID">
-                    <option value="Jana Hani"> Jana Hani</option>
-                    <option value="Malak Helmy"> Malak Helmy</option>
-                    </select>
+                    <label for="coach">Coach</label>
+                    <select class="add-user-input" name="CoachID" asp-for="CoachID">
+                        @foreach (var employeeModel in ViewBag.Coaches)
+                        {
+                            <option value="@employeeModel.ID">@employeeModel.Name</option>
+                        }
+                    </select> 
                     <span class="error-message" id="coachID-error"></span>
-                    <hr> *@
+                    <hr>
 
                     <label for="start-time">Start Time</label>
                     <input class="add-user-input" type="time" name="startTime" id="" asp-for="StartTime">

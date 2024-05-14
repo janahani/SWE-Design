@@ -40,7 +40,7 @@ public class EmployeesController : Controller
     [HttpPost]
     public async Task<IActionResult> AddEmployees(EmployeeModel addEmployeeRequest)
     {
-        await _employeeService.AddEmployees(addEmployeeRequest);
+        await _employeeService.AddEmployee(addEmployeeRequest);
         return RedirectToAction("ViewEmployees");
     }
 

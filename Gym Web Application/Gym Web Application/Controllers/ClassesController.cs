@@ -8,12 +8,14 @@ public class ClassesController : Controller
 {
     private readonly ILogger<ClassesController> _logger;
     private readonly ClassService _classService;
+    private readonly EmployeeService _employeeService;
 
 
-    public ClassesController(ILogger<ClassesController> logger, ClassService classService)
+    public ClassesController(ILogger<ClassesController> logger, ClassService classService,EmployeeService employeeService)
     {
         _logger = logger;
         _classService = classService;
+        _employeeService = employeeService;
     }
 
     [HttpGet]
@@ -86,10 +88,10 @@ public class ClassesController : Controller
     {
         var assignedClass = new AssignedClassModel();
         var classes = await _classService.GetAllClasses();
-        //var ecoaches = await _employeeService.GetAllCoaches();
+        var coaches = await _employeeService.GetAllCoaches();
 
         ViewBag.Classes = classes;
-        //ViewBag.Coaches = coaches;
+        ViewBag.Coaches = coaches;
 
         return View(assignedClass);
     }

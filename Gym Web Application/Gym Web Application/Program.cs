@@ -13,13 +13,13 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 IServiceCollection serviceCollection = builder.Services.AddSingleton<IWebHostEnvironment>(builder.Environment);
 
 builder.Services.AddScoped<ClientService>();
-builder.Services.AddScoped<PackageService>();
+//builder.Services.AddScoped<PackageService>();
 builder.Services.AddScoped<EmployeeService>();
 builder.Services.AddScoped<JobTitleService>();
 builder.Services.AddScoped<ClassService>();
-builder.Services.AddScoped<AttendanceService>();
-builder.Services.AddScoped<SalesReportService>();
-builder.Services.AddScoped<ISalesReportObservable, SalesReportObservable>();
+//builder.Services.AddScoped<AttendanceService>();
+//builder.Services.AddScoped<SalesReportService>();
+//builder.Services.AddScoped<ISalesReportObservable, SalesReportObservable>();
 
 
 

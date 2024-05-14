@@ -3,7 +3,7 @@
 }
 @model List<Gym_Web_Application.Models.AssignedClassModel>
 @inject ClassService _classService
-@* @inject EmployeeService _employeeService*@
+@inject EmployeeService _employeeService
 
 <div class="container-fluid pt-3">
     <div class="row removable">
@@ -53,8 +53,8 @@
                                         }
                                     </td>
                                     <td>
-                                        @* @{
-                                    var coachModel = await _employeeService.GetEmployeeById(assignedClass.CoachID);
+                                        @{
+                                    var coachModel = await _employeeService.FindById(assignedClass.CoachID);
                                     if (coachModel != null)
                                     {
                                     @coachModel.Name
@@ -63,7 +63,7 @@
                                     {
                                     <text>Coach not found</text>
                                     }
-                                    } *@
+                                    }
                                     </td>
                                     <td>@assignedClass.Date</td>
                                     <td>@assignedClass.StartTime</td>
