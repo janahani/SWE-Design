@@ -14,6 +14,8 @@ IServiceCollection serviceCollection = builder.Services.AddSingleton<IWebHostEnv
 
 builder.Services.AddScoped<ClientService>();
 builder.Services.AddScoped<PackageService>();
+builder.Services.AddScoped<EmployeeService>();
+builder.Services.AddScoped<JobTitleService>();
 builder.Services.AddScoped<ClassService>();
 builder.Services.AddScoped<AttendanceService>();
 builder.Services.AddScoped<SalesReportService>();
