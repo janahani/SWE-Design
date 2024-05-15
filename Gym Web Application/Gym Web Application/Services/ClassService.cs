@@ -1,21 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-using Gym_Web_Application.Data;
 using Gym_Web_Application.Models;
-using Microsoft.AspNetCore.Hosting;
+using Gym_Web_Application.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http;
 
 public class ClassService
 {
     private readonly AppDbContext _dbContext;
     private readonly IWebHostEnvironment _hostingEnvironment;
 
-    public ClassService(AppDbContext dbContext, IWebHostEnvironment hostingEnvironment)
+    public ClassService(DbContextOptions<AppDbContext> options, IWebHostEnvironment hostingEnvironment)
     {
-        _dbContext = dbContext;
+        _dbContext = AppDbContext.GetInstance(options);
         _hostingEnvironment = hostingEnvironment;
     }
 
@@ -63,6 +57,16 @@ public class ClassService
         return await _dbContext.Classes.ToListAsync();
     }
 
+    public async Task<string> GetClassName(int classId)
+    {
+        var className = await _dbContext.Classes
+            .Where(c => c.ID == classId)
+            .Select(c => c.Name)
+            .FirstOrDefaultAsync();
+
+        return className;
+    }
+
     public async Task<List<ClassDaysModel>> GetAllClassDays()
     {
         return await _dbContext.ClassDays.ToListAsync();
@@ -73,17 +77,18 @@ public class ClassService
         return await _dbContext.AssignedClasses.ToListAsync();
     }
 
-    public async Task<List<string>> GetClassDays(int classId)
+    public async Task<List<DateTime>> GetClassDays(int classId)
     {
         var classDays = await _dbContext.ClassDays
             .Where(cd => cd.ClassID == classId)
             .Select(cd => cd.Days)
             .ToListAsync();
 
-        List<string> upcomingDates = new List<string>();
+        List<DateTime> upcomingDates = new List<DateTime>();
+
         foreach (var day in classDays)
         {
-            upcomingDates.Add(CalculateNextOccurrenceDate(day).ToString("MM/dd/yyyy"));
+            upcomingDates.Add(CalculateNextOccurrenceDate(day));
         }
 
         return upcomingDates;
@@ -93,15 +98,15 @@ public class ClassService
     {
         DateTime currentDate = DateTime.Today;
 
-        DayOfWeek selectedDay;
-        if (!Enum.TryParse(day, out selectedDay))
+        if (!Enum.TryParse(day, out DayOfWeek selectedDay))
         {
             throw new ArgumentException("Invalid day");
         }
-
         int daysUntilNextOccurrence = ((int)selectedDay - (int)currentDate.DayOfWeek + 7) % 7;
 
-        return currentDate.AddDays(daysUntilNextOccurrence);
+        DateTime nearestDate = currentDate.AddDays(daysUntilNextOccurrence);
+
+        return nearestDate;
     }
 
 
@@ -166,10 +171,10 @@ public class ClassService
             classObject.Name = updatedClass.Name;
             classObject.Description = updatedClass.Description;
 
-           await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
         }
     }
-    
+
 
     public async Task AddClassDay(ClassDaysModel classDay)
     {
