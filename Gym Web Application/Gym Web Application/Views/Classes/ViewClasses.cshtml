@@ -17,7 +17,6 @@
                         </div>
                         <div class="col text-right">
                             <a class="btn-add" asp-controller="Classes" asp-action="AddClasses">Add a Class</a>
-                            <a class="btn-add" asp-controller="Classes" asp-action="AssignClasses">Assign a Class</a>
                         </div>
                     </div>
                 </div>
@@ -54,6 +53,7 @@
                                     </td>
                                     <td>
                                       @Html.ActionLink("Edit","EditClasses", new{id = Class.ID},new{@class="btn btn-sm btn-primary"})
+                                     @Html.ActionLink("Assign", "AssignClasses", new { classId = Class.ID }, new { @class="btn btn-sm btn-primary" })
                                     </td>
                                 </tr>
                             }

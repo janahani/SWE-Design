@@ -1,7 +1,10 @@
 @{
-    ViewData["Title"] = "Classes";
+    ViewData["Title"] = "Assign Class";
 }
+
 @model Gym_Web_Application.Models.AssignedClassModel
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <div class="container-fluid pt-3">
     <div class="row removable">
@@ -10,14 +13,9 @@
                 <h1>@ViewData["Title"]</h1>
                 <form class="add-user" method="POST">
                     <label for="class">Class</label>
-                    <select class="add-user-input" name="ClassID" asp-for="ClassID" id="classDropdown">
-                        @foreach (var classModel in ViewBag.Classes)
-                        {
-                            <option value="@classModel.ID">@classModel.Name</option>
-                        }
-                    </select>
-                    <span class="error-message" id="classID-error"></span>
-                    <hr>
+                    <input class="add-user-input" type="text" name="className" id="className"
+                        value="@ViewBag.ClassName" disabled>
+                     <input type="hidden" name="ClassID" value="@ViewBag.ClassID">
 
 
                     <label for="coach">Coach</label>
@@ -26,7 +24,7 @@
                         {
                             <option value="@employeeModel.ID">@employeeModel.Name</option>
                         }
-                    </select> 
+                    </select>
                     <span class="error-message" id="coachID-error"></span>
                     <hr>
 
@@ -41,10 +39,8 @@
                     <br>
                     <hr>
 
-                    <br>
-
                     <label for="free">Free</label>
-                    <select class="add-user-input" id="free-select" onchange="togglePriceField()" name="IsFree">
+                    <select class="add-user-input" id="free-select" onchange="togglePriceField()" name="IsFree" asp-for="IsFree">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
@@ -53,20 +49,26 @@
 
                     <div id="price-field" style="display:none;">
                         <label for="price">Price</label>
-                        <input class="add-user-input" type="number" name="price" id="price-input" placeholder="Price">
+                        <input class="add-user-input" type="number" name="price" id="price-input" placeholder="Price" asp-for="Price">
                         <span class="error-message" id="price-error"></span>
                     </div>
                     <br>
 
                     <label for="num-of-attendants">Number Of Attendants</label>
-                    <input class="add-user-input" type="number" name="no-of-attendants" id="" asp-for="NumOfAttendants">
+                    <input class="add-user-input" type="number" name="NumOfAttendants" id="" asp-for="NumOfAttendants">
                     <span class="error-message" id="numOfAttendants-error"></span>
                     <br>
 
-                    <label for="class-day">Days</label>
-                    <select id="classDayDropdown" class="add-user-input" name="ClassDay" asp-for="Date">
+                    <div id="classDayContainer">
+                        <label for="class-day">Class Days</label>
+                        <select class="add-user-input" id="classDayDropdown" name="Date">
+                            @foreach (var classDay in ViewBag.ClassDays)
+                            {
+                                <option>@classDay.ToString("MM/dd/yyyy")</option>
+                            }
+                        </select>
 
-                    </select>
+                    </div>
                     <span class="error-message" id="classDay-error"></span>
 
                     <hr>
@@ -91,28 +93,7 @@
                         }
                     }
 
-                    $(document).ready(function () {
-                        $('#classDropdown').change(function () {
-                            var classId = $(this).val();
-                            if (classId !== '') {
-                                $.ajax({
-                                    url: '@Url.Action("GetClassDays", "Class")',
-                                    type: 'GET',
-                                    data: { classId: classId },
-                                    success: function (data) {
-                                        var classDayDropdown = $('#classDayDropdown');
-                                        classDayDropdown.empty();
-                                        $.each(data, function (index, item) {
-                                            classDayDropdown.append($('<option>', {
-                                                value: item,
-                                                text: item
-                                            }));
-                                        });
-                                    }
-                                });
-                            }
-                        });
-                    });
+
                 </script>
             </div>
         </div>
