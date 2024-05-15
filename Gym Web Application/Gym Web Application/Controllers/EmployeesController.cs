@@ -24,6 +24,8 @@ public class EmployeesController : Controller
     public async Task<IActionResult> ViewEmployees()
     {
         var employees = await _employeeService.GetAllEmployees();
+        var jobTitles = await _jobTitleService.GetAllJobTitles();
+        ViewBag.JobTitles=jobTitles;
         return View(employees);
     }
 
