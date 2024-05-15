@@ -209,9 +209,7 @@ namespace Gym_Web_Application.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AssignedClassID = table.Column<int>(type: "int", nullable: false),
                     CoachID = table.Column<int>(type: "int", nullable: false),
-                    ClientID = table.Column<int>(type: "int", nullable: false),
-                    Attended = table.Column<bool>(type: "bit", nullable: false),
-                    IsActivated = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ClientID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
