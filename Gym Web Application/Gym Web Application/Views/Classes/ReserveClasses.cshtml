@@ -65,12 +65,12 @@
                                     }
                                     }
                                     </td>
-                                    <td>@assignedClass.Date</td>
-                                    <td>@assignedClass.StartTime</td>
-                                    <td>@assignedClass.EndTime</td>
+                                    <td>@assignedClass.Date.ToString("MM/dd/yyyy")</td>
+                                    <td>@assignedClass.StartTime.ToString("HH:mm")</td>
+                                    <td>@assignedClass.EndTime.ToString("HH:mm")</td>
                                     <td>@assignedClass.Price</td>
                                     <td>
-                                        <form method="post" asp-controller="Classes" asp-action="ReserveClasses">
+                                        <form method="post" asp-controller="Classes" asp-action="ReserveClass">
                                             <input type="hidden" name="AssignedClassID" value="@assignedClass.ID" />
                                             <input type="hidden" name="ClientID" value="@ViewBag.ClientId" />
                                             <input type="hidden" name="CoachID" value="@assignedClass.CoachID" />
