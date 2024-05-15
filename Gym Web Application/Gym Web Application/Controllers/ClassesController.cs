@@ -11,7 +11,7 @@ public class ClassesController : Controller
     private readonly EmployeeService _employeeService;
 
 
-    public ClassesController(ILogger<ClassesController> logger, ClassService classService,EmployeeService employeeService)
+    public ClassesController(ILogger<ClassesController> logger, ClassService classService, EmployeeService employeeService)
     {
         _logger = logger;
         _classService = classService;
@@ -65,7 +65,7 @@ public class ClassesController : Controller
                 {
                     if (!existingClassDays.Any(cd => cd.Days == dayString))
                     {
-                        await _classService.AddClassDay(new ClassDaysModel { ClassID = updatedClass.ID, Days= dayString });
+                        await _classService.AddClassDay(new ClassDaysModel { ClassID = updatedClass.ID, Days = dayString });
                     }
                 }
                 else
@@ -84,23 +84,27 @@ public class ClassesController : Controller
 
 
     [HttpGet]
-    public async Task<IActionResult> AssignClasses()
+    public async Task<IActionResult> AssignClasses(int classId)
     {
         var assignedClass = new AssignedClassModel();
-        var classes = await _classService.GetAllClasses();
         var coaches = await _employeeService.GetAllCoaches();
+        var classDays = await _classService.GetClassDays(classId);
+        var className = await _classService.GetClassName(classId);
 
-        ViewBag.Classes = classes;
+        ViewBag.ClassID = classId;
+        ViewBag.ClassName = className;
         ViewBag.Coaches = coaches;
+        ViewBag.ClassDays = classDays;
 
         return View(assignedClass);
     }
+
 
     [HttpGet]
     public async Task<IActionResult> GetClassDays(int classId)
     {
         var classDays = await _classService.GetClassDays(classId);
-        return Json(classDays);
+        return PartialView("GetClassDays", classDays);
     }
 
     [HttpPost]
@@ -122,7 +126,7 @@ public class ClassesController : Controller
     public async Task<IActionResult> ReserveClass(int AssignedClassID, int ClientID, int CoachID)
     {
         await _classService.AddReservedClass(AssignedClassID, ClientID, CoachID);
-        return RedirectToAction("ReserveClass");
+        return RedirectToAction("ReserveClasses");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

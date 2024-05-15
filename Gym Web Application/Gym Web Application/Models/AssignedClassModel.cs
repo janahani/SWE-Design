@@ -14,7 +14,7 @@ public class AssignedClassModel
     
     [Required(ErrorMessage = "Date is required")]
     [DataType(DataType.Date)]
-    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+    [DisplayFormat(DataFormatString = "{dd-MM-yyyy}", ApplyFormatInEditMode = true)]
     public DateTime Date { get; set; }
     
     [Required(ErrorMessage = "Start time is required")]
