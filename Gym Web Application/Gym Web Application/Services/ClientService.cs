@@ -1,84 +1,37 @@
-using Gym_Web_Application.Data;
 using Gym_Web_Application.Models;
-using Microsoft.EntityFrameworkCore;
 
 public class ClientService
 {
-    private readonly AppDbContext _dbContext;
+    private ClientAuthoritiesFactory _clientAuthoritiesFactory;
 
-    public ClientService(DbContextOptions<AppDbContext> options)
+    public ClientService(ClientAuthoritiesFactory clientAuthoritiesFactory)
     {
-        _dbContext = AppDbContext.GetInstance(options);
+        _clientAuthoritiesFactory= clientAuthoritiesFactory;
     }
 
     public async Task AddClientAsync(ClientModel clientRequest)
     {
-        var client = new ClientModel()
-        {
-            FirstName = clientRequest.FirstName,
-            LastName = clientRequest.LastName,
-            Age = clientRequest.Age,
-            Gender = clientRequest.Gender,
-            Email = clientRequest.Email,
-            PhoneNumber = clientRequest.PhoneNumber,
-            CreatedAt = DateTime.Now
-        };
-        await _dbContext.Clients.AddAsync(client);
-        await _dbContext.SaveChangesAsync();
+        await _clientAuthoritiesFactory.addClient(clientRequest);
     }
 
     public async Task<List<ClientModel>> GetAllClients()
     {
-        return await _dbContext.Clients.ToListAsync();
+        return await _clientAuthoritiesFactory.getClients();
     }
 
     public async Task EditClient(ClientModel updatedClient)
     {
-        var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.ID == updatedClient.ID);
-        if (client != null)
-        {
-            client.FirstName = updatedClient.FirstName;
-            client.LastName = updatedClient.LastName;
-            client.Email = updatedClient.Email;
-            client.PhoneNumber = updatedClient.PhoneNumber;
-
-           await _dbContext.SaveChangesAsync();
-        }
+        await _clientAuthoritiesFactory.editClient(updatedClient);
     }
 
     public async Task DeleteClient(int clientId)
     {
-        var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.ID == clientId);
-        if (client != null)
-        {
-            _dbContext.Clients.Remove(client);
-            await _dbContext.SaveChangesAsync();
-        }
-
+        await _clientAuthoritiesFactory.deleteClient(clientId);
     }
 
     public async Task<ClientModel> GetClientById(int clientId)
     {
-        var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.ID == clientId);
-
-        if (client == null)
-        {
-            return null;
-        }
-
-        var clientModel = new ClientModel
-        {
-            FirstName = client.FirstName,
-            LastName = client.LastName,
-            Email = client.Email,
-            PhoneNumber = client.PhoneNumber
-        };
-
-        return clientModel;
+        return await _clientAuthoritiesFactory.getClientById(clientId);
     }
 
-    public ClientModel FindByEmail(string email)
-    {
-        return _dbContext.Clients.FirstOrDefault(c => c.Email == email);
-    }
 }
