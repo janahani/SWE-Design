@@ -63,7 +63,7 @@
                                         asp-action="ViewPackages">Activate</a>
                                 </td>
                                 <td>
-                                    @Html.ActionLink("Reserve", "ReserveClasses", "Classes", new { id = client.ID }, new { @class = "btn btn-sm btn-primary" })
+                                    @Html.ActionLink("Reserve", "ReserveClasses", "Classes", new { clientId = client.ID }, new { @class = "btn btn-sm btn-primary" })
                                 </td>
                                 <td>
                                     @Html.ActionLink("Edit","EditClients", new{id = client.ID},new{@class="btn btn-sm btn-primary"})
