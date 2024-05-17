@@ -1,6 +1,7 @@
 using Gym_Web_Application.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
+using Gym_Web_Application.FactoryDP;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,17 +11,26 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddSingleton(sp => new DbContextOptionsBuilder<AppDbContext>().UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")).Options);
+
 IServiceCollection serviceCollection = builder.Services.AddSingleton<IWebHostEnvironment>(builder.Environment);
 
-builder.Services.AddScoped<ClientService>();
-//builder.Services.AddScoped<PackageService>();
-builder.Services.AddScoped<EmployeeService>();
-builder.Services.AddScoped<JobTitleService>();
-builder.Services.AddScoped<ClassService>();
-//builder.Services.AddScoped<AttendanceService>();
-//builder.Services.AddScoped<SalesReportService>();
-//builder.Services.AddScoped<ISalesReportObservable, SalesReportObservable>();
 
+builder.Services.AddSingleton<ClientAuthoritiesFactory>();
+builder.Services.AddSingleton<ClassAuthoritiesFactory>();
+builder.Services.AddSingleton<AdminAuthFactory>();
+
+
+builder.Services.AddTransient<ClientService>();
+builder.Services.AddTransient<ClassService>();
+builder.Services.AddTransient<EmailService>();
+builder.Services.AddTransient<PackageService>();
+builder.Services.AddTransient<EmployeeService>();
+builder.Services.AddTransient<JobTitleService>();
+builder.Services.AddTransient<ClassService>();
+builder.Services.AddTransient<AttendanceService>();
+builder.Services.AddTransient<SalesReportService>();
+builder.Services.AddTransient<ISalesReportObservable, SalesReportObservable>();
 
 
 

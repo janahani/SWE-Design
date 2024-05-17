@@ -4,14 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 public class ClientAuthoritiesFactory : AuthorityModel
 {
-    private readonly AppDbContext _dbContext;
+   private readonly DbContextOptions<AppDbContext> _options;
 
     public ClientAuthoritiesFactory(DbContextOptions<AppDbContext> options)
     {
-        _dbContext = AppDbContext.GetInstance(options);
+       _options = options;
     }
     public async Task addClient(ClientModel clientRequest)
     {
+         using var _dbContext = new AppDbContext(_options);
         var client = new ClientModel()
         {
             FirstName = clientRequest.FirstName,
@@ -28,6 +29,7 @@ public class ClientAuthoritiesFactory : AuthorityModel
     }
     public async Task editClient(ClientModel updatedClient)
     {
+         using var _dbContext = new AppDbContext(_options);
         var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.ID == updatedClient.ID);
         if (client != null)
         {
@@ -41,10 +43,12 @@ public class ClientAuthoritiesFactory : AuthorityModel
     }
     public async Task<List<ClientModel>> getClients()
     {
+         using var _dbContext = new AppDbContext(_options);
         return await _dbContext.Clients.ToListAsync();
     }
     public async Task deleteClient(int clientId)
     {
+         using var _dbContext = new AppDbContext(_options);
         var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.ID == clientId);
         if (client != null)
         {
@@ -55,6 +59,7 @@ public class ClientAuthoritiesFactory : AuthorityModel
 
      public async Task<ClientModel> getClientById(int clientId)
     {
+         using var _dbContext = new AppDbContext(_options);
         var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.ID == clientId);
 
         if (client == null)

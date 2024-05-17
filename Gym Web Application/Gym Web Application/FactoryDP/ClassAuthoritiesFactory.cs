@@ -4,17 +4,18 @@ using Microsoft.EntityFrameworkCore;
 
 public class ClassAuthoritiesFactory : AuthorityModel
 {
-    private readonly AppDbContext _dbContext;
+    private readonly DbContextOptions<AppDbContext> _options;
     private readonly IWebHostEnvironment _hostingEnvironment;
 
     public ClassAuthoritiesFactory(DbContextOptions<AppDbContext> options, IWebHostEnvironment hostingEnvironment)
     {
-        _dbContext = AppDbContext.GetInstance(options);
+        _options = options;
         _hostingEnvironment = hostingEnvironment;
     }
 
     public async Task addClass(ClassModel classModel, IFormFile imageFile, List<string> selectedDays)
     {
+        using var _dbContext = new AppDbContext(_options);
         if (imageFile != null && imageFile.Length > 0)
         {
 
@@ -54,11 +55,13 @@ public class ClassAuthoritiesFactory : AuthorityModel
 
     public async Task<List<ClassModel>> getClasses()
     {
+        using var _dbContext = new AppDbContext(_options);
         return await _dbContext.Classes.ToListAsync();
     }
 
     public async Task<string> getClassName(int classId)
     {
+        using var _dbContext = new AppDbContext(_options);
         var className = await _dbContext.Classes
             .Where(c => c.ID == classId)
             .Select(c => c.Name)
@@ -69,16 +72,19 @@ public class ClassAuthoritiesFactory : AuthorityModel
 
     public async Task<List<ClassDaysModel>> getClassDays()
     {
+        using var _dbContext = new AppDbContext(_options);
         return await _dbContext.ClassDays.ToListAsync();
     }
 
     public async Task<List<AssignedClassModel>> getAssignedClasses()
     {
+        using var _dbContext = new AppDbContext(_options);
         return await _dbContext.AssignedClasses.ToListAsync();
     }
 
     public async Task<List<DateTime>> getClassDays(int classId)
     {
+        using var _dbContext = new AppDbContext(_options);
         var classDays = await _dbContext.ClassDays
             .Where(cd => cd.ClassID == classId)
             .Select(cd => cd.Days)
@@ -96,6 +102,7 @@ public class ClassAuthoritiesFactory : AuthorityModel
 
     public async Task addAssignedClass(AssignedClassModel assignedClassRequest)
     {
+        using var _dbContext = new AppDbContext(_options);
         var assignedClass = new AssignedClassModel()
         {
             ClassID = assignedClassRequest.ClassID,
@@ -114,6 +121,7 @@ public class ClassAuthoritiesFactory : AuthorityModel
 
     public async Task addReservedClass(int AssignedClassID, int ClientID, int CoachID)
     {
+        using var _dbContext = new AppDbContext(_options);
         var reservedClass = new ReservedClassModel()
         {
             AssignedClassID = AssignedClassID,
@@ -126,6 +134,7 @@ public class ClassAuthoritiesFactory : AuthorityModel
 
     public async Task<ClassModel> getClassById(int classId)
     {
+        using var _dbContext = new AppDbContext(_options);
         var classObject = await _dbContext.Classes.FirstOrDefaultAsync(c => c.ID == classId);
 
         if (classObject == null)
@@ -144,11 +153,13 @@ public class ClassAuthoritiesFactory : AuthorityModel
 
     public async Task<List<ClassDaysModel>> getClassDaysByClassId(int classId)
     {
+        using var _dbContext = new AppDbContext(_options);
         return await _dbContext.ClassDays.Where(cd => cd.ClassID == classId).ToListAsync();
     }
 
     public async Task editClass(ClassModel updatedClass)
     {
+        using var _dbContext = new AppDbContext(_options);
         var classObject = await _dbContext.Classes.FirstOrDefaultAsync(c => c.ID == updatedClass.ID);
         if (classObject != null)
         {
@@ -161,12 +172,14 @@ public class ClassAuthoritiesFactory : AuthorityModel
 
     public async Task addClassDay(ClassDaysModel classDay)
     {
+        using var _dbContext = new AppDbContext(_options);
         await _dbContext.ClassDays.AddAsync(classDay);
         await _dbContext.SaveChangesAsync();
     }
 
     public async Task removeClassDay(int classDayId)
     {
+        using var _dbContext = new AppDbContext(_options);
         var classDayToRemove = await _dbContext.ClassDays.FindAsync(classDayId);
         if (classDayToRemove != null)
         {

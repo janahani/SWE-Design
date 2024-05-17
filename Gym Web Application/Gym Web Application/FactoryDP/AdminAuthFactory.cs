@@ -1,36 +1,36 @@
 using Gym_Web_Application.Models;
-using System.Collections.Generic;
+using Gym_Web_Application.Data;
+namespace Gym_Web_Application.FactoryDP;
+using Microsoft.EntityFrameworkCore;
 
-namespace Gym_Web_Application.FactoryDP
+public class AdminAuthFactory : AuthoritiesFactory
 {
-    public class AdminAuthFactory : AuthoritiesFactory
+   private readonly DbContextOptions<AppDbContext> _options;
+   private readonly IWebHostEnvironment _hostingEnvironment;
+
+    public AdminAuthFactory(DbContextOptions<AppDbContext> options)
     {
-        private readonly ClientAuthoritiesFactory _clientAuthoritiesFactory;
-        private readonly EmployeeAuthoritiesFactory _empAuthoritiesFactory;
-        private readonly MembershipAuthoritiesFactory _membershipAuthoritiesFactory;
-        private readonly PackagesAuthoritiesFactory _packagesAuthoritiesFactory;
+        _options = options;
+    }
 
-        public AdminAuthFactory(ClientAuthoritiesFactory clientAuthoritiesFactory,
-                                EmployeeAuthoritiesFactory empAuthoritiesFactory,
-                                MembershipAuthoritiesFactory membershipAuthoritiesFactory,
-                                PackagesAuthoritiesFactory packagesAuthoritiesFactory)
-        {
-            _clientAuthoritiesFactory = clientAuthoritiesFactory;
-            _empAuthoritiesFactory = empAuthoritiesFactory;
-            _membershipAuthoritiesFactory = membershipAuthoritiesFactory;
-            _packagesAuthoritiesFactory = packagesAuthoritiesFactory;
-        }
+    public List<AuthorityModel> createAuthorities()
+    {
+        using var dbContext= new AppDbContext(_options);
+        List<AuthorityModel> adminAuth = new List<AuthorityModel>();
 
-        public List<AuthorityModel> createAuthorities()
-        {
-            List<AuthorityModel> adminAuth = new List<AuthorityModel>();
+        ClientAuthoritiesFactory clientAuthoritiesFactory = new ClientAuthoritiesFactory(_options);
+        // EmployeeAuthoritiesFactory empAuthoritiesFactory = new EmployeeAuthoritiesFactory();
+        // MembershipAuthoritiesFactory membershipAuthoritiesFactory = new MembershipAuthoritiesFactory();
+        // PackagesAuthoritiesFactory packagesAuthoritiesFactory = new PackagesAuthoritiesFactory();
+        ClassAuthoritiesFactory classAuthoritiesFactory = new ClassAuthoritiesFactory(_options,_hostingEnvironment);
 
-            adminAuth.Add(_clientAuthoritiesFactory);
-            adminAuth.Add(_empAuthoritiesFactory);
-            adminAuth.Add(_membershipAuthoritiesFactory);
-            adminAuth.Add(_packagesAuthoritiesFactory);
+        adminAuth.Add(clientAuthoritiesFactory);
+        adminAuth.Add(classAuthoritiesFactory);
+        // adminAuth.Add(empAuthoritiesFactory);
+        // adminAuth.Add(membershipAuthoritiesFactory);
+        // adminAuth.Add(packagesAuthoritiesFactory);
 
-            return adminAuth;
-        }
+        return adminAuth;
+
     }
 }
