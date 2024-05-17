@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zjMK6+R1UNiMdgWiNQeBdloEMsEqVVNwYz4heBYqgwRJC9mu6gL/eRrhrZf+X1wZAp1+dOWguAdx0gxB28GJuA==",
+  "dgSpecHash": "HJmT/A1wwCI=",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
   "expectedPackageFiles": [
@@ -103,12 +103,5 @@
     "C:\\Users\\DELL\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

@@ -42,10 +42,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xWaWV3Q2xhc3Nlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWE-Design/Gym Web Application/Gym Web Application/Views/Clients/ActivateMembership.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xBY3RpdmF0ZU1lbWJlcnNoaXAuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/DELL/Desktop/SWE-Design/Gym Web Application/Gym Web Application/Views/Clients/AddClients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50c1xBZGRDbGllbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -76,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/DELL/Desktop/SWE-Design/Gym Web Application/Gym Web Application/Views/Memberships/ViewMemberships.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyc2hpcHNcVmlld01lbWJlcnNoaXBzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/SWE-Design/Gym Web Application/Gym Web Application/Views/Packages/ActivateMembership.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNcQWN0aXZhdGVNZW1iZXJzaGlwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DELL/Desktop/SWE-Design/Gym Web Application/Gym Web Application/Views/Packages/AddPackages.cshtml]

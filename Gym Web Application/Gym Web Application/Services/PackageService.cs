@@ -18,22 +18,25 @@ public class PackageService
 
     public async Task<List<PackageModel>> GetActivatedPackages()
     {
-        return await _dbContext.Packages.Where(p => p.IsActivated == "Activated").ToListAsync();
+        return await _dbContext.Packages
+             .Where(p => p.IsActivated.Equals("Activated", StringComparison.OrdinalIgnoreCase))
+             .ToListAsync();
+
     }
 
- public async Task AddPackages(PackageModel addPackageRequest)
+    public async Task AddPackages(PackageModel addPackageRequest)
     {
         var package = new PackageModel()
         {
             Title = addPackageRequest.Title,
-            NumOfInbodySessions=addPackageRequest.NumOfInbodySessions,
-            NumOfMonths=addPackageRequest.NumOfMonths,
-            NumOfPrivateTrainingSessions=addPackageRequest.NumOfPrivateTrainingSessions,
-            NumOfInvitations=addPackageRequest.NumOfInvitations,
-            FreezeLimit=addPackageRequest.FreezeLimit,
-            VisitsLimit=addPackageRequest.VisitsLimit,
-            Price=addPackageRequest.Price,
-            IsActivated=addPackageRequest.IsActivated
+            NumOfInbodySessions = addPackageRequest.NumOfInbodySessions,
+            NumOfMonths = addPackageRequest.NumOfMonths,
+            NumOfPrivateTrainingSessions = addPackageRequest.NumOfPrivateTrainingSessions,
+            NumOfInvitations = addPackageRequest.NumOfInvitations,
+            FreezeLimit = addPackageRequest.FreezeLimit,
+            VisitsLimit = addPackageRequest.VisitsLimit,
+            Price = addPackageRequest.Price,
+            IsActivated = addPackageRequest.IsActivated
         };
 
         await _dbContext.Packages.AddAsync(package);
@@ -52,7 +55,7 @@ public class PackageService
         if (package != null)
         {
             package.IsActivated = "Activated";
-           await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
         }
     }
 
@@ -62,7 +65,7 @@ public class PackageService
         if (package != null)
         {
             package.IsActivated = "Deactivated";
-           await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

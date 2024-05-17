@@ -59,8 +59,7 @@
                                     @client.PhoneNumber
                                 </td>
                                 <td>
-                                    <a class="btn btn-sm btn-activate" asp-controller="Packages"
-                                        asp-action="ViewPackages">Activate</a>
+                                    @Html.ActionLink("Activate","ViewActivatedPackages","Packages" ,new{clientID = client.ID},new{@class="btn btn-sm btn-activate"})
                                 </td>
                                 <td>
                                     @Html.ActionLink("Reserve", "ReserveClasses", "Classes", new { clientId = client.ID }, new { @class = "btn btn-sm btn-primary" })

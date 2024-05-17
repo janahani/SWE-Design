@@ -12,11 +12,10 @@ public class PackagesController : Controller
     private readonly PackageService _packageService;
     private readonly ClientService _clientService;
 
-
-    public PackagesController(ILogger<PackagesController> logger, PackageService packageService )
+    public PackagesController(ILogger<PackagesController> logger, PackageService packageService, ClientService clientService )
     {
         _logger = logger;
-
+        this._clientService = clientService;
         this._packageService=packageService;
     }
 
@@ -31,7 +30,9 @@ public class PackagesController : Controller
     [HttpGet]
     public async Task<IActionResult> ViewActivatedPackages(int clientID)
     {
+         _logger.LogInformation("Starting ViewActivatedPackages method for client ID {ClientID}", clientID);
         var client = await _clientService.GetClientById(clientID);
+         _logger.LogInformation("output this rn {client}",client);
         var packages = await _packageService.GetActivatedPackages();
         ViewBag.Client = client;
         ViewBag.Packages = packages; 
