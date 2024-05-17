@@ -19,7 +19,7 @@ public class PackageService
     public async Task<List<PackageModel>> GetActivatedPackages()
     {
         return await _dbContext.Packages
-             .Where(p => p.IsActivated.Equals("Activated", StringComparison.OrdinalIgnoreCase))
+             .Where(p => p.IsActivated == "Activated")
              .ToListAsync();
 
     }
