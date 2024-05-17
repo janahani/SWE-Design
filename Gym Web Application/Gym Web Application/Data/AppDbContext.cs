@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 public class AppDbContext : DbContext
 {
      private static AppDbContext _instance;
+     
      public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
      {
 
