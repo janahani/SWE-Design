@@ -10,6 +10,7 @@ public class PackagesController : Controller
 {
     private readonly ILogger<PackagesController> _logger;
     private readonly PackageService _packageService;
+    private readonly ClientService _clientService;
 
 
     public PackagesController(ILogger<PackagesController> logger, PackageService packageService )
@@ -25,6 +26,16 @@ public class PackagesController : Controller
         
         var packages = await _packageService.GetAllPackages();
         return View(packages);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> ViewActivatedPackages(int clientID)
+    {
+        var client = await _clientService.GetClientById(clientID);
+        var packages = await _packageService.GetActivatedPackages();
+        ViewBag.Client = client;
+        ViewBag.Packages = packages; 
+        return View();
     }
     
     [HttpGet]

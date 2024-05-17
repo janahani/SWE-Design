@@ -16,6 +16,11 @@ public class PackageService
         return await _dbContext.Packages.ToListAsync();
     }
 
+    public async Task<List<PackageModel>> GetActivatedPackages()
+    {
+        return await _dbContext.Packages.Where(p => p.IsActivated == "Activated").ToListAsync();
+    }
+
  public async Task AddPackages(PackageModel addPackageRequest)
     {
         var package = new PackageModel()

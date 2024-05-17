@@ -1,23 +1,36 @@
 using Gym_Web_Application.Models;
-namespace Gym_Web_Application.FactoryDP;
+using System.Collections.Generic;
 
-public class AdminAuthFactory : AuthoritiesFactory
+namespace Gym_Web_Application.FactoryDP
 {
-    public List<AuthorityModel> createAuthorities()
+    public class AdminAuthFactory : AuthoritiesFactory
     {
-        List<AuthorityModel> adminAuth = new List<AuthorityModel>();
+        private readonly ClientAuthoritiesFactory _clientAuthoritiesFactory;
+        private readonly EmployeeAuthoritiesFactory _empAuthoritiesFactory;
+        private readonly MembershipAuthoritiesFactory _membershipAuthoritiesFactory;
+        private readonly PackagesAuthoritiesFactory _packagesAuthoritiesFactory;
 
-        ClientAuthoritiesFactory clientAuthoritiesFactory = new ClientAuthoritiesFactory();
-        EmployeeAuthoritiesFactory empAuthoritiesFactory = new EmployeeAuthoritiesFactory();
-        MembershipAuthoritiesFactory membershipAuthoritiesFactory = new MembershipAuthoritiesFactory();
-        PackagesAuthoritiesFactory packagesAuthoritiesFactory = new PackagesAuthoritiesFactory();
+        public AdminAuthFactory(ClientAuthoritiesFactory clientAuthoritiesFactory,
+                                EmployeeAuthoritiesFactory empAuthoritiesFactory,
+                                MembershipAuthoritiesFactory membershipAuthoritiesFactory,
+                                PackagesAuthoritiesFactory packagesAuthoritiesFactory)
+        {
+            _clientAuthoritiesFactory = clientAuthoritiesFactory;
+            _empAuthoritiesFactory = empAuthoritiesFactory;
+            _membershipAuthoritiesFactory = membershipAuthoritiesFactory;
+            _packagesAuthoritiesFactory = packagesAuthoritiesFactory;
+        }
 
-        adminAuth.Add(clientAuthoritiesFactory);
-        adminAuth.Add(empAuthoritiesFactory);
-        adminAuth.Add(membershipAuthoritiesFactory);
-        adminAuth.Add(packagesAuthoritiesFactory);
+        public List<AuthorityModel> createAuthorities()
+        {
+            List<AuthorityModel> adminAuth = new List<AuthorityModel>();
 
-        return adminAuth;
+            adminAuth.Add(_clientAuthoritiesFactory);
+            adminAuth.Add(_empAuthoritiesFactory);
+            adminAuth.Add(_membershipAuthoritiesFactory);
+            adminAuth.Add(_packagesAuthoritiesFactory);
 
+            return adminAuth;
+        }
     }
 }

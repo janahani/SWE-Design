@@ -91,7 +91,27 @@ public class MembershipService
 
         return MembershipModel;
     }
+    public async Task<bool> activateMembership (int clientId, PackageModel package)
+    {
 
+        var Membership = new MembershipModel()
+        {
+            ClientID = clientId,
+            PackageID = package.ID,
+            StartDate = DateTime.Now.Date,
+            EndDate = DateTime.Now.Date.AddDays(package.NumOfMonths),
+            VisitsCount = package.VisitsLimit,
+            InvitationsCount = package.NumOfInvitations,
+            InbodySessionsCount = package.NumOfInbodySessions,
+            PrivateTrainingSessionsCount = package.NumOfPrivateTrainingSessions,
+            FreezeCount = package.FreezeLimit,
+            Freezed = "Not Freezed",
+            IsActivated = "Activated"
+        };
+        await _dbContext.Memberships.AddAsync(Membership);
+        await _dbContext.SaveChangesAsync();
+        return true;
+    }
     public MembershipModel FindByClientId(int id)
     {
         return _dbContext.Memberships.FirstOrDefault(mem => mem.ClientID == id);
