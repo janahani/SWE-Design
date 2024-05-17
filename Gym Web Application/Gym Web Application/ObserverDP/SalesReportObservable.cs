@@ -33,7 +33,7 @@ public class SalesReportObservable : ISalesReportObservable
         Console.WriteLine("Notifying sales reporters of new release of monthly sales report");
         foreach (var observer in observers)
         {
-            observer.Update(latestReport);
+            observer.UpdateAsync(latestReport);
         }
     }
 }

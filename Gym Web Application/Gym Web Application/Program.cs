@@ -21,6 +21,8 @@ builder.Services.AddScoped<ClassService>();
 //builder.Services.AddScoped<SalesReportService>();
 //builder.Services.AddScoped<ISalesReportObservable, SalesReportObservable>();
 
+builder.Services.AddSingleton<EmailService>();
+
 
 
 
