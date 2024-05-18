@@ -21,6 +21,7 @@ builder.Services.AddSingleton<ClassAuthoritiesFactory>();
 builder.Services.AddSingleton<AdminAuthFactory>();
 
 
+builder.Services.AddTransient<MembershipService>();
 builder.Services.AddTransient<ClientService>();
 builder.Services.AddTransient<ClassService>();
 builder.Services.AddTransient<EmailService>();

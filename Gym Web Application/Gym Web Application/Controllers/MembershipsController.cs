@@ -20,9 +20,10 @@ public class MembershipsController : Controller
     }
 
     [HttpGet]
-    public IActionResult ViewMemberships()
+    public async Task<IActionResult> ViewMemberships()
     {
-        return View();
+        var memberships = await _membershipService.GetAllMemberships();
+        return View(memberships);
     }
     [HttpPost]
     public async Task<IActionResult> ActivateMembership(int id, int packageID)
@@ -32,7 +33,7 @@ public class MembershipsController : Controller
         PackageModel package = await _packageService.GetPackageById(packageID);
         await _membershipService.activateMembership(id, package);
 
-        return RedirectToAction("ViewClients");
+        return RedirectToAction("ViewMemberships");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

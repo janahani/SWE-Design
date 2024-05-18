@@ -1,6 +1,7 @@
 @{
     ViewData["Title"] = "Packages";
 }
+@model List<Gym_Web_Application.Models.MembershipModel>
 
 <div class="container-fluid pt-3">
     <div class="row removable">
@@ -38,6 +39,8 @@
                                 <th scope="col">ID</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Membership</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
                                 <th scope="col">Visits</th>
                                 <th scope="col">Inbody</th>
                                 <th scope="col">Freeze</th>
@@ -46,55 +49,40 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">
-                                    01
-                                </th>
-                                <td>
-                                    Sahwa Amr
-                                </td>
-                                <td>
-                                    sahwaamr@gmail.com
-                                </td>
-                                <td>
-                                    20
-                                </td>
-                                <td>
-                                    female
-                                </td>
-                                <td>
-                                    <a href="packagesAdminDash.html" class="btn btn-sm btn-freeze">Freeze</a>
-                                </td>
-                                <td>
-                                    <a href="#!" class="btn btn-sm btn-primary">Edit</a>
-                                    <a href="#!" class="btn btn-sm btn-delete">Delete</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    01
-                                </th>
-                                <td>
-                                    Sahwa Amr
-                                </td>
-                                <td>
-                                    sahwaamr@gmail.com
-                                </td>
-                                <td>
-                                    20
-                                </td>
-                                <td>
-                                    female
-                                </td>
+                            @foreach (var membership in Model)
+                            {
+                                <tr>
 
-                                <td>
-                                    <button href="#!" class="btn btn-sm btn-unfreeze">Unfreeze</button>
-                                </td>
-                                <td>
-                                    <a href="#!" class="btn btn-sm btn-primary">Edit</a>
-                                    <a href="#!" class="btn btn-sm btn-delete">Delete</a>
-                                </td>
-                            </tr>
+                                    <th scope="row">
+                                        @membership.ID
+                                    </th>
+                                    <td>
+                                        @membership.ClientID
+                                    </td>
+                                    <td>
+                                        @membership.PackageID
+                                    </td>
+                                    <td>
+                                        @membership.StartDate
+                                    </td>
+                                    <td>
+                                        @membership.EndDate
+                                    </td>
+                                    <td>
+                                        @membership.VisitsCount
+                                    </td>
+                                    <td>
+                                        @membership.InbodySessionsCount
+                                    </td>
+                                    <td>
+                                        <a href="packagesAdminDash.html" class="btn btn-sm btn-freeze">Freeze</a>
+                                    </td>
+                                    <td>
+                                        <a href="#!" class="btn btn-sm btn-primary">Edit</a>
+                                        <a href="#!" class="btn btn-sm btn-delete">Delete</a>
+                                    </td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div>

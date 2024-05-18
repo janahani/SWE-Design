@@ -91,7 +91,7 @@ public class MembershipService
 
         return MembershipModel;
     }
-    public async Task activateMembership (int clientId, PackageModel package)
+    public async Task activateMembership(int clientId, PackageModel package)
     {
 
         var Membership = new MembershipModel()
@@ -111,9 +111,9 @@ public class MembershipService
         await _dbContext.Memberships.AddAsync(Membership);
         await _dbContext.SaveChangesAsync();
     }
-    public MembershipModel FindByClientId(int id)
+    public async Task<MembershipModel> FindByClientId(int id)
     {
-        return _dbContext.Memberships.FirstOrDefault(mem => mem.ClientID == id);
+        return await _dbContext.Memberships.FirstOrDefaultAsync(mem => mem.ClientID == id);
     }
     public int CalculateFreezeDuration(DateTime currentDate, DateTime freezeEndDate)
     {
