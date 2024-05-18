@@ -11,11 +11,14 @@ public class MembershipsController : Controller
     private readonly MembershipService _membershipService;
 
 
-    public MembershipsController(ILogger<MembershipsController> logger)
+    public MembershipsController(ILogger<MembershipsController> logger, PackageService packageService, MembershipService membershipService)
     {
         _logger = logger;
+        this._packageService = packageService;
+        this._membershipService = membershipService;
+
     }
-    
+
     [HttpGet]
     public IActionResult ViewMemberships()
     {
@@ -23,9 +26,11 @@ public class MembershipsController : Controller
     }
     [HttpPost]
     public async Task<IActionResult> ActivateMembership(int id, int packageID)
-    {
-        PackageModel package =  _packageService.FindById(packageID);
-        bool membershipCreated = await _membershipService.activateMembership(id, package);
+    {        
+        _logger.LogInformation("Starting ActivateMembership method for package ID {packageID}", packageID);
+        _logger.LogInformation("Starting ActivateMembership method for client ID {id}", id);
+        PackageModel package = await _packageService.GetPackageById(packageID);
+        await _membershipService.activateMembership(id, package);
 
         return RedirectToAction("ViewClients");
     }

@@ -91,7 +91,7 @@ public class MembershipService
 
         return MembershipModel;
     }
-    public async Task<bool> activateMembership (int clientId, PackageModel package)
+    public async Task activateMembership (int clientId, PackageModel package)
     {
 
         var Membership = new MembershipModel()
@@ -110,7 +110,6 @@ public class MembershipService
         };
         await _dbContext.Memberships.AddAsync(Membership);
         await _dbContext.SaveChangesAsync();
-        return true;
     }
     public MembershipModel FindByClientId(int id)
     {

@@ -44,10 +44,12 @@ public class PackageService
     }
 
 
-    public PackageModel FindById(int id)
+    public async Task<PackageModel> GetPackageById(int id)
     {
-        return _dbContext.Packages.FirstOrDefault(p => p.ID == id);
+        return await _dbContext.Packages.FirstOrDefaultAsync(p => p.ID == id);
+        
     }
+
 
     public async Task ActivatePackage(int id)
     {
