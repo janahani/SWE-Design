@@ -4889,19 +4889,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\YASSMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
+      "projectUniqueName": "C:\\Users\\YASSMIN\\GitHub\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
       "projectName": "Gym Web Application",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\obj\\",
+      "projectPath": "C:\\Users\\YASSMIN\\GitHub\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
+      "packagesPath": "C:\\Users\\YASSMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\YASSMIN\\GitHub\\SWE-Design\\Gym Web Application\\Gym Web Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\YASSMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4974,7 +4974,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
