@@ -69,4 +69,16 @@ public class EmployeeService
     {
         return await _dbContext.Employees.FirstOrDefaultAsync(p => p.ID == id);
     }
+
+     public async Task DeleteEmployee(int id)
+    {
+        var employee = await _dbContext.Employees.FirstOrDefaultAsync(e => e.ID == id);
+
+        if(employee!=null)
+        {
+            _dbContext.Employees.Remove(employee);
+            await _dbContext.SaveChangesAsync();
+        }
+        
+    }
 }

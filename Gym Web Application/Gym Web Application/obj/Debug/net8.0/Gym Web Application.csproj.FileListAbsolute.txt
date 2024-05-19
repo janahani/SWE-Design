@@ -1383,3 +1383,6 @@ C:\Users\DELL\Desktop\SWE-Design\Gym Web Application\Gym Web Application\obj\Deb
 C:\Users\DELL\Desktop\SWE-Design\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.pdb
 C:\Users\DELL\Desktop\SWE-Design\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.genruntimeconfig.cache
 C:\Users\DELL\Desktop\SWE-Design\Gym Web Application\Gym Web Application\obj\Debug\net8.0\ref\Gym Web Application.dll
+C:\Users\YASSMIN\GitHub\SWE-Design\Gym Web Application\Gym Web Application\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\YASSMIN\GitHub\SWE-Design\Gym Web Application\Gym Web Application\bin\Debug\net8.0\MailKit.dll
+C:\Users\YASSMIN\GitHub\SWE-Design\Gym Web Application\Gym Web Application\bin\Debug\net8.0\MimeKit.dll

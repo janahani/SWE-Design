@@ -40,10 +40,21 @@
                                 <td>@employee.Name</td>
                                 <td>@employee.Email</td>
                                 <td>@employee.PhoneNumber</td>
-                                <td>@ViewBag.JobTitles[@employee.JobTitleID].Name</td>
+                                @* <td>@ViewBag.JobTitles[@employee.JobTitleID].Name</td> *@
+  @{
+    var jobTitlesList = (List<Gym_Web_Application.Models.JobTitlesModel>)ViewBag.JobTitles;
+}
+
+<td>
+    @{
+        var jobTitle = jobTitlesList.FirstOrDefault(jt => jt.ID == @employee.JobTitleID)?.Name ?? "Unknown Job Title";
+    }
+    @jobTitle
+</td>
                                 <td>
                                     <a class="btn btn-sm btn-primary">Edit</a>
-                                    <form method="post" style="display: inline;">
+                                    <form method="post" asp-controller="Employees" asp-action="DeleteEmployeeById" style="display: inline;">
+                                        <input type="hidden" name="id" value="@employee.ID">
                                         <button type="submit" class="btn btn-sm btn-delete">Delete</button>
                                     </form>
                                 </td>
