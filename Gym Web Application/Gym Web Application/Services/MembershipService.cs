@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 public class MembershipService
 {
     private readonly AppDbContext _dbContext;
-
     public MembershipService(DbContextOptions<AppDbContext> options)
     {
         _dbContext = AppDbContext.GetInstance(options);
@@ -136,7 +135,7 @@ public class MembershipService
         {
             if (FreezeEndDate > DateTime.Now.Date && FreezeEndDate <= DateTime.Now.Date.AddDays(Membership.FreezeCount))
             {
-                int freezeDuration = CalculateFreezeDuration(DateTime.Now.Date, FreezeEndDate.Date);
+                int freezeDuration = CalculateFreezeDuration(DateTime.Now.Date, FreezeEndDate.Date.Date);
                 DateTime membershipEndDate = Membership.EndDate.AddDays(freezeDuration);
                 int newFreezeCount = Membership.FreezeCount - freezeDuration;
                 Membership.FreezeCount = newFreezeCount;
@@ -146,6 +145,27 @@ public class MembershipService
                 ScheduledUnfreezeService scheduledUnfreezeService = new ScheduledUnfreezeService(_dbContext);
                 await scheduledUnfreezeService.AddScheduledUnfreezeAsync(MembershipId, newFreezeCount, FreezeEndDate);
             }
+        }
+    }
+    public async Task UnfreezeMembership(int MembershipId)
+    {
+        var Membership = await _dbContext.Memberships.FirstOrDefaultAsync(mem => mem.ID == MembershipId);
+        if (Membership != null)
+        {
+            ScheduledUnfreezeService scheduledUnfreezeService = new ScheduledUnfreezeService(_dbContext);
+            var scheduledUnfreeze = await scheduledUnfreezeService.FindByMembershipId(MembershipId);
+            int newFreezeDuration = CalculateFreezeDuration(scheduledUnfreeze.FreezeStartDate.Date, DateTime.Now.Date);
+            int oldFreezeDuration = CalculateFreezeDuration(scheduledUnfreeze.FreezeStartDate.Date, scheduledUnfreeze.FreezeEndDate.Date);
+            int earlyFreeze = oldFreezeDuration - newFreezeDuration;
+            DateTime newEndDate = Membership.EndDate.AddDays(-earlyFreeze);
+            var freezeCount = Membership.FreezeCount + earlyFreeze;
+
+            Membership.Freezed = "Not Freezed";
+            Membership.EndDate = newEndDate;
+            Membership.FreezeCount = freezeCount;
+            await updateMembership(Membership);
+
+            await scheduledUnfreezeService.DeleteScheduledUnfreeze(scheduledUnfreeze.ID);
         }
     }
 }

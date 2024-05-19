@@ -40,8 +40,8 @@ public class ScheduledUnfreezeService
 
     }
 
-    public ScheduledUnfreezeModel FindByMembershipId(int membershipId)
+    public async Task<ScheduledUnfreezeModel> FindByMembershipId(int membershipId)
     {
-        return _dbContext.ScheduledUnfreeze.FirstOrDefault(mem => mem.MembershipID == membershipId);
+        return await _dbContext.ScheduledUnfreeze.FirstOrDefaultAsync(mem => mem.MembershipID == membershipId);
     }
 }

@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Packages";
+    ViewData["Title"] = "Memberships";
 }
 @model List<Gym_Web_Application.Models.MembershipModel>
 
@@ -43,53 +43,131 @@
                                 <th scope="col">End Date</th>
                                 <th scope="col">Visits</th>
                                 <th scope="col">Inbody</th>
-                                <th scope="col">Freeze</th>
                                 <th scope="col">Status</th>
+                                <th scope="col">Freeze</th>
                                 <th scope="col">Action</th>
 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var membership in ViewBag.memberships)
+                            @if (ViewBag.memberships != null)
                             {
-                                <tr>
+                                @foreach (var membership in ViewBag.memberships)
+                                {
+                                    <tr>
 
-                                    <th scope="row">
-                                        @membership.ID
-                                    </th>
-                                    <td>
-                                        @ViewBag.clientNames[ViewBag.memberships.IndexOf(membership)]
-                                    </td>
-                                    <td>
-                                        @membership.PackageID
-                                    </td>
-                                    <td>
-                                        @membership.StartDate
-                                    </td>
-                                    <td>
-                                        @membership.EndDate
-                                    </td>
-                                    <td>
-                                        @membership.VisitsCount
-                                    </td>
-                                    <td>
-                                        @membership.InbodySessionsCount
-                                    </td>
-                                    <td>
-                                        @membership.IsActivated
-                                    </td>
-                                    <td>
-                                        <a href="packagesAdminDash.html" class="btn btn-sm btn-freeze">Freeze</a>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="btn btn-sm btn-primary">Edit</a>
-                                        @using(Html.BeginForm("DeleteMembership","Memberships",FormMethod.Post))
-                                    {
-                                        <input type="hidden" name="id" value="@membership.ID" />
-                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                    }
-                                    </td>
-                                </tr>
+                                        <th scope="row">
+                                            @membership.ID
+                                        </th>
+                                        <td>
+                                            @ViewBag.clientNames[ViewBag.memberships.IndexOf(membership)]
+                                        </td>
+                                        <td>
+                                            @membership.PackageID
+                                        </td>
+                                        <td>
+                                            @membership.StartDate
+                                        </td>
+                                        <td>
+                                            @membership.EndDate
+                                        </td>
+                                        <td>
+                                            @membership.VisitsCount
+                                        </td>
+                                        <td>
+                                            @membership.InbodySessionsCount
+                                        </td>
+                                        <td>
+                                            @membership.IsActivated
+                                        </td>
+                                        <td>
+                                            @if (@membership.Freezed == "Freezed")
+                                            {
+                                                <button type="button" onclick="showModal(@membership.ID)"
+                                                    class="btn btn-sm btn-unfreeze">Unfreeze</button>
+                                                @using (Html.BeginForm("UnfreezeMembership", "Memberships", FormMethod.Post))
+                                                {
+                                                    <input type="hidden" name="id" value="@membership.ID" />
+                                                    <div id="modal-@membership.ID" class="modal">
+                                                        <div class="modal-content">
+                                                            <div class="modal-sandbox"></div>
+                                                            <div class="modal-box">
+                                                                <div class="close-modal" onclick="closeModal(@membership.ID)">
+                                                                    &#10006;
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <p class="confirmation-text" id="confirmation-text">Are you sure you
+                                                                        want to unfreeze this membership?</p>
+                                                                    <br />
+                                                                    <button type="submit" id=" freeze-button"
+                                                                        class="btn btn-sm btn-unfreeze">
+                                                                        Unfreeze
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+
+                                            }
+                                            @if (@membership.Freezed == "Not Freezed")
+                                            {
+                                                <button class="btn btn-sm btn-freeze" type="button"
+                                                    onclick="showModal(@membership.ID)" id="freeze-button">Freeze</button>
+                                                @using (Html.BeginForm("FreezeMembership", "Memberships", FormMethod.Post))
+                                                {
+                                                    <input type="hidden" name="id" value="@membership.ID" />
+                                                    <div id="modal-@membership.ID" class="modal">
+                                                        <div class="modal-content">
+                                                            <div class="modal-sandbox"></div>
+                                                            <div class="modal-box">
+                                                                <div class="close-modal" onclick="closeModal(@membership.ID)">
+                                                                    &#10006;
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    @{
+                                                                        var minFreezeDate = DateTime.Now.Date.AddDays(3);
+                                                                        var maxFreezeDate =
+                                                                        DateTime.Now.Date.AddDays(@membership.FreezeCount);
+
+                                                                    }
+                                                                    <div class="datePicking" id="datePickerContainer">
+                                                                        <label for="datepicker">Choose a
+                                                                            Date:</label>
+                                                                        <input type="date" id="datepicker-@membership.ID"
+                                                                            onchange="handleDateChange(@membership.ID)"
+                                                                            name="freezeEndDate"
+                                                                            min="@minFreezeDate.ToString("yyyy-MM-dd")"
+                                                                            max="@maxFreezeDate.ToString("yyyy-MM-dd")" />
+                                                                    </div>
+                                                                    <p class="confirmation-text" id="confirmation-text"></p>
+                                                                    <br />
+                                                                    <button type="submit" id=" freeze-button"
+                                                                        class="btn btn-sm btn-freeze">
+                                                                        Freeze
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            }
+                                            @if (@membership.IsActivated != "Activated")
+                                            {
+                                                <a href="packagesAdminDash.html" class="btn btn-sm btn-freeze" disabled>Freeze</a>
+                                            }
+
+                                        </td>
+                                        <td>
+                                            @* <a href="#!" class="btn btn-sm btn-primary">Edit</a> *@
+                                            @using (Html.BeginForm("DeleteMembership", "Memberships", FormMethod.Post))
+                                            {
+                                                <input type="hidden" name="id" value="@membership.ID" />
+                                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
                             }
                         </tbody>
                     </table>
@@ -119,4 +197,25 @@
             }
         };
     });
+
+    function handleDateChange(modalID) {
+        var selectedDate = $("#datepicker-" + modalID).val();
+        var modalLabel = document
+            .getElementById("modal-" + modalID)
+            .querySelector(".confirmation-text");
+        if (selectedDate) {
+            modalLabel.textContent =
+                "Are you sure you want to freeze your membership to " +
+                selectedDate +
+                "?";
+        }
+    }
+
+    function showModal(modalID) {
+        console.log("Modal ID: " + modalID);
+        $("#modal-" + modalID).fadeIn();
+    }
+    function closeModal(modalID) {
+        $("#modal-" + modalID).fadeOut();
+    }
 </script>

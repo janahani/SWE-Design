@@ -65,6 +65,16 @@ public class MembershipsController : Controller
         await _membershipService.DeleteMembership(id);
         return RedirectToAction("ViewMemberships");
     }
+    public async Task<ActionResult> FreezeMembership(int id, DateTime freezeEndDate)
+    {
+        await _membershipService.FreezeMembership(id, freezeEndDate);
+        return RedirectToAction("ViewMemberships");
+    }
+    public async Task<ActionResult> UnfreezeMembership(int id)
+    {
+        await _membershipService.UnfreezeMembership(id);
+        return RedirectToAction("ViewMemberships");
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
