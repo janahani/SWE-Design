@@ -37,7 +37,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach(var client in Model)
+                            @foreach(var client in ViewBag.clients)
                             {
                             <tr>
                                 <th scope="row">
@@ -59,7 +59,13 @@
                                     @client.PhoneNumber
                                 </td>
                                 <td>
+                                @if(ViewBag.hasActiveMembership[ViewBag.clients.IndexOf(client)]){
+                                    <button class="btn btn-sm btn-activate" type="button" disabled>Activated</button>
+                                }else{
+                                
                                     @Html.ActionLink("Activate","ViewActivatedPackages","Packages" ,new{clientID = client.ID},new{@class="btn btn-sm btn-activate"})
+
+                                }
                                 </td>
                                 <td>
                                     @Html.ActionLink("Reserve", "ReserveClasses", "Classes", new { clientId = client.ID }, new { @class = "btn btn-sm btn-primary" })
@@ -68,7 +74,7 @@
                                     @Html.ActionLink("Edit","EditClients", new{id = client.ID},new{@class="btn btn-sm btn-primary"})
                                     @using(Html.BeginForm("DeleteClients","Clients",FormMethod.Post))
                                     {
-                                        @Html.Hidden("id",client.ID)
+                                        <input type="hidden" name="id" value="@client.ID" />
                                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                     }
                                 </td>

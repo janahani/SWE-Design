@@ -44,12 +44,13 @@
                                 <th scope="col">Visits</th>
                                 <th scope="col">Inbody</th>
                                 <th scope="col">Freeze</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Action</th>
 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var membership in Model)
+                            @foreach (var membership in ViewBag.memberships)
                             {
                                 <tr>
 
@@ -57,7 +58,7 @@
                                         @membership.ID
                                     </th>
                                     <td>
-                                        @membership.ClientID
+                                        @ViewBag.clientNames[ViewBag.memberships.IndexOf(membership)]
                                     </td>
                                     <td>
                                         @membership.PackageID
@@ -75,11 +76,18 @@
                                         @membership.InbodySessionsCount
                                     </td>
                                     <td>
+                                        @membership.isActivated
+                                    </td>
+                                    <td>
                                         <a href="packagesAdminDash.html" class="btn btn-sm btn-freeze">Freeze</a>
                                     </td>
                                     <td>
                                         <a href="#!" class="btn btn-sm btn-primary">Edit</a>
-                                        <a href="#!" class="btn btn-sm btn-delete">Delete</a>
+                                        @using(Html.BeginForm("DeleteMembership","Memberships",FormMethod.Post))
+                                    {
+                                        <input type="hidden" name="id" value="@membership.ID" />
+                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                    }
                                     </td>
                                 </tr>
                             }

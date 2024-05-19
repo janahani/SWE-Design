@@ -94,12 +94,12 @@ public class MembershipService
     public async Task activateMembership(int clientId, PackageModel package)
     {
 
-        var Membership = new MembershipModel()
+        var Membership = new MembershipModel
         {
             ClientID = clientId,
             PackageID = package.ID,
             StartDate = DateTime.Now.Date,
-            EndDate = DateTime.Now.Date.AddDays(package.NumOfMonths),
+            EndDate = DateTime.Now.Date.AddMonths(package.NumOfMonths),
             VisitsCount = package.VisitsLimit,
             InvitationsCount = package.NumOfInvitations,
             InbodySessionsCount = package.NumOfInbodySessions,
@@ -114,6 +114,15 @@ public class MembershipService
     public async Task<MembershipModel> FindByClientId(int id)
     {
         return await _dbContext.Memberships.FirstOrDefaultAsync(mem => mem.ClientID == id);
+    }
+    public async Task<bool> hasActiveMembership(int id)
+    {
+        var membership = await _dbContext.Memberships.FirstOrDefaultAsync(mem => mem.ClientID == id);
+        if (membership != null && membership.IsActivated == "Activated")
+        {
+            return true;
+        }
+        return false;
     }
     public int CalculateFreezeDuration(DateTime currentDate, DateTime freezeEndDate)
     {

@@ -30,7 +30,6 @@ public class PackagesController : Controller
     [HttpGet]
     public async Task<IActionResult> ViewActivatedPackages(int clientID)
     {
-         _logger.LogInformation("Starting ViewActivatedPackages method for client ID {ClientID}", clientID);
         var client = await _clientService.GetClientById(clientID);
          _logger.LogInformation("output this rn {client}",client);
         var packages = await _packageService.GetActivatedPackages();

@@ -8,18 +8,33 @@ public class ClientsController : Controller
 {
     private readonly ILogger<ClientsController> _logger;
     private readonly ClientService _clientService;
+    private readonly MembershipService _membershipService;
 
-    public ClientsController(ILogger<ClientsController> logger,ClientService clientService)
+    public ClientsController(ILogger<ClientsController> logger,ClientService clientService, MembershipService membershipService)
     {
         _logger = logger;
         _clientService = clientService;
+        _membershipService = membershipService;
     }
 
     [HttpGet]
     public async Task<IActionResult> ViewClients()
     {
         var clients = await _clientService.GetAllClients();
-        return View(clients);
+        List<bool> hasActiveMembership = new List<bool>();
+        foreach(var client in clients){
+            if(await _membershipService.hasActiveMembership(client.ID))
+            {
+                hasActiveMembership.Add(true);
+            }
+            else{
+                hasActiveMembership.Add(false);
+
+            }
+        }
+        ViewBag.clients = clients;
+        ViewBag.hasActiveMembership = hasActiveMembership;
+        return View();
     }
 
     [HttpGet]
