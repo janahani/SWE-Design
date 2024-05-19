@@ -46,6 +46,14 @@ public class EmployeesController : Controller
         return RedirectToAction("ViewEmployees");
     }
 
+     [HttpPost]
+    public async Task<IActionResult> DeleteEmployeeById(int id)
+    {
+        await _employeeService.DeleteEmployee(id);
+        return RedirectToAction("ViewEmployees");
+
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
