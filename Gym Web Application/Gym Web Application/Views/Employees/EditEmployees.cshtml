@@ -1,0 +1,60 @@
+@{
+    ViewData["Title"] = "Employees";
+}
+@model Gym_Web_Application.Models.EmployeeModel
+
+<div class="container-fluid pt-3">
+    <div class="row removable">
+        <div class="col-lg">
+            <div class="user-form">
+                <h1>Edit Employee</h1>
+                <form method="POST" class="EditEmployees">
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Name" asp-for="Name"/>
+                    </div>
+                    <span id="name-error" class="error-message"></span>
+                    <br>
+                    <div>
+                        <input class="add-user-input" type="text"  placeholder="Email" asp-for="Email"/>
+                    </div>
+                    <span id="email-error" class="error-message"></span>
+                    <br>
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Phone Number" asp-for="PhoneNumber"/>
+                    </div>
+                    <span id="phoneno-error" class="error-message"></span>
+                    <br>
+                    <label for="jobTitle">Job Title</label>
+                    <div>
+                        <select class="add-user-input" asp-for="JobTitleID" asp-items="@(new SelectList(ViewBag.JobTitles, "ID", "Name"))">
+                        </select>
+                    </div>
+                    <span id="jobTitle-error" class="error-message"> </span>
+                    <br>
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Salary" asp-for="Salary"/>
+                    </div>
+                    <span id="salary-error" class="error-message"></span>
+                    <br>
+                    <div>
+                        <input class="add-user-input" type="text" placeholder="Address" asp-for="Address"/>
+                    </div>
+                    <span id="address-error" class="error-message"></span>
+                    <br>
+                    <div>
+                        <input class="add-user-input" type="password" name="Password" placeholder="Password" asp-for="Password"/>
+                    </div>
+                    <span id="password-error" class="error-message"></span>
+                    <button class="btn btn-add-form" type="submit">Edit Employee</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelector('[name="Password"]').value = '';
+    });
+</script>
