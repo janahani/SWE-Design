@@ -31,6 +31,9 @@ namespace Gym_Web_Application.Controllers;
             {
                 if (await _employeeService.ValidateEmployeeLogin(model.Email, model.Password))
                 {
+                    string JobTitleID = employee.JobTitleID.ToString();
+                    HttpContext.Session.SetString("EmployeeEmail", employee.Email);
+                    HttpContext.Session.SetString("EmployeeJobTitleID", JobTitleID);
                     return RedirectToAction("Dashboard");
                 }
                 else
@@ -49,7 +52,19 @@ namespace Gym_Web_Application.Controllers;
         [HttpGet]
         public IActionResult Dashboard()
         {
+            if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("EmployeeEmail");
+            HttpContext.Session.Remove("EmployeeJobTitleID");
+            return RedirectToAction("Login");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
