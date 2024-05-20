@@ -46,6 +46,22 @@ public class EmployeesController : Controller
         return RedirectToAction("ViewEmployees");
     }
 
+    [HttpGet]
+    public async Task<IActionResult> EditEmployees(int id)
+    {
+        var employee = await _employeeService.FindById(id);
+        var jobTitles = await _jobTitleService.GetAllJobTitles();
+        ViewBag.JobTitles=jobTitles;
+        return View(employee);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> EditEmployees(EmployeeModel updatedEmployee)
+    {
+        await _employeeService.EditEmployee(updatedEmployee);
+        return RedirectToAction("ViewEmployees");
+    }
+
      [HttpPost]
     public async Task<IActionResult> DeleteEmployeeById(int id)
     {
