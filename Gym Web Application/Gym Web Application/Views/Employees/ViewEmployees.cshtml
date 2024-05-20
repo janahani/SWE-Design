@@ -52,7 +52,8 @@
     @jobTitle
 </td>
                                 <td>
-                                    <a class="btn btn-sm btn-primary">Edit</a>
+
+                                    @Html.ActionLink("Edit","EditEmployees", new{id = employee.ID},new{@class="btn btn-sm btn-primary"})
                                     <form method="post" asp-controller="Employees" asp-action="DeleteEmployeeById" style="display: inline;">
                                         <input type="hidden" name="id" value="@employee.ID">
                                         <button type="submit" class="btn btn-sm btn-delete">Delete</button>
