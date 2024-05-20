@@ -4,70 +4,42 @@ using Microsoft.EntityFrameworkCore;
 
 public class PackageService
 {
-    private readonly AppDbContext _dbContext;
+    private PackagesAuthoritiesFactory _packageAuthoritiesFactory;
 
-    public PackageService(DbContextOptions<AppDbContext> options)
+    public PackageService(PackagesAuthoritiesFactory packageAuthoritiesFactory)
     {
-        _dbContext = AppDbContext.GetInstance(options);
+        _packageAuthoritiesFactory = packageAuthoritiesFactory;
     }
 
     public async Task<List<PackageModel>> GetAllPackages()
     {
-        return await _dbContext.Packages.ToListAsync();
+        return await _packageAuthoritiesFactory.GetAllPackages();
     }
 
     public async Task<List<PackageModel>> GetActivatedPackages()
     {
-        return await _dbContext.Packages
-             .Where(p => p.IsActivated == "Activated")
-             .ToListAsync();
-
+      return await _packageAuthoritiesFactory.GetActivatedPackages();
     }
 
     public async Task AddPackages(PackageModel addPackageRequest)
     {
-        var package = new PackageModel()
-        {
-            Title = addPackageRequest.Title,
-            NumOfInbodySessions = addPackageRequest.NumOfInbodySessions,
-            NumOfMonths = addPackageRequest.NumOfMonths,
-            NumOfPrivateTrainingSessions = addPackageRequest.NumOfPrivateTrainingSessions,
-            NumOfInvitations = addPackageRequest.NumOfInvitations,
-            FreezeLimit = addPackageRequest.FreezeLimit,
-            VisitsLimit = addPackageRequest.VisitsLimit,
-            Price = addPackageRequest.Price,
-            IsActivated = addPackageRequest.IsActivated
-        };
-
-        await _dbContext.Packages.AddAsync(package);
-        await _dbContext.SaveChangesAsync();
+       await _packageAuthoritiesFactory.AddPackages(addPackageRequest);
     }
 
 
     public async Task<PackageModel> GetPackageById(int id)
     {
-        return await _dbContext.Packages.FirstOrDefaultAsync(p => p.ID == id);
-        
+        return await _packageAuthoritiesFactory.GetPackageById(id);
     }
 
 
     public async Task ActivatePackage(int id)
     {
-        var package = _dbContext.Packages.FirstOrDefault(p => p.ID == id);
-        if (package != null)
-        {
-            package.IsActivated = "Activated";
-            await _dbContext.SaveChangesAsync();
-        }
+        await _packageAuthoritiesFactory.ActivatePackage(id);
     }
 
     public async Task DeactivatePackage(int id)
     {
-        var package = _dbContext.Packages.FirstOrDefault(p => p.ID == id);
-        if (package != null)
-        {
-            package.IsActivated = "Deactivated";
-            await _dbContext.SaveChangesAsync();
-        }
+        await _packageAuthoritiesFactory.DeactivatePackage(id);
     }
 }
