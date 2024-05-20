@@ -1,7 +1,8 @@
-using System.Security.Cryptography;
 using Gym_Web_Application.Data;
 using Gym_Web_Application.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
+using System.Text;
 
 public class EmployeeService
 {
@@ -20,6 +21,11 @@ public class EmployeeService
     public async Task<List<EmployeeModel>> GetAllCoaches()
     {
         return await _employeeAuthoritiesFactory.GetAllCoaches();
+    }
+
+    public async Task<EmployeeModel> GetEmployeeByEmail(string email)
+    {
+        return await _employeeAuthoritiesFactory.GetEmployeeByEmail(email);
     }
 
     public async Task AddEmployee(EmployeeModel addEmployeeRequest)
@@ -42,4 +48,11 @@ public class EmployeeService
         await _employeeAuthoritiesFactory.DeleteEmployee(id);
     }
 
+     public async Task<bool> ValidateEmployeeLogin(string email, string password)
+        {
+            bool login = await _employeeAuthoritiesFactory.ValidateEmployeeLogin( email, password);
+            return login;
+        }
+
+ 
 }
