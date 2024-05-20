@@ -23,6 +23,10 @@ public class EmployeesController : Controller
     [HttpGet]
     public async Task<IActionResult> ViewEmployees()
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         var employees = await _employeeService.GetAllEmployees();
         var jobTitles = await _jobTitleService.GetAllJobTitles();
         ViewBag.JobTitles=jobTitles;
@@ -32,6 +36,10 @@ public class EmployeesController : Controller
     [HttpGet]
     public async Task<IActionResult> AddEmployees()
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         EmployeeModel employee = new EmployeeModel();
         var jobTitles = await _jobTitleService.GetAllJobTitles();
         ViewBag.JobTitles=jobTitles;
@@ -42,6 +50,10 @@ public class EmployeesController : Controller
     [HttpPost]
     public async Task<IActionResult> AddEmployees(EmployeeModel addEmployeeRequest)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         await _employeeService.AddEmployee(addEmployeeRequest);
         return RedirectToAction("ViewEmployees");
     }
@@ -49,6 +61,10 @@ public class EmployeesController : Controller
     [HttpGet]
     public async Task<IActionResult> EditEmployees(int id)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         var employee = await _employeeService.FindById(id);
         var jobTitles = await _jobTitleService.GetAllJobTitles();
         ViewBag.JobTitles=jobTitles;
@@ -58,6 +74,10 @@ public class EmployeesController : Controller
     [HttpPost]
     public async Task<IActionResult> EditEmployees(EmployeeModel updatedEmployee)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         await _employeeService.EditEmployee(updatedEmployee);
         return RedirectToAction("ViewEmployees");
     }
@@ -65,6 +85,10 @@ public class EmployeesController : Controller
      [HttpPost]
     public async Task<IActionResult> DeleteEmployeeById(int id)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         await _employeeService.DeleteEmployee(id);
         return RedirectToAction("ViewEmployees");
 
