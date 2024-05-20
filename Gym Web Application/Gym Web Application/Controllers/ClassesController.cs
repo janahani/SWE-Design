@@ -21,12 +21,20 @@ public class ClassesController : Controller
     [HttpGet]
     public IActionResult AddClasses()
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         return View();
     }
 
     [HttpPost]
     public async Task<IActionResult> AddClass(ClassModel classModel, IFormFile ImageFile, List<string> SelectedDays)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         await _classService.AddClass(classModel, ImageFile, SelectedDays);
         return RedirectToAction("AddClasses");
     }
@@ -34,6 +42,10 @@ public class ClassesController : Controller
     [HttpGet]
     public async Task<IActionResult> ViewClasses()
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         var classes = await _classService.GetAllClasses();
         var classDays = await _classService.GetAllClassDays();
         ViewData["ClassDays"] = classDays;
@@ -43,6 +55,10 @@ public class ClassesController : Controller
     [HttpGet]
     public async Task<IActionResult> EditClasses(int id)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         var classObject = await _classService.GetClassById(id);
         var classDays = await _classService.GetClassDaysByClassId(id);
         ViewData["ClassDays"] = classDays.Select(cd => cd.Days).ToList();
@@ -52,6 +68,10 @@ public class ClassesController : Controller
     [HttpPost]
     public async Task<IActionResult> EditClasses(ClassModel updatedClass, List<string> SelectedDays)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         await _classService.UpdateClass(updatedClass);
 
         var existingClassDays = await _classService.GetClassDaysByClassId(updatedClass.ID);
@@ -86,6 +106,10 @@ public class ClassesController : Controller
     [HttpGet]
     public async Task<IActionResult> AssignClasses(int classId)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         var assignedClass = new AssignedClassModel();
         var coaches = await _employeeService.GetAllCoaches();
         var classDays = await _classService.GetClassDays(classId);
@@ -103,6 +127,10 @@ public class ClassesController : Controller
     [HttpGet]
     public async Task<IActionResult> GetClassDays(int classId)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         var classDays = await _classService.GetClassDays(classId);
         return PartialView("GetClassDays", classDays);
     }
@@ -110,6 +138,10 @@ public class ClassesController : Controller
     [HttpPost]
     public async Task<IActionResult> AssignClasses(AssignedClassModel assignedClassRequest)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         await _classService.AddAssignedClass(assignedClassRequest);
         return RedirectToAction("AssignClasses");
     }
@@ -117,6 +149,10 @@ public class ClassesController : Controller
     [HttpGet]
     public async Task<IActionResult> ReserveClasses(int clientId)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         var assignedClasses = await _classService.GetAllAssignedClasses();
         ViewBag.ClientId = clientId;
 
@@ -125,6 +161,10 @@ public class ClassesController : Controller
     [HttpPost]
     public async Task<IActionResult> ReserveClass(int AssignedClassID, int ClientID, int CoachID)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         await _classService.AddReservedClass(AssignedClassID, ClientID, CoachID);
         return RedirectToAction("ReserveClasses");
     }

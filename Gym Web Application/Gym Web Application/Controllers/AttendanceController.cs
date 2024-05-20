@@ -17,6 +17,11 @@ namespace Gym_Web_Application.Controllers
       [HttpPost]
 public IActionResult MarkAttendance(Dictionary<int, bool> attendedEmployees)
 {
+    if (HttpContext.Session.GetString("EmployeeEmail") == null)
+    {
+         return RedirectToAction("Login");
+    }
+
     if (attendedEmployees != null)
     {
         foreach (var (employeeId, attended) in attendedEmployees)
@@ -26,12 +31,17 @@ public IActionResult MarkAttendance(Dictionary<int, bool> attendedEmployees)
     }
 
     return RedirectToAction("ViewAttendance");
+
 }
 
 
         [HttpGet]
         public IActionResult ViewAttendance()
         {
+            if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
             List<EmployeeModel> employees = _attendanceService.GetAllEmployees(); 
             return View(employees);
         }
