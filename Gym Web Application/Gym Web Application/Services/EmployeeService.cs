@@ -70,6 +70,29 @@ public class EmployeeService
         return await _dbContext.Employees.FirstOrDefaultAsync(p => p.ID == id);
     }
 
+
+
+    public async Task EditEmployee(EmployeeModel editEmployeeRequest)
+    {
+        var employee = await FindById(editEmployeeRequest.ID);
+        byte[] salt = GenerateSalt();
+        string hashedPassword = HashPassword(editEmployeeRequest.Password, salt);
+
+        
+            employee.Name = editEmployeeRequest.Name;
+            employee.Email = editEmployeeRequest.Email;
+            employee.PhoneNumber = editEmployeeRequest.PhoneNumber;
+            employee.Salary = editEmployeeRequest.Salary;
+            employee.Address = editEmployeeRequest.Address;
+            employee.JobTitleID = editEmployeeRequest.JobTitleID;
+            employee.Password = hashedPassword;
+        
+
+        await _dbContext.SaveChangesAsync();
+    }
+
+    
+
      public async Task DeleteEmployee(int id)
     {
         var employee = await _dbContext.Employees.FirstOrDefaultAsync(e => e.ID == id);
