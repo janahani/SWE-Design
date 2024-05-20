@@ -15,6 +15,10 @@ namespace Gym_Web_Application.Controllers
 [HttpGet]
     public IActionResult ViewSalesReport()
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         var latestReport = _salesReportService.GetLatestSalesReport();
         return View(latestReport);
     }

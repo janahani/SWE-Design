@@ -30,12 +30,27 @@ public class EmployeeAuthoritiesFactory : AuthorityModel{
             .ToListAsync();
     }
 
+
+
+    public async Task<bool> ValidateEmployeeLogin(string email, string password)
+        {
+            using var _dbContext = new AppDbContext(_options);
+            var employee = await GetEmployeeByEmail(email);
+            bool passwordCorrect = VerifyPassword(password, employee.Password);
+            
+            if (employee != null && VerifyPassword(password, employee.Password))
+            {
+                return true;
+            }
+            return false;
+        }
+
     public async Task AddEmployee(EmployeeModel addEmployeeRequest)
     {
         using var _dbContext = new AppDbContext(_options);
         byte[] salt = GenerateSalt();
-
         string hashedPassword = HashPassword(addEmployeeRequest.Password, salt);
+        addEmployeeRequest.Password = hashedPassword;
 
         var employee = new EmployeeModel()
         {
@@ -63,13 +78,40 @@ public class EmployeeAuthoritiesFactory : AuthorityModel{
     }
 
     private string HashPassword(string password, byte[] salt)
+{
+    using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000))
     {
-        using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000))
-        {
-            byte[] hash = pbkdf2.GetBytes(20); 
-            return Convert.ToBase64String(hash);
-        }
+        byte[] hash = pbkdf2.GetBytes(20);
+        byte[] hashBytes = new byte[36]; // 16 bytes for the salt + 20 bytes for the hash
+        Array.Copy(salt, 0, hashBytes, 0, 16);
+        Array.Copy(hash, 0, hashBytes, 16, 20);
+        return Convert.ToBase64String(hashBytes);
     }
+}
+
+private bool VerifyPassword(string enteredPassword, string storedPassword)
+    {
+        byte[] hashBytes = Convert.FromBase64String(storedPassword);
+        byte[] salt = new byte[16];
+        Array.Copy(hashBytes, 0, salt, 0, 16);
+
+        using (var pbkdf2 = new Rfc2898DeriveBytes(enteredPassword, salt, 10000))
+        {
+            byte[] hash = pbkdf2.GetBytes(20);
+            for (int i = 0; i < 20; i++)
+            {
+                if (hashBytes[i + 16] != hash[i])
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
+
+
+
 
     public async Task<EmployeeModel> FindById(int id)
     {
@@ -77,12 +119,21 @@ public class EmployeeAuthoritiesFactory : AuthorityModel{
         return await _dbContext.Employees.FirstOrDefaultAsync(p => p.ID == id);
     }
 
+    public async Task<EmployeeModel> GetEmployeeByEmail(string email)
+    {
+        
+        using var _dbContext = new AppDbContext(_options);
+        return await _dbContext.Employees.FirstOrDefaultAsync(e => e.Email == email);
+
+    }
+
     public async Task EditEmployee(EmployeeModel editEmployeeRequest)
     {
         using var _dbContext = new AppDbContext(_options);
         var employee =  await _dbContext.Employees.FirstOrDefaultAsync(e => e.ID == editEmployeeRequest.ID);
-        byte[] salt = GenerateSalt();
+       byte[] salt = GenerateSalt();
         string hashedPassword = HashPassword(editEmployeeRequest.Password, salt);
+        editEmployeeRequest.Password = hashedPassword;
 
         if(employee!=null)
         {
