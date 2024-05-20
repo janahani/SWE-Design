@@ -18,6 +18,7 @@ IServiceCollection serviceCollection = builder.Services.AddSingleton<IWebHostEnv
 
 builder.Services.AddSingleton<ClientAuthoritiesFactory>();
 builder.Services.AddSingleton<ClassAuthoritiesFactory>();
+builder.Services.AddSingleton<EmployeeAuthoritiesFactory>();
 builder.Services.AddSingleton<AdminAuthFactory>();
 
 

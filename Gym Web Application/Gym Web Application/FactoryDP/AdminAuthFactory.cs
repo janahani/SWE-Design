@@ -19,14 +19,14 @@ public class AdminAuthFactory : AuthoritiesFactory
         List<AuthorityModel> adminAuth = new List<AuthorityModel>();
 
         ClientAuthoritiesFactory clientAuthoritiesFactory = new ClientAuthoritiesFactory(_options);
-        // EmployeeAuthoritiesFactory empAuthoritiesFactory = new EmployeeAuthoritiesFactory();
+        EmployeeAuthoritiesFactory empAuthoritiesFactory = new EmployeeAuthoritiesFactory(_options);
         // MembershipAuthoritiesFactory membershipAuthoritiesFactory = new MembershipAuthoritiesFactory();
         // PackagesAuthoritiesFactory packagesAuthoritiesFactory = new PackagesAuthoritiesFactory();
         ClassAuthoritiesFactory classAuthoritiesFactory = new ClassAuthoritiesFactory(_options,_hostingEnvironment);
 
         adminAuth.Add(clientAuthoritiesFactory);
         adminAuth.Add(classAuthoritiesFactory);
-        // adminAuth.Add(empAuthoritiesFactory);
+        adminAuth.Add(empAuthoritiesFactory);
         // adminAuth.Add(membershipAuthoritiesFactory);
         // adminAuth.Add(packagesAuthoritiesFactory);
 

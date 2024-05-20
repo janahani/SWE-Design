@@ -5,103 +5,41 @@ using Microsoft.EntityFrameworkCore;
 
 public class EmployeeService
 {
-   private readonly AppDbContext _dbContext;
+    private EmployeeAuthoritiesFactory _employeeAuthoritiesFactory;
 
-    public EmployeeService(DbContextOptions<AppDbContext> options)
+    public EmployeeService(EmployeeAuthoritiesFactory employeeAuthoritiesFactory)
     {
-        _dbContext = AppDbContext.GetInstance(options);
+        _employeeAuthoritiesFactory = employeeAuthoritiesFactory;
     }
 
     public async Task<List<EmployeeModel>> GetAllEmployees()
     {
-        return await _dbContext.Employees.ToListAsync();
+        return await _employeeAuthoritiesFactory.GetAllEmployees();
     }
 
     public async Task<List<EmployeeModel>> GetAllCoaches()
     {
-        return await _dbContext.Employees
-            .Where(e => e.JobTitleID == 4)
-            .ToListAsync();
+        return await _employeeAuthoritiesFactory.GetAllCoaches();
     }
-
 
     public async Task AddEmployee(EmployeeModel addEmployeeRequest)
     {
-        byte[] salt = GenerateSalt();
-
-        string hashedPassword = HashPassword(addEmployeeRequest.Password, salt);
-
-        var employee = new EmployeeModel()
-        {
-            Name = addEmployeeRequest.Name,
-            Email = addEmployeeRequest.Email,
-            PhoneNumber = addEmployeeRequest.PhoneNumber,
-            Salary = addEmployeeRequest.Salary,
-            Address = addEmployeeRequest.Address,
-            JobTitleID = addEmployeeRequest.JobTitleID,
-            Password = hashedPassword,
-        };
-
-        await _dbContext.Employees.AddAsync(employee);
-        await _dbContext.SaveChangesAsync();
-    }
-
-    private byte[] GenerateSalt()
-    {
-        byte[] salt = new byte[16];
-        using (var rng = RandomNumberGenerator.Create())
-        {
-            rng.GetBytes(salt);
-        }
-        return salt;
-    }
-
-    private string HashPassword(string password, byte[] salt)
-    {
-        using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000))
-        {
-            byte[] hash = pbkdf2.GetBytes(20); 
-            return Convert.ToBase64String(hash);
-        }
+        await _employeeAuthoritiesFactory.AddEmployee(addEmployeeRequest);
     }
 
     public async Task<EmployeeModel> FindById(int id)
     {
-        return await _dbContext.Employees.FirstOrDefaultAsync(p => p.ID == id);
+        return await _employeeAuthoritiesFactory.FindById(id);
     }
-
-
 
     public async Task EditEmployee(EmployeeModel editEmployeeRequest)
     {
-        var employee = await FindById(editEmployeeRequest.ID);
-        byte[] salt = GenerateSalt();
-        string hashedPassword = HashPassword(editEmployeeRequest.Password, salt);
-
-        
-            employee.Name = editEmployeeRequest.Name;
-            employee.Email = editEmployeeRequest.Email;
-            employee.PhoneNumber = editEmployeeRequest.PhoneNumber;
-            employee.Salary = editEmployeeRequest.Salary;
-            employee.Address = editEmployeeRequest.Address;
-            employee.JobTitleID = editEmployeeRequest.JobTitleID;
-            employee.Password = hashedPassword;
-        
-
-        await _dbContext.SaveChangesAsync();
+        await _employeeAuthoritiesFactory.EditEmployee(editEmployeeRequest);
     }
 
-    
-
-     public async Task DeleteEmployee(int id)
+    public async Task DeleteEmployee(int id)
     {
-        var employee = await _dbContext.Employees.FirstOrDefaultAsync(e => e.ID == id);
-
-        if(employee!=null)
-        {
-            _dbContext.Employees.Remove(employee);
-            await _dbContext.SaveChangesAsync();
-        }
-        
+        await _employeeAuthoritiesFactory.DeleteEmployee(id);
     }
+
 }
