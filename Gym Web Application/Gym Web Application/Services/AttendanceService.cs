@@ -91,4 +91,11 @@ public void UpdateAttendanceForNewDay()
     }
 }
 
+public bool HasAttended(int employeeId, DateTime date)
+{
+    var attendanceRecord = _dbContext.Attendance.FirstOrDefault(a => a.EmployeeID == employeeId && a.Date == date);
+    return attendanceRecord != null && attendanceRecord.Attended;
+}
+
+
     }
