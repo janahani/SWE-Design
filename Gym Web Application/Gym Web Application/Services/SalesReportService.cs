@@ -9,6 +9,11 @@ public class SalesReportService
 
     private readonly ISalesReportObservable _salesReportObservable;
 
+    private readonly SalesReportObservable salesReportObservable;
+
+    private readonly EmailService _emailService; 
+
+
     public SalesReportService(DbContextOptions<AppDbContext> options, ISalesReportObservable salesReportObservable)
     {
         _dbContext = AppDbContext.GetInstance(options);
@@ -19,20 +24,22 @@ public class SalesReportService
     {
         //will generate new sales report every 25th day of month
 
-        if (DateTime.Now.Day == 25)
+        if (DateTime.Now.Day == 1)
         {
             SalesReportModel newReport = GenerateReport();
             //setting the latest report in the observable
+            
             _salesReportObservable.NotifyObservers(newReport);
         }
     }
+
 
 
     private SalesReportModel GenerateReport()
     {
 
         DateTime today = DateTime.Today;
-        DateTime _25thDayOfMonth = new DateTime(today.Year, today.Month, 25);
+        DateTime _25thDayOfMonth = new DateTime(today.Year, today.Month, 1);
 
         var SalesReportData = _dbContext.SalesReport.Where(s => s.CreatedAt >= _25thDayOfMonth && s.CreatedAt <= today).ToList();
         var packages = _dbContext.Packages
@@ -50,6 +57,7 @@ public class SalesReportService
             decimal totalRevenue = CalculateTotalRevenue(memberships, packages);
             int totalMembershipsSold = CalculateTotalMembershipsSold(memberships);
             int totalClassesAttended = CalculateTotalClassesAttended(classes);
+            // int newClientsJoined = GetNewClientsJoinedOfMonth();
 
 
         SalesReportModel report = new SalesReportModel
@@ -58,6 +66,7 @@ public class SalesReportService
             TotalRevenue = totalRevenue,
             TotalMembershipsSold = totalMembershipsSold,
             TotalClassesAttended = totalClassesAttended
+            // NewClientsJoined = newClientsJoined
         };
 
         _dbContext.SalesReport.Add(report);
@@ -67,12 +76,20 @@ public class SalesReportService
 
     }
 
-    public SalesReportModel GetLatestSalesReport()
+
+       public SalesReportModel GetLatestSalesReport()
     {
-        // Retrieve the latest sales report from the database
-        return _dbContext.SalesReport
+        var latestReport = _dbContext.SalesReport
             .OrderByDescending(s => s.CreatedAt)
             .FirstOrDefault();
+        
+        // Notify observers with the latest report
+        if (latestReport != null)
+        {
+            _salesReportObservable.NotifyObservers(latestReport);
+        }
+
+        return latestReport;
     }
 
      private int CalculateTotalMembershipsSold(IEnumerable<MembershipModel> memberships)
@@ -87,7 +104,7 @@ public class SalesReportService
 
         private decimal CalculateTotalRevenue(IEnumerable<MembershipModel> memberships, IEnumerable<PackageModel> packages)
         {
-        DateTime _25thDayOfMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 25);
+        DateTime _25thDayOfMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
 
             var latestMonthMemberships = memberships.Where(m => m.StartDate >= _25thDayOfMonth);
 
@@ -102,6 +119,19 @@ public class SalesReportService
     }
              return totalRevenue;
         }
+
+// public int GetNewClientsJoinedOfMonth()
+// {
+//     DateTime startDateOfMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+
+//     DateTime endDateOfMonth = startDateOfMonth.AddMonths(1).AddDays(-1); 
+
+//     var newClients = _dbContext.Clients
+//         .Where(c => c.CreatedAt >= startDateOfMonth && c.CreatedAt <= endDateOfMonth)
+//         .ToList();
+
+//     return newClients.Count;
+// }
 
 
 }
