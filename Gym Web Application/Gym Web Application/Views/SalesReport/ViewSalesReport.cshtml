@@ -8,22 +8,26 @@
                 @if (Model != null)
                 {
                     <div class="sales-report">
-                        <div class="report-item">
-                            <label for="createdAt">Generated At:</label>
-                            <span>@Model.CreatedAt.ToString("yyyy-MM-dd")</span>
-                        </div>
-                        <div class="report-item">
-                            <label for="totalRevenue">This Month's Total Revenue:</label>
-                            <span>@Model.TotalRevenue</span>
-                        </div>
-                        <div class="report-item">
-                            <label for="totalMemberships">Total Memberships Sold This Month:</label>
-                            <span>@Model.TotalMembershipsSold</span>
-                        </div>
-                        <div class="report-item">
-                            <label for="totalClasses">Total Classes Attended This Month:</label>
-                            <span>@Model.TotalClassesAttended</span>
-                        </div>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Generated At:</th>
+                                    <td>@Model.CreatedAt.ToString("yyyy-MM-dd")</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">This Month's Total Revenue:</th>
+                                    <td>@Model.TotalRevenue</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Total Memberships Sold This Month:</th>
+                                    <td>@Model.TotalMembershipsSold</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Total Classes Attended This Month:</th>
+                                    <td>@Model.TotalClassesAttended</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 }
                 else
