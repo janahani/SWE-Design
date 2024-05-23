@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="table-responsive">
-                    <form method="post" action="/Attendance/MarkAttendance">
+                    <form method="post" action="/Attendance/MarkAttendance" id="attendanceForm">
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
@@ -42,18 +42,27 @@
                                         <td>@employee.Email</td>
                                         <td>@employee.PhoneNumber</td>
                                         <td>
-                    <input type="checkbox" name="attendedEmployees[@employee.ID]" value="true" class="btn-check" />
-                    <input type="hidden" name="attendedEmployees[@employee.ID]" value="false" />
-               
+                                            <input type="checkbox" name="attendedEmployees[@employee.ID]" value="true" class="btn-check" />
+                                            <input type="hidden" name="attendedEmployees[@employee.ID]" value="false" />
                                         </td>
                                     </tr>
                                 }
                             </tbody>
                         </table>
-                        <button type="submit" class="btn btn-primary">Submit Attendance</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <div class="row mt-3">
+        <div class="col text-right">
+            <button type="button" id="attendance-submit" class="btn btn-primary">Submit Attendance</button>
+        </div>
+    </div>
 </div>
+
+<script>
+    document.getElementById('attendance-submit').addEventListener('click', function() {
+        document.getElementById('attendanceForm').submit();
+    });
+</script>
