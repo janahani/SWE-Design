@@ -14,7 +14,9 @@ namespace Gym_Web_Application.Controllers
             _attendanceService = attendanceService;
         }
 
-      [HttpPost]
+
+
+[HttpPost]
 public IActionResult MarkAttendance(Dictionary<int, bool> attendedEmployees)
 {
     if (HttpContext.Session.GetString("EmployeeEmail") == null)
