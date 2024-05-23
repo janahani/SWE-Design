@@ -5,6 +5,8 @@ public class SalesReportObservable : ISalesReportObservable
     private List<ISalesEmployeeObserver> observers = new List<ISalesEmployeeObserver>();
     private SalesReportModel latestReport;
 
+    
+
     public SalesReportModel LatestReport
     {
         get { return latestReport; }
@@ -16,11 +18,12 @@ public class SalesReportObservable : ISalesReportObservable
         }
     }
 
-    public void AttachObserver(ISalesEmployeeObserver observer)
-    {
-        observers.Add(observer);
-        Console.WriteLine("new observer added");
-    }
+ public void AttachObserver(ISalesEmployeeObserver observer)
+{
+    observers.Add(observer);
+    Console.WriteLine("New observer added");
+}
+
 
     public void DetachObserver(ISalesEmployeeObserver observer)
     {
@@ -31,6 +34,10 @@ public class SalesReportObservable : ISalesReportObservable
      public void NotifyObservers(SalesReportModel latestReport)
     {
         Console.WriteLine("Notifying sales reporters of new release of monthly sales report");
+
+
+
+        
         foreach (var observer in observers)
         {
             observer.UpdateAsync(latestReport);
