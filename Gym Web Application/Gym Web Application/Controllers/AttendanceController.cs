@@ -42,8 +42,7 @@ public IActionResult MarkAttendance(Dictionary<int, bool> attendedEmployees)
             {
                 return RedirectToAction("Login");
             }
-
-             _attendanceService.UpdateAttendanceForNewDay();
+            
             List<EmployeeModel> employees = _attendanceService.GetAllEmployees(); 
             return View(employees);
         }
