@@ -2,6 +2,9 @@ using Gym_Web_Application.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Gym_Web_Application.FactoryDP;
+using Gym_Web_Application.ObserverDP;
+using Gym_Web_Application.Models;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,7 +36,7 @@ builder.Services.AddSingleton<AdminAuthFactory>();
 builder.Services.AddTransient<MembershipService>();
 builder.Services.AddTransient<ClientService>();
 builder.Services.AddTransient<ClassService>();
-builder.Services.AddTransient<EmailService>();
+builder.Services.AddTransient<EmailService, MockEmailService>();
 builder.Services.AddTransient<PackageService>();
 builder.Services.AddTransient<EmployeeService>();
 builder.Services.AddTransient<JobTitleService>();
@@ -43,6 +46,18 @@ builder.Services.AddTransient<SalesReportService>();
 builder.Services.AddTransient<ISalesReportObservable, SalesReportObservable>();
 
 
+builder.Services.AddSingleton<ISalesReportObservable>(provider =>
+{
+    var observable = new SalesReportObservable();
+    
+    var observers = provider.GetServices<ISalesEmployeeObserver>();
+    foreach (var observer in observers)
+    {
+        observable.AttachObserver(observer);
+    }
+    
+    return observable;
+});
 
 var app = builder.Build();
 
@@ -65,5 +80,28 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Login}/{id?}");
+
+// Test code
+SalesReportObservable salesReportObservable = new SalesReportObservable();
+
+var configuration = builder.Configuration;
+
+            // Create an instance of EmailService
+var emailService = new EmailService(configuration); // Provide the necessary configuration
+    
+// Create and attach mock observers for testing
+salesReportObservable.AttachObserver(new MockSalesEmployeeObserver(10, emailService));
+salesReportObservable.AttachObserver(new MockSalesEmployeeObserver(20, emailService));
+salesReportObservable.AttachObserver(new MockSalesEmployeeObserver(30, emailService));
+
+// Generate a test report and notify observers
+SalesReportModel testReport = new SalesReportModel
+{
+    CreatedAt = DateTime.Now,
+    TotalRevenue = 1000,
+    TotalMembershipsSold = 50,
+    TotalClassesAttended = 200
+};
+salesReportObservable.LatestReport = testReport;
 
 app.Run();
