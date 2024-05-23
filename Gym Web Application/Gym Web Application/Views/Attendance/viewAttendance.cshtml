@@ -1,5 +1,5 @@
 @model List<Gym_Web_Application.Models.EmployeeModel> 
-
+@inject AttendanceService _attendanceService 
 @{
     ViewData["Title"] = "Attendance";
 }
@@ -42,10 +42,12 @@
                                         <td>@employee.Email</td>
                                         <td>@employee.PhoneNumber</td>
                                         <td>
-                                            <input type="checkbox" name="attendedEmployees[@employee.ID]" value="true" class="btn-check" />
-                                            <input type="hidden" name="attendedEmployees[@employee.ID]" value="false" />
-                                        </td>
-                                    </tr>
+                                           @{
+                                        bool hasAttended = _attendanceService.HasAttended(employee.ID, DateTime.Today); }
+                                        <input type="checkbox" name="attendedEmployees[@employee.ID]" value="true" class="btn-check" @(hasAttended ? "checked" : "") />
+                                        <input type="hidden" name="attendedEmployees[@employee.ID]" value="false" />
+                                    </td>
+                                </tr>
                                 }
                             </tbody>
                         </table>
