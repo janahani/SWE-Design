@@ -12,16 +12,19 @@ namespace Gym_Web_Application.Controllers
         {
             _salesReportService = salesReportService;
         }
-[HttpGet]
+[HttpGet] 
     public IActionResult ViewSalesReport()
     {
-         if (HttpContext.Session.GetString("EmployeeEmail") == null)
-            {
-                return RedirectToAction("Login");
-            }
         var latestReport = _salesReportService.GetLatestSalesReport();
         return View(latestReport);
     }
+
+       [HttpPost]
+        public IActionResult GetLatestSalesReport()
+        {
+            _salesReportService.GenerateMonthlySalesReport();
+            return RedirectToAction(nameof(ViewSalesReport)); 
+        }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
