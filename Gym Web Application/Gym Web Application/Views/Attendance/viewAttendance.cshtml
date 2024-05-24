@@ -62,9 +62,32 @@
         </div>
     </div>
 </div>
+<script>
+    function filterEmployees() {
+        var searchText = document.querySelector('.table-search-bar').value.toLowerCase();
+
+        var rows = document.querySelectorAll('tbody tr');
+
+        rows.forEach(function(row) {
+            var nameColumn = row.querySelector('td:nth-child(2)');
+            if (nameColumn) {
+                var name = nameColumn.textContent.toLowerCase();
+                if (name.includes(searchText)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    document.querySelector('.table-search-bar').addEventListener('input', filterEmployees);
+</script>
 
 <script>
     document.getElementById('attendance-submit').addEventListener('click', function() {
         document.getElementById('attendanceForm').submit();
     });
 </script>
+
+
