@@ -19,25 +19,20 @@ public class SalesReportService
         _httpContextAccessor = httpContextAccessor;
     }
 
-    public SalesReportModel GenerateMonthlySalesReport()
+  public SalesReportModel GenerateMonthlySalesReport()
+{
+    SalesReportModel newReport = GenerateReport(); 
+
+    if (_httpContextAccessor != null && _httpContextAccessor.HttpContext != null && _httpContextAccessor.HttpContext.Request.Method == "POST")
     {
-        SalesReportModel newReport = new SalesReportModel
-        {
-            CreatedAt = DateTime.Now,
-            TotalRevenue = 1000,
-            TotalMembershipsSold = 50,
-            TotalClassesAttended = 200
-        };
+        ((SalesReportObservable)_salesReportObservable).LatestReport = newReport;
 
-        if (_httpContextAccessor != null && _httpContextAccessor.HttpContext != null && _httpContextAccessor.HttpContext.Request.Method == "POST")
-        {
-            ((SalesReportObservable)_salesReportObservable).LatestReport = newReport;
-
-            _salesReportObservable.NotifyObservers(newReport);
-        }
-
-        return newReport;
+        _salesReportObservable.NotifyObservers(newReport);
     }
+
+    return newReport;
+}
+
 
     public SalesReportModel GetLatestSalesReport()
     {
@@ -46,52 +41,39 @@ public class SalesReportService
 
 
 
+    public SalesReportModel GenerateReport()
+{
+    DateTime today = DateTime.Today;
+    DateTime _25thDayOfMonth = new DateTime(today.Year, today.Month, 1);
 
+    var memberships = _dbContext.Memberships
+        .Where(m => m.StartDate >= _25thDayOfMonth && m.StartDate <= today)
+        .ToList();
 
-    
+    var packages = _dbContext.Packages
+        .Where(p => p.IsActivated == "Activated")
+        .ToList();
 
+    var classes = _dbContext.Classes
+        .Where(c => c.ID > 0)
+        .ToList();
 
+    decimal totalRevenue = CalculateTotalRevenue(memberships, packages);
+    int totalMembershipsSold = CalculateTotalMembershipsSold(memberships);
+    int totalClassesAttended = CalculateTotalClassesAttended(classes);
 
-    private SalesReportModel GenerateReport()
+    SalesReportModel report = new SalesReportModel
     {
+        CreatedAt = today,
+        TotalRevenue = totalRevenue,
+        TotalMembershipsSold = totalMembershipsSold,
+        TotalClassesAttended = totalClassesAttended
+    };
 
-        DateTime today = DateTime.Today;
-        DateTime _25thDayOfMonth = new DateTime(today.Year, today.Month, 1);
-
-        var SalesReportData = _dbContext.SalesReport.Where(s => s.CreatedAt >= _25thDayOfMonth && s.CreatedAt <= today).ToList();
-        var packages = _dbContext.Packages
-                             .Where(p => p.IsActivated == "Activated")
-                             .ToList();
-
-        var classes = _dbContext.Classes
-                           .Where(c => c.ID > 0) 
-                           .ToList();
-
-        var memberships = _dbContext.Memberships
-                                .Where(m => m.StartDate >= _25thDayOfMonth && m.StartDate <= today)
-                                .ToList();
-
-            decimal totalRevenue = CalculateTotalRevenue(memberships, packages);
-            int totalMembershipsSold = CalculateTotalMembershipsSold(memberships);
-            int totalClassesAttended = CalculateTotalClassesAttended(classes);
-            // int newClientsJoined = GetNewClientsJoinedOfMonth();
-
-
-        SalesReportModel report = new SalesReportModel
-        {
-            CreatedAt = today,
-            TotalRevenue = totalRevenue,
-            TotalMembershipsSold = totalMembershipsSold,
-            TotalClassesAttended = totalClassesAttended
-            // NewClientsJoined = newClientsJoined
-        };
-
-        _dbContext.SalesReport.Add(report);
-        _dbContext.SaveChanges();
-        return report;
-
-
-    }
+    _dbContext.SalesReport.Add(report);
+    _dbContext.SaveChanges();
+    return report;
+}
 
 
     //    public SalesReportModel GetLatestSalesReport()
