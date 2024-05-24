@@ -2,36 +2,53 @@ using Gym_Web_Application.Data;
 using Gym_Web_Application.Models;
 using Gym_Web_Application.ObserverDP;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http; // Add this namespace
 
 public class SalesReportService
 {
     private readonly AppDbContext _dbContext;
-
     private readonly ISalesReportObservable _salesReportObservable;
+    private readonly EmailService _emailService;
+    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    private readonly SalesReportObservable salesReportObservable;
-
-    private readonly EmailService _emailService; 
-
-
-    public SalesReportService(DbContextOptions<AppDbContext> options, ISalesReportObservable salesReportObservable)
+    public SalesReportService(DbContextOptions<AppDbContext> options, ISalesReportObservable salesReportObservable, EmailService emailService, IHttpContextAccessor httpContextAccessor)
     {
         _dbContext = AppDbContext.GetInstance(options);
         _salesReportObservable = salesReportObservable;
+        _emailService = emailService;
+        _httpContextAccessor = httpContextAccessor;
     }
 
-    public void GenerateMonthlySalesReport()
+    public SalesReportModel GenerateMonthlySalesReport()
     {
-        //will generate new sales report every 25th day of month
-
-        if (DateTime.Now.Day == 1)
+        SalesReportModel newReport = new SalesReportModel
         {
-            SalesReportModel newReport = GenerateReport();
-            //setting the latest report in the observable
-            
+            CreatedAt = DateTime.Now,
+            TotalRevenue = 1000,
+            TotalMembershipsSold = 50,
+            TotalClassesAttended = 200
+        };
+
+        if (_httpContextAccessor != null && _httpContextAccessor.HttpContext != null && _httpContextAccessor.HttpContext.Request.Method == "POST")
+        {
+            ((SalesReportObservable)_salesReportObservable).LatestReport = newReport;
+
             _salesReportObservable.NotifyObservers(newReport);
         }
+
+        return newReport;
     }
+
+    public SalesReportModel GetLatestSalesReport()
+    {
+        return ((SalesReportObservable)_salesReportObservable).LatestReport;
+    }
+
+
+
+
+
+    
 
 
 
@@ -77,20 +94,20 @@ public class SalesReportService
     }
 
 
-       public SalesReportModel GetLatestSalesReport()
-    {
-        var latestReport = _dbContext.SalesReport
-            .OrderByDescending(s => s.CreatedAt)
-            .FirstOrDefault();
+    //    public SalesReportModel GetLatestSalesReport()
+    // {
+    //     var latestReport = _dbContext.SalesReport
+    //         .OrderByDescending(s => s.CreatedAt)
+    //         .FirstOrDefault();
         
-        // Notify observers with the latest report
-        if (latestReport != null)
-        {
-            _salesReportObservable.NotifyObservers(latestReport);
-        }
+    //     // Notify observers with the latest report
+    //     if (latestReport != null)
+    //     {
+    //         _salesReportObservable.NotifyObservers(latestReport);
+    //     }
 
-        return latestReport;
-    }
+    //     return latestReport;
+    // }
 
      private int CalculateTotalMembershipsSold(IEnumerable<MembershipModel> memberships)
         {
