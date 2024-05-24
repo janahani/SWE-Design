@@ -21,6 +21,8 @@ public class SalesReportModel
 
     [Required(ErrorMessage = "Total classes sold is required.")]
     [Range(0, int.MaxValue, ErrorMessage = "Total classes attended must be a non-negative number.")]
+    // public int NewClientsJoined { get; set; }
+
     public int TotalClassesAttended { get; set; }
 
 

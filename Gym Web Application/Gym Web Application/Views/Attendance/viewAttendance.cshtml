@@ -1,5 +1,5 @@
 @model List<Gym_Web_Application.Models.EmployeeModel> 
-
+@inject AttendanceService _attendanceService 
 @{
     ViewData["Title"] = "Attendance";
 }
@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="table-responsive">
-                    <form method="post" action="/Attendance/MarkAttendance">
+                    <form method="post" action="/Attendance/MarkAttendance" id="attendanceForm">
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
@@ -42,18 +42,52 @@
                                         <td>@employee.Email</td>
                                         <td>@employee.PhoneNumber</td>
                                         <td>
-                    <input type="checkbox" name="attendedEmployees[@employee.ID]" value="true" class="btn-check" />
-                    <input type="hidden" name="attendedEmployees[@employee.ID]" value="false" />
-               
-                                        </td>
-                                    </tr>
+                                           @{
+                                        bool hasAttended = _attendanceService.HasAttended(employee.ID, DateTime.Today); }
+                                        <input type="checkbox" name="attendedEmployees[@employee.ID]" value="true" class="btn-check" @(hasAttended ? "checked" : "") />
+                                        <input type="hidden" name="attendedEmployees[@employee.ID]" value="false" />
+                                    </td>
+                                </tr>
                                 }
                             </tbody>
                         </table>
-                        <button type="submit" class="btn btn-primary">Submit Attendance</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <div class="row mt-3">
+        <div class="col text-right">
+            <button type="button" id="attendance-submit" class="btn btn-primary">Submit Attendance</button>
+        </div>
+    </div>
 </div>
+<script>
+    function filterEmployees() {
+        var searchText = document.querySelector('.table-search-bar').value.toLowerCase();
+
+        var rows = document.querySelectorAll('tbody tr');
+
+        rows.forEach(function(row) {
+            var nameColumn = row.querySelector('td:nth-child(2)');
+            if (nameColumn) {
+                var name = nameColumn.textContent.toLowerCase();
+                if (name.includes(searchText)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    document.querySelector('.table-search-bar').addEventListener('input', filterEmployees);
+</script>
+
+<script>
+    document.getElementById('attendance-submit').addEventListener('click', function() {
+        document.getElementById('attendanceForm').submit();
+    });
+</script>
+
+

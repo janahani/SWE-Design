@@ -1,5 +1,8 @@
 using Gym_Web_Application.Models;
 using Gym_Web_Application.ObserverDP;
+using System.Collections.Generic;
+using System;
+
 public class SalesReportObservable : ISalesReportObservable
 {
     private List<ISalesEmployeeObserver> observers = new List<ISalesEmployeeObserver>();
@@ -10,7 +13,6 @@ public class SalesReportObservable : ISalesReportObservable
         get { return latestReport; }
         set
         {
-
             latestReport = value;
             NotifyObservers(latestReport);
         }
@@ -19,18 +21,19 @@ public class SalesReportObservable : ISalesReportObservable
     public void AttachObserver(ISalesEmployeeObserver observer)
     {
         observers.Add(observer);
-        Console.WriteLine("new observer added");
+        Console.WriteLine("New observer added");
     }
 
     public void DetachObserver(ISalesEmployeeObserver observer)
     {
         observers.Remove(observer);
-        Console.WriteLine("an observer is removed");
+        Console.WriteLine("An observer is removed");
     }
 
-     public void NotifyObservers(SalesReportModel latestReport)
+    public void NotifyObservers(SalesReportModel latestReport)
     {
         Console.WriteLine("Notifying sales reporters of new release of monthly sales report");
+
         foreach (var observer in observers)
         {
             observer.UpdateAsync(latestReport);

@@ -79,7 +79,13 @@ public class ClassAuthoritiesFactory : AuthorityModel
     public async Task<List<AssignedClassModel>> getAssignedClasses()
     {
         using var _dbContext = new AppDbContext(_options);
-        return await _dbContext.AssignedClasses.ToListAsync();
+        var now = DateTime.Now;
+
+        return await _dbContext.AssignedClasses
+            .Where(ac => (ac.Date > now.Date ||
+                          (ac.Date == now.Date && ac.StartTime.TimeOfDay > now.TimeOfDay)) &&
+                          ac.AvailablePlaces > 0)
+            .ToListAsync();
     }
 
     public async Task<List<DateTime>> getClassDays(int classId)
@@ -118,18 +124,29 @@ public class ClassAuthoritiesFactory : AuthorityModel
         await _dbContext.AssignedClasses.AddAsync(assignedClass);
         await _dbContext.SaveChangesAsync();
     }
-
     public async Task addReservedClass(int AssignedClassID, int ClientID, int CoachID)
     {
         using var _dbContext = new AppDbContext(_options);
-        var reservedClass = new ReservedClassModel()
+        var assignedClass = await _dbContext.AssignedClasses.FindAsync(AssignedClassID);
+
+        if (assignedClass != null)
         {
-            AssignedClassID = AssignedClassID,
-            CoachID = CoachID,
-            ClientID = ClientID
-        };
-        await _dbContext.ReservedClasses.AddAsync(reservedClass);
-        await _dbContext.SaveChangesAsync();
+            assignedClass.AvailablePlaces -= 1;
+
+            var reservedClass = new ReservedClassModel()
+            {
+                AssignedClassID = AssignedClassID,
+                CoachID = CoachID,
+                ClientID = ClientID
+            };
+
+            await _dbContext.ReservedClasses.AddAsync(reservedClass);
+            await _dbContext.SaveChangesAsync();
+        }
+        else
+        {
+            throw new InvalidOperationException("Class not found or no available places.");
+        }
     }
 
     public async Task<ClassModel> getClassById(int classId)

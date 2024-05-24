@@ -55,5 +55,47 @@ public void MarkAttendance(int employeeId, bool attended, DateTime date)
         return _dbContext.Employees.ToList();
     }
 
-    
+
+public void UpdateAttendanceForNewDay()
+{
+    DateTime currentDate = DateTime.Today;
+
+    bool attendanceUpdated = _dbContext.Attendance.Any(a => a.Date.Date == currentDate);
+
+    if (!attendanceUpdated)
+    {
+        var employees = _dbContext.Employees.ToList();
+
+        foreach (var employee in employees)
+        {
+            var attendanceRecord = _dbContext.Attendance.FirstOrDefault(a => a.EmployeeID == employee.ID && a.Date.Date == currentDate);
+
+            if (attendanceRecord == null)
+            {
+                attendanceRecord = new AttendanceModel
+                {
+                    EmployeeID = employee.ID,
+                    Attended = false,
+                    Date = currentDate
+                };
+
+                _dbContext.Add(attendanceRecord);
+            }
+            else
+            {
+                attendanceRecord.Attended = false;
+            }
+        }
+
+        _dbContext.SaveChanges();
+    }
 }
+
+public bool HasAttended(int employeeId, DateTime date)
+{
+    var attendanceRecord = _dbContext.Attendance.FirstOrDefault(a => a.EmployeeID == employeeId && a.Date == date);
+    return attendanceRecord != null && attendanceRecord.Attended;
+}
+
+
+    }

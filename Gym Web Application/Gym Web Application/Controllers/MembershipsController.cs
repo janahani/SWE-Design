@@ -4,6 +4,8 @@ using Gym_Web_Application.Models;
 
 namespace Gym_Web_Application.Controllers;
 
+
+
 public class MembershipsController : Controller
 {
     private readonly ILogger<MembershipsController> _logger;
@@ -19,11 +21,16 @@ public class MembershipsController : Controller
         this._membershipService = membershipService;
         this._clientService = clientService;
 
-    }
+    } 
+ 
 
     [HttpGet]
     public async Task<IActionResult> ViewMemberships()
     {
+   if (HttpContext.Session.GetString("EmployeeEmail") == null)
+    {
+                return RedirectToAction("Login");
+    }
         var memberships = await _membershipService.GetAllMemberships();
         _logger.LogInformation("Membership {memberships}", memberships);
 
@@ -53,6 +60,10 @@ public class MembershipsController : Controller
     [HttpPost]
     public async Task<IActionResult> ActivateMembership(int id, int packageID)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         _logger.LogInformation("Starting ActivateMembership method for client ID {id}", id);
         PackageModel package = await _packageService.GetPackageById(packageID);
         await _membershipService.activateMembership(id, package);
@@ -62,16 +73,28 @@ public class MembershipsController : Controller
 
     public async Task<ActionResult> DeleteMembership(int id)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         await _membershipService.DeleteMembership(id);
         return RedirectToAction("ViewMemberships");
     }
     public async Task<ActionResult> FreezeMembership(int id, DateTime freezeEndDate)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         await _membershipService.FreezeMembership(id, freezeEndDate);
         return RedirectToAction("ViewMemberships");
     }
     public async Task<ActionResult> UnfreezeMembership(int id)
     {
+         if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
         await _membershipService.UnfreezeMembership(id);
         return RedirectToAction("ViewMemberships");
     }

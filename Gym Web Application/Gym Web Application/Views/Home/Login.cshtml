@@ -1,7 +1,7 @@
+@model Gym_Web_Application.Models.EmployeeModel
+
 @{
     Layout = null;
-}
-@{
     ViewData["Title"] = "Login";
 }
 <!DOCTYPE html>
@@ -9,20 +9,24 @@
 <head>
     <link rel="stylesheet" href="~/css/loginEmp.css" asp-append-version="true" />
 </head>
-
+<body>
 <div class="login-page">
     <h1 class="title">ProFit Gym Employee Log in</h1>
     <div class="form">
-        <form autocomplete="off" method="post" class="login-form" asp-action="LoginEmployee"
-            onsubmit="return validateForm()">
-            <input id="email" type="email" placeholder="email" />
-            <span id="email-error" class="error-message"> </span>
-            <input type="password" id="password" placeholder="password" />
-            <span id="password-error" class="error-message"> </span>
-            <span id="all-error"> </span>
+        <form asp-action="LoginEmployee" method="post" asp-controller="Home" class="login-form" onsubmit="return validateForm()">
+            <input id="email" name="Email" type="email" placeholder="email" asp-for="Email" />
+            <span id="email-error" class="error-message"></span>
+            <input type="password" id="password" name="Password" placeholder="password" asp-for="Password" />
+            <span id="password-error" class="error-message"></span>
+            <span id="all-error"></span>
             <button type="submit">login</button>
         </form>
+        @if(ViewBag.ErrorMessage != null)
+        {
+            <p class="text-danger">@ViewBag.ErrorMessage</p>
+        }
     </div>
 </div>
-</div>
 <script src="~/js/login_validation.js"></script>
+</body>
+</html>

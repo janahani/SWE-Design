@@ -14,7 +14,7 @@ using Gym_Web_Application.Models;
             _configuration = configuration;
         }
 
-        public async Task SendEmailAsync(string toEmail, string subject, string body)
+        public virtual async Task SendEmailAsync(string toEmail, string subject, string body)
         {
             var email = new MimeMessage();
             email.From.Add(new MailboxAddress(_configuration["EmailSettings:SenderName"], _configuration["EmailSettings:SenderEmail"]));

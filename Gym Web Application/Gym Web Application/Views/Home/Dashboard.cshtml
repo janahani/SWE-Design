@@ -2,9 +2,9 @@
     ViewData["Title"] = "Admin Dashboard";
 }
 
-
 <div class="container-fluid pt-3">
     <div class="container-fluid pt-3">
+        <!-- Recent Clients Section -->
         <div class="row removable">
             <div class="col-lg-8">
                 <div class="card">
@@ -14,8 +14,7 @@
                                 <h3 class="mb-0">Recent Clients</h3>
                             </div>
                             <div class="col text-right">
-                                <a class="btn btn-sm btn-primary" asp-controller="Clients" asp-action="ViewClients">See
-                                    all</a>
+                                <a class="btn btn-sm btn-primary" asp-controller="Clients" asp-action="ViewClients">See all</a>
                             </div>
                         </div>
                     </div>
@@ -32,105 +31,121 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        01
-                                    </th>
-                                    <td>
-                                        Sahwa Amr
-                                    </td>
-                                    <td>
-                                        sahwaamr@gmail.com
-                                    </td>
-                                    <td>
-                                        20
-                                    </td>
-                                    <td>
-                                        female
-                                    </td>
-                                    <td>
-                                        01127897625
-                                    </td>
-
-                                </tr>
-
+                                @foreach (var client in ViewBag.Top3RecentClients)
+                                {
+                                    <tr>
+                                        <td>@client.ID</td>
+                                        <td>@(client.FirstName + " " + client.LastName)</td>
+                                        <td>@client.Email</td>
+                                        <td>@client.Age</td>
+                                        <td>@client.Gender</td>
+                                        <td>@client.PhoneNumber</td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-4">
-                    <div class="card card-stats">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Packages</h5>
-                                    <span class="h2 font-weight-bold mb-0">5</span>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="icon icon-shape text-white rounded-circle shadow bg-gradient-warning">
-                                        <i class='bx bxs-calendar-check'></i>
-                                    </div>
+            <!-- Count Cards Section -->
+            <div class="col-lg-4">
+                 <!-- Package Count -->
+                <div class="card card-stats">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Clients</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.ClientCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape text-white rounded-circle shadow bg-gradient-warning">
+                                    <i class='bx bxs-calendar-check'></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card card-stats">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Classes</h5>
-                                    <span class="h2 font-weight-bold mb-0">10</span>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="icon icon-shape text-white rounded-circle shadow bg-blue">
-                                        <i class='bx bxs-calendar-check'></i>
-                                    </div>
+                </div>
+
+                <!-- Package Count -->
+                <div class="card card-stats">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Packages</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.PackageCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape text-white rounded-circle shadow bg-gradient-warning">
+                                    <i class='bx bxs-calendar-check'></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card card-stats">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Employees</h5>
-                                    <span class="h2 font-weight-bold mb-0">9</span>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="icon icon-shape text-white rounded-circle shadow bg-yellow">
-                                        <i class='bx bxs-group'></i>
-                                    </div>
+                </div>
+
+                <!-- Classes Count -->
+                <div class="card card-stats">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Classes</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.ClassCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape text-white rounded-circle shadow bg-blue">
+                                    <i class='bx bxs-calendar-check'></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card card-stats">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Coaches</h5>
-                                    <span class="h2 font-weight-bold mb-0">1</span>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="icon icon-shape text-white rounded-circle shadow bg-pink">
-                                        <i class='bx bxs-group'></i>
-                                    </div>
+                </div>
+
+                <!-- Employees Count -->
+                <div class="card card-stats">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Employees</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.EmployeeCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape text-white rounded-circle shadow bg-yellow">
+                                    <i class='bx bxs-group'></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card card-stats">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Total Revenue</h5>
-                                    <span class="h2 font-weight-bold mb-0">$2300</span>
+                </div>
+
+                <!-- Coaches Count -->
+                <div class="card card-stats">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Coaches</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.CoachCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape text-white rounded-circle shadow bg-pink">
+                                    <i class='bx bxs-group'></i>
                                 </div>
-                                <div class="col-auto">
-                                    <div class="icon icon-shape text-white rounded-circle shadow bg-gradient-success">
-                                        <i class='bx bxs-dollar-circle'></i>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memberships Count -->
+                <div class="card card-stats">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Memberships</h5>
+                                <span class="h2 font-weight-bold mb-0">@ViewBag.ActivatedMembershipCount</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape text-white rounded-circle shadow bg-gradient-success">
+                                    <i class='bx bxs-dollar-circle'></i>
                                 </div>
                             </div>
                         </div>
@@ -138,5 +153,5 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
 </div>
