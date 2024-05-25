@@ -27,6 +27,9 @@ builder.Services.AddSingleton(sp => new DbContextOptionsBuilder<AppDbContext>()
 
 builder.Services.AddSingleton<IWebHostEnvironment>(builder.Environment);
 
+IServiceCollection serviceCollection = builder.Services.AddSingleton<IWebHostEnvironment>(builder.Environment);
+
+builder.Services.AddSingleton<DashboardAuthoritiesFactory>();
 builder.Services.AddSingleton<ClientAuthoritiesFactory>();
 builder.Services.AddSingleton<ClassAuthoritiesFactory>();
 builder.Services.AddSingleton<EmployeeAuthoritiesFactory>();
@@ -34,6 +37,7 @@ builder.Services.AddSingleton<PackagesAuthoritiesFactory>();
 builder.Services.AddSingleton<AdminAuthFactory>();
 
 builder.Services.AddTransient<MembershipService>();
+builder.Services.AddTransient<DashboardService>();
 builder.Services.AddTransient<ClientService>();
 builder.Services.AddTransient<ClassService>();
 builder.Services.AddTransient<PackageService>();
