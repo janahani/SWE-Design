@@ -5024,19 +5024,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\malak\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
+      "projectUniqueName": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
       "projectName": "Gym Web Application",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\SWE-Design\\Gym Web Application\\Gym Web Application\\obj\\",
+      "projectPath": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
+      "packagesPath": "C:\\Users\\malak\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\malak\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5056,11 +5056,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -5113,7 +5108,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
