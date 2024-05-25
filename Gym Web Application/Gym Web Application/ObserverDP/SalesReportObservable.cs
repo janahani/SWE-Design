@@ -8,13 +8,20 @@ public class SalesReportObservable : ISalesReportObservable
     private List<ISalesEmployeeObserver> observers = new List<ISalesEmployeeObserver>();
     private SalesReportModel latestReport;
 
+    
+
+    
+
     public SalesReportModel LatestReport
     {
         get { return latestReport; }
         set
         {
+            if (value != latestReport)
+        {
             latestReport = value;
             NotifyObservers(latestReport);
+        }
         }
     }
 
@@ -22,12 +29,18 @@ public class SalesReportObservable : ISalesReportObservable
     {
         observers.Add(observer);
         Console.WriteLine("New observer added");
-    }
+   
+}
+
 
     public void DetachObserver(ISalesEmployeeObserver observer)
     {
+        SalesEmployee salesEmployeeObserver = observer as SalesEmployee;
+        if (salesEmployeeObserver != null && salesEmployeeObserver.AssociatedEmployee.JobTitleID != 3)
+    {
         observers.Remove(observer);
         Console.WriteLine("An observer is removed");
+    }
     }
 
     public void NotifyObservers(SalesReportModel latestReport)

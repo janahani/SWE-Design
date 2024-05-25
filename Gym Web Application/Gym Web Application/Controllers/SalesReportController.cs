@@ -16,20 +16,21 @@ namespace Gym_Web_Application.Controllers
         }
 
         [HttpPost]
-        public IActionResult GenerateAndNotify()
+        public async Task<IActionResult> GenerateAndNotify()
         {
-            SalesReportModel newReport = _salesReportService.GenerateMonthlySalesReport();
-            
-            ((SalesReportObservable)_salesReportObservable).LatestReport = newReport;
-
-            return RedirectToAction("ViewSalesReport");
+        SalesReportModel newReport = await _salesReportService.GenerateMonthlySalesReport();
+        ((SalesReportObservable)_salesReportObservable).LatestReport = newReport;
+        
+        return RedirectToAction("ViewSalesReport");
         }
+
 
         [HttpGet]
-        public IActionResult ViewSalesReport()
+        public async Task<IActionResult> ViewSalesReport()
         {
-            var latestReport = _salesReportService.GetLatestSalesReport();
+            var latestReport = await _salesReportService.GetLatestSalesReport();
             return View(latestReport);
-        }
+            }
+
     }
 }

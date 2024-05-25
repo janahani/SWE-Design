@@ -19,25 +19,25 @@ public class SalesReportService
         _httpContextAccessor = httpContextAccessor;
     }
 
-  public SalesReportModel GenerateMonthlySalesReport()
+
+public async Task<SalesReportModel> GenerateMonthlySalesReport()
 {
-    SalesReportModel newReport = GenerateReport(); 
+    SalesReportModel newReport = GenerateReport();
 
     if (_httpContextAccessor != null && _httpContextAccessor.HttpContext != null && _httpContextAccessor.HttpContext.Request.Method == "POST")
     {
         ((SalesReportObservable)_salesReportObservable).LatestReport = newReport;
 
-        _salesReportObservable.NotifyObservers(newReport);
+        await Task.Run(() => _salesReportObservable.NotifyObservers(newReport));
     }
 
     return newReport;
 }
 
-
-    public SalesReportModel GetLatestSalesReport()
-    {
-        return ((SalesReportObservable)_salesReportObservable).LatestReport;
-    }
+public async Task<SalesReportModel> GetLatestSalesReport()
+{
+    return await Task.FromResult(((SalesReportObservable)_salesReportObservable).LatestReport);
+}
 
 
 
