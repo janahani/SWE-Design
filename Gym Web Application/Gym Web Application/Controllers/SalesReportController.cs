@@ -1,36 +1,45 @@
+// SalesReportController.cs
 using Microsoft.AspNetCore.Mvc;
 using Gym_Web_Application.Models;
 using Gym_Web_Application.ObserverDP;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Gym_Web_Application.Controllers
 {
     public class SalesReportController : Controller
     {
-        private readonly SalesReportService _salesReportService;
-        private readonly ISalesReportObservable _salesReportObservable;
+        private readonly IServiceProvider _serviceProvider;
 
-        public SalesReportController(SalesReportService salesReportService, ISalesReportObservable salesReportObservable)
+        public SalesReportController(IServiceProvider serviceProvider)
         {
-            _salesReportService = salesReportService;
-            _salesReportObservable = salesReportObservable;
+            _serviceProvider = serviceProvider;
         }
 
         [HttpPost]
         public async Task<IActionResult> GenerateAndNotify()
         {
-        SalesReportModel newReport = await _salesReportService.GenerateMonthlySalesReport();
-        ((SalesReportObservable)_salesReportObservable).LatestReport = newReport;
-        
-        return RedirectToAction("ViewSalesReport");
-        }
+            using (var scope = _serviceProvider.CreateScope())
+            {
+                var salesReportService = scope.ServiceProvider.GetRequiredService<SalesReportService>();
+                var salesReportObservable = scope.ServiceProvider.GetRequiredService<ISalesReportObservable>();
 
+                SalesReportModel newReport = await salesReportService.GenerateReport();
+                ((SalesReportObservable)salesReportObservable).LatestReport = newReport;
+                await salesReportService.NotifyObservers(newReport);
+
+                return RedirectToAction("ViewSalesReport");
+            }
+        }
 
         [HttpGet]
         public async Task<IActionResult> ViewSalesReport()
         {
-            var latestReport = await _salesReportService.GetLatestSalesReport();
-            return View(latestReport);
+            using (var scope = _serviceProvider.CreateScope())
+            {
+                var salesReportService = scope.ServiceProvider.GetRequiredService<SalesReportService>();
+                var latestReport = await salesReportService.GetLatestSalesReport();
+                return View(latestReport);
             }
-
+        }
     }
 }

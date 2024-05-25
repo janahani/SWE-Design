@@ -27,6 +27,7 @@ public class SalesReportObservable : ISalesReportObservable
 
     public void AttachObserver(ISalesEmployeeObserver observer)
     {
+        
         observers.Add(observer);
         Console.WriteLine("New observer added");
    

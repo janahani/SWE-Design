@@ -6,75 +6,70 @@ using Microsoft.AspNetCore.Http; // Add this namespace
 
 public class SalesReportService
 {
-    private readonly AppDbContext _dbContext;
+     private readonly AppDbContext _dbContext;
     private readonly ISalesReportObservable _salesReportObservable;
     private readonly EmailService _emailService;
     private readonly IHttpContextAccessor _httpContextAccessor;
+    
 
-    public SalesReportService(DbContextOptions<AppDbContext> options, ISalesReportObservable salesReportObservable, EmailService emailService, IHttpContextAccessor httpContextAccessor)
+    public SalesReportService(AppDbContext dbContext, ISalesReportObservable salesReportObservable, EmailService emailService, IHttpContextAccessor httpContextAccessor)
     {
-        _dbContext = AppDbContext.GetInstance(options);
+        _dbContext = dbContext;
         _salesReportObservable = salesReportObservable;
         _emailService = emailService;
         _httpContextAccessor = httpContextAccessor;
     }
 
+    public async Task<SalesReportModel> GenerateReport()
+    {
+        SalesReportModel newReport = GenerateReportData();
+        return newReport;
+    }
 
-public async Task<SalesReportModel> GenerateMonthlySalesReport()
-{
-    SalesReportModel newReport = GenerateReport();
-
-    if (_httpContextAccessor != null && _httpContextAccessor.HttpContext != null && _httpContextAccessor.HttpContext.Request.Method == "POST")
+    public async Task NotifyObservers(SalesReportModel newReport)
     {
         ((SalesReportObservable)_salesReportObservable).LatestReport = newReport;
-
         await Task.Run(() => _salesReportObservable.NotifyObservers(newReport));
     }
 
-    return newReport;
-}
-
-public async Task<SalesReportModel> GetLatestSalesReport()
-{
-    return await Task.FromResult(((SalesReportObservable)_salesReportObservable).LatestReport);
-}
-
-
-
-    public SalesReportModel GenerateReport()
-{
-    DateTime today = DateTime.Today;
-    DateTime _25thDayOfMonth = new DateTime(today.Year, today.Month, 1);
-
-    var memberships = _dbContext.Memberships
-        .Where(m => m.StartDate >= _25thDayOfMonth && m.StartDate <= today)
-        .ToList();
-
-    var packages = _dbContext.Packages
-        .Where(p => p.IsActivated == "Activated")
-        .ToList();
-
-    var classes = _dbContext.Classes
-        .Where(c => c.ID > 0)
-        .ToList();
-
-    decimal totalRevenue = CalculateTotalRevenue(memberships, packages);
-    int totalMembershipsSold = CalculateTotalMembershipsSold(memberships);
-    int totalClassesAttended = CalculateTotalClassesAttended(classes);
-
-    SalesReportModel report = new SalesReportModel
+    public async Task<SalesReportModel> GetLatestSalesReport()
     {
-        CreatedAt = today,
-        TotalRevenue = totalRevenue,
-        TotalMembershipsSold = totalMembershipsSold,
-        TotalClassesAttended = totalClassesAttended
-    };
+        return await Task.FromResult(((SalesReportObservable)_salesReportObservable).LatestReport);
+    }
 
-    _dbContext.SalesReport.Add(report);
-    _dbContext.SaveChanges();
-    return report;
-}
+    private SalesReportModel GenerateReportData()
+    {
+        DateTime today = DateTime.Today;
+        DateTime _25thDayOfMonth = new DateTime(today.Year, today.Month, 1);
 
+        var memberships = _dbContext.Memberships
+            .Where(m => m.StartDate >= _25thDayOfMonth && m.StartDate <= today)
+            .ToList();
+
+        var packages = _dbContext.Packages
+            .Where(p => p.IsActivated == "Activated")
+            .ToList();
+
+        var classes = _dbContext.Classes
+            .Where(c => c.ID > 0)
+            .ToList();
+
+        decimal totalRevenue = CalculateTotalRevenue(memberships, packages);
+        int totalMembershipsSold = CalculateTotalMembershipsSold(memberships);
+        int totalClassesAttended = CalculateTotalClassesAttended(classes);
+
+        SalesReportModel report = new SalesReportModel
+        {
+            CreatedAt = today,
+            TotalRevenue = totalRevenue,
+            TotalMembershipsSold = totalMembershipsSold,
+            TotalClassesAttended = totalClassesAttended
+        };
+
+        _dbContext.SalesReport.Add(report);
+        _dbContext.SaveChanges();
+        return report;
+    }
 
     //    public SalesReportModel GetLatestSalesReport()
     // {
