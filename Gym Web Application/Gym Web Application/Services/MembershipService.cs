@@ -4,168 +4,53 @@ using Microsoft.EntityFrameworkCore;
 
 public class MembershipService
 {
-    private readonly AppDbContext _dbContext;
-    public MembershipService(DbContextOptions<AppDbContext> options)
+    private MembershipAuthoritiesFactory membershipAuthoritiesFactory;
+
+    public MembershipService(MembershipAuthoritiesFactory membershipAuthoritiesFactory)
     {
-        _dbContext = AppDbContext.GetInstance(options);
+        membershipAuthoritiesFactory = membershipAuthoritiesFactory;
     }
 
-    public async Task AddMembershipAsync(MembershipModel MembershipRequest)
+    public async Task addMembership(MembershipModel membership)
     {
-        var Membership = new MembershipModel()
-        {
-            ClientID = MembershipRequest.ClientID,
-            PackageID = MembershipRequest.PackageID,
-            StartDate = MembershipRequest.StartDate,
-            EndDate = MembershipRequest.EndDate,
-            VisitsCount = MembershipRequest.VisitsCount,
-            InvitationsCount = MembershipRequest.InvitationsCount,
-            InbodySessionsCount = MembershipRequest.InbodySessionsCount,
-            PrivateTrainingSessionsCount = MembershipRequest.PrivateTrainingSessionsCount,
-            FreezeCount = MembershipRequest.FreezeCount,
-            Freezed = MembershipRequest.Freezed,
-            IsActivated = MembershipRequest.IsActivated
-        };
-        await _dbContext.Memberships.AddAsync(Membership);
-        await _dbContext.SaveChangesAsync();
+        await membershipAuthoritiesFactory.AddMembershipAsync(membership);
     }
-
+    public async Task activateMembership(int clientID, PackageModel package)
+    {
+        await membershipAuthoritiesFactory.activateMembership(clientID, package);
+    }
     public async Task<List<MembershipModel>> GetAllMemberships()
     {
-        return await _dbContext.Memberships.ToListAsync();
+        return await membershipAuthoritiesFactory.GetAllMemberships();
     }
-
-    public async Task updateMembership(MembershipModel updatedMembership)
+    public async Task updateMembership(MembershipModel membership)
     {
-        var Membership = await _dbContext.Memberships.FirstOrDefaultAsync(membership => membership.ID == updatedMembership.ID);
-        if (Membership != null)
-        {
-            Membership.VisitsCount = updatedMembership.VisitsCount;
-            Membership.InvitationsCount = updatedMembership.InvitationsCount;
-            Membership.InbodySessionsCount = updatedMembership.InbodySessionsCount;
-            Membership.PrivateTrainingSessionsCount = updatedMembership.PrivateTrainingSessionsCount;
-            Membership.FreezeCount = updatedMembership.FreezeCount;
-            Membership.EndDate = updatedMembership.EndDate;
-            Membership.Freezed = updatedMembership.Freezed;
-            Membership.IsActivated = updatedMembership.IsActivated;
-
-            await _dbContext.SaveChangesAsync();
-        }
+        await membershipAuthoritiesFactory.updateMembership(membership);
     }
-
-    public async Task DeleteMembership(int MembershipId)
+    public async Task DeleteMembership(int membershipID)
     {
-        var Membership = await _dbContext.Memberships.FirstOrDefaultAsync(mem => mem.ID == MembershipId);
-        if (Membership != null)
-        {
-            _dbContext.Memberships.Remove(Membership);
-            await _dbContext.SaveChangesAsync();
-        }
-
+        await membershipAuthoritiesFactory.DeleteMembership(membershipID);
     }
-
-    public async Task<MembershipModel> GetMembershipById(int MembershipId)
+    public async Task<MembershipModel> GetMembershipById(int membershipID)
     {
-        var Membership = await _dbContext.Memberships.FirstOrDefaultAsync(mem => mem.ID == MembershipId);
-
-        if (Membership == null)
-        {
-            return null;
-        }
-
-        var MembershipModel = new MembershipModel
-        {
-            ClientID = Membership.ClientID,
-            PackageID = Membership.PackageID,
-            StartDate = Membership.StartDate,
-            EndDate = Membership.EndDate,
-            VisitsCount = Membership.VisitsCount,
-            InvitationsCount = Membership.InvitationsCount,
-            InbodySessionsCount = Membership.InbodySessionsCount,
-            PrivateTrainingSessionsCount = Membership.PrivateTrainingSessionsCount,
-            FreezeCount = Membership.FreezeCount,
-            Freezed = Membership.Freezed,
-            IsActivated = Membership.IsActivated
-        };
-
-        return MembershipModel;
+        return await membershipAuthoritiesFactory.GetMembershipById(membershipID);
     }
-    public async Task activateMembership(int clientId, PackageModel package)
+    public async Task<MembershipModel> FindByClientId(int clientID)
     {
-
-        var Membership = new MembershipModel
-        {
-            ClientID = clientId,
-            PackageID = package.ID,
-            StartDate = DateTime.Now.Date,
-            EndDate = DateTime.Now.Date.AddMonths(package.NumOfMonths),
-            VisitsCount = package.VisitsLimit,
-            InvitationsCount = package.NumOfInvitations,
-            InbodySessionsCount = package.NumOfInbodySessions,
-            PrivateTrainingSessionsCount = package.NumOfPrivateTrainingSessions,
-            FreezeCount = package.FreezeLimit,
-            Freezed = "Not Freezed",
-            IsActivated = "Activated"
-        };
-        await _dbContext.Memberships.AddAsync(Membership);
-        await _dbContext.SaveChangesAsync();
+        return await membershipAuthoritiesFactory.GetMembershipById(clientID);
     }
-    public async Task<MembershipModel> FindByClientId(int id)
+    public async Task<bool> hasActiveMembership(int clientID)
     {
-        return await _dbContext.Memberships.FirstOrDefaultAsync(mem => mem.ClientID == id);
-    }
-    public async Task<bool> hasActiveMembership(int id)
-    {
-        var membership = await _dbContext.Memberships.FirstOrDefaultAsync(mem => mem.ClientID == id);
-        if (membership != null && membership.IsActivated == "Activated")
-        {
-            return true;
-        }
-        return false;
-    }
-    public int CalculateFreezeDuration(DateTime currentDate, DateTime freezeEndDate)
-    {
-        int freezeDuration = (int)(freezeEndDate - currentDate).TotalDays;
-        return freezeDuration;
+        return await membershipAuthoritiesFactory.hasActiveMembership(clientID);
     }
     public async Task FreezeMembership(int MembershipId, DateTime FreezeEndDate)
     {
-        var Membership = await _dbContext.Memberships.FirstOrDefaultAsync(mem => mem.ID == MembershipId);
-        if (Membership != null)
-        {
-            if (FreezeEndDate > DateTime.Now.Date && FreezeEndDate <= DateTime.Now.Date.AddDays(Membership.FreezeCount))
-            {
-                int freezeDuration = CalculateFreezeDuration(DateTime.Now.Date, FreezeEndDate.Date.Date);
-                DateTime membershipEndDate = Membership.EndDate.AddDays(freezeDuration);
-                int newFreezeCount = Membership.FreezeCount - freezeDuration;
-                Membership.FreezeCount = newFreezeCount;
-                Membership.EndDate = membershipEndDate;
-                Membership.Freezed = "Freezed";
-                await updateMembership(Membership);
-                ScheduledUnfreezeService scheduledUnfreezeService = new ScheduledUnfreezeService(_dbContext);
-                await scheduledUnfreezeService.AddScheduledUnfreezeAsync(MembershipId, newFreezeCount, FreezeEndDate);
-            }
-        }
+        await membershipAuthoritiesFactory.FreezeMembership(MembershipId, FreezeEndDate);
     }
     public async Task UnfreezeMembership(int MembershipId)
     {
-        var Membership = await _dbContext.Memberships.FirstOrDefaultAsync(mem => mem.ID == MembershipId);
-        if (Membership != null)
-        {
-            ScheduledUnfreezeService scheduledUnfreezeService = new ScheduledUnfreezeService(_dbContext);
-            var scheduledUnfreeze = await scheduledUnfreezeService.FindByMembershipId(MembershipId);
-            int newFreezeDuration = CalculateFreezeDuration(scheduledUnfreeze.FreezeStartDate.Date, DateTime.Now.Date);
-            int oldFreezeDuration = CalculateFreezeDuration(scheduledUnfreeze.FreezeStartDate.Date, scheduledUnfreeze.FreezeEndDate.Date);
-            int earlyFreeze = oldFreezeDuration - newFreezeDuration;
-            DateTime newEndDate = Membership.EndDate.AddDays(-earlyFreeze);
-            var freezeCount = Membership.FreezeCount + earlyFreeze;
-
-            Membership.Freezed = "Not Freezed";
-            Membership.EndDate = newEndDate;
-            Membership.FreezeCount = freezeCount;
-            await updateMembership(Membership);
-
-            await scheduledUnfreezeService.DeleteScheduledUnfreeze(scheduledUnfreeze.ID);
-        }
+        await membershipAuthoritiesFactory.UnfreezeMembership(MembershipId);
     }
+
+
 }
