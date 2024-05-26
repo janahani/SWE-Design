@@ -10,14 +10,20 @@ public class AppDbContext : DbContext
      {
 
      }
-     public static AppDbContext GetInstance(DbContextOptions<AppDbContext> options)
-     {
-          if (_instance == null)
-          {
-               _instance = new AppDbContext(options);
-          }
-          return _instance;
-     }
+ public static AppDbContext GetInstance(DbContextOptions<AppDbContext> options)
+{
+    if (_instance == null)
+    {
+        lock (typeof(AppDbContext))
+        {
+            if (_instance == null)
+            {
+                _instance = new AppDbContext(options);
+            }
+        }
+    }
+    return _instance;
+}
 
      protected override void OnModelCreating(ModelBuilder modelBuilder)
 {

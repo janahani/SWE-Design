@@ -3,37 +3,32 @@ namespace Gym_Web_Application.Models;
 using System.Threading.Tasks;
 using System;
 using global::Gym_Web_Application.ObserverDP;
+using Gym_Web_Application.Data;
+using System.Linq;
 
-public class SalesEmployee : ISalesEmployeeObserver
-{
-    private readonly EmployeeModel Sales_Employee;
-    private readonly EmailService _emailService;
-
-    public int EmployeeID { get; set; }
-
-
-
-    public SalesEmployee(EmployeeModel employee, EmailService emailService)
+    public class SalesEmployee : ISalesEmployeeObserver
     {
-        Sales_Employee = employee; 
-        _emailService = emailService;
+        public EmployeeModel AssociatedEmployee { get; private set; }
+        private readonly EmailService _emailService;
 
+        public SalesEmployee(EmployeeModel employee, EmailService emailService)
+        {
+            AssociatedEmployee = employee;
+            _emailService = emailService;
+        }
+
+        public async void UpdateAsync(SalesReportModel latestReport)
+        {
+            Console.WriteLine($"UpdateAsync invoked, Employee ID {AssociatedEmployee.ID} notified of new sales report: {latestReport.CreatedAt}");
+
+            string employeeEmail = AssociatedEmployee.Email;
+
+            string subject = "New Sales Report Available";
+            string body = $"Dear {AssociatedEmployee.Name},<br/>A new sales report has been generated. Please check your dashboard for more details.";
+
+            Console.WriteLine("Sending email...");
+            await _emailService.SendEmailAsync(employeeEmail, subject, body);
+            Console.WriteLine("Email sent.");
+        }
     }
 
-    public async void UpdateAsync(SalesReportModel latestReport)
-
-    {
-            Console.WriteLine("UpdateAsync invoked.");
-
-        string adminmalak = "malakhelmy2004@gmail.com";
-        // //im assuming en el sales report job title id is 4 lehad ma tables are mapped
-        // if (Sales_Employee.JobTitleID == 4)
-        //     {
-                string subject = "New Sales Report Available";
-                string body = $"Dear,<br/>A new sales report has been generated. Please check your dashboard for more details.";
-                await _emailService.SendEmailAsync(adminmalak, subject, body);
-                
-                Console.WriteLine("Sales employee malak has been notified about the new sales report.");
-            // }
-    }
-}

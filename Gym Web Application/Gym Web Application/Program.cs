@@ -6,6 +6,7 @@ using Gym_Web_Application.ObserverDP;
 using Gym_Web_Application.Models;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Linq;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,8 +28,6 @@ builder.Services.AddSingleton(sp => new DbContextOptionsBuilder<AppDbContext>()
 
 builder.Services.AddSingleton<IWebHostEnvironment>(builder.Environment);
 
-IServiceCollection serviceCollection = builder.Services.AddSingleton<IWebHostEnvironment>(builder.Environment);
-
 builder.Services.AddSingleton<DashboardAuthoritiesFactory>();
 builder.Services.AddSingleton<ClientAuthoritiesFactory>();
 builder.Services.AddSingleton<ClassAuthoritiesFactory>();
@@ -47,25 +46,23 @@ builder.Services.AddTransient<ClassService>();
 builder.Services.AddTransient<AttendanceService>();
 builder.Services.AddTransient<SalesReportService>();
 builder.Services.AddTransient<EmailService>();
-builder.Services.AddTransient<ISalesReportObservable, SalesReportObservable>();
+// builder.Services.AddTransient<ISalesReportObservable, SalesReportObservable>();
 builder.Services.AddHttpContextAccessor();
 
-
-// Registering MockSalesEmployeeObserver with EmailService
-builder.Services.AddTransient<ISalesEmployeeObserver>(provider =>
-{
-    var emailService = provider.GetRequiredService<EmailService>();
-    return new MockSalesEmployeeObserver(10, emailService);
-});
-
-builder.Services.AddSingleton<ISalesReportObservable>(provider =>
+builder.Services.AddSingleton<ISalesReportObservable, SalesReportObservable>(provider =>
 {
     var observable = new SalesReportObservable();
 
-    var observers = provider.GetServices<ISalesEmployeeObserver>();
-    foreach (var observer in observers)
+    using var scope = provider.CreateScope();
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    var emailService = provider.GetRequiredService<EmailService>();
+
+    var employees = dbContext.Employees.Where(e => e.JobTitleID == 3).ToList();
+
+    foreach (var employee in employees)
     {
-        observable.AttachObserver(observer);
+        var salesEmployee = new SalesEmployee(employee, emailService);
+        observable.AttachObserver(salesEmployee);
     }
 
     return observable;
@@ -91,9 +88,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Login}/{id?}");
-
-// Test code to generate report and notify
-var salesReportService = app.Services.GetRequiredService<SalesReportService>();
-var testReport = salesReportService.GenerateMonthlySalesReport();
 
 app.Run();
