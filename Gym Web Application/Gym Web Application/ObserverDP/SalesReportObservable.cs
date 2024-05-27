@@ -71,5 +71,7 @@ public class SalesReportObservable : ISalesReportObservable
 
             emailSent = true; 
         }
+     emailSent = false;
+
     }
 }
