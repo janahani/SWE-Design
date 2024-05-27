@@ -1533,3 +1533,5 @@ c:\xampp\htdocs\SWE-Design-13\Gym Web Application\Gym Web Application\obj\Debug\
 c:\xampp\htdocs\SWE-Design-13\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.pdb
 c:\xampp\htdocs\SWE-Design-13\Gym Web Application\Gym Web Application\obj\Debug\net8.0\Gym Web Application.genruntimeconfig.cache
 c:\xampp\htdocs\SWE-Design-13\Gym Web Application\Gym Web Application\obj\Debug\net8.0\ref\Gym Web Application.dll
+C:\Users\YASSMIN\GitHub\SWE-Design\Gym Web Application\Gym Web Application\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\YASSMIN\GitHub\SWE-Design\Gym Web Application\Gym Web Application\bin\Debug\net8.0\Moq.dll
