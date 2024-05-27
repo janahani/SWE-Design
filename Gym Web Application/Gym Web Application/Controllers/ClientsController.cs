@@ -8,9 +8,9 @@ public class ClientsController : Controller
 {
     private readonly ILogger<ClientsController> _logger;
     private readonly ClientService _clientService;
-    private readonly MembershipService _membershipService;
+    private readonly MembershipsService _membershipService;
 
-    public ClientsController(ILogger<ClientsController> logger, ClientService clientService, MembershipService membershipService)
+    public ClientsController(ILogger<ClientsController> logger, ClientService clientService, MembershipsService membershipService)
     {
         _logger = logger;
         _clientService = clientService;

@@ -10,11 +10,11 @@ public class MembershipsController : Controller
 {
     private readonly ILogger<MembershipsController> _logger;
     private readonly PackageService _packageService;
-    private readonly MembershipService _membershipService;
+    private readonly MembershipsService _membershipService;
     private readonly ClientService _clientService;
 
 
-    public MembershipsController(ILogger<MembershipsController> logger, PackageService packageService, MembershipService membershipService, ClientService clientService)
+    public MembershipsController(ILogger<MembershipsController> logger, PackageService packageService, MembershipsService membershipService, ClientService clientService)
     {
         this._logger = logger;
         this._packageService = packageService;
