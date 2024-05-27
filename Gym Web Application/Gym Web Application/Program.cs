@@ -33,9 +33,11 @@ builder.Services.AddSingleton<ClientAuthoritiesFactory>();
 builder.Services.AddSingleton<ClassAuthoritiesFactory>();
 builder.Services.AddSingleton<EmployeeAuthoritiesFactory>();
 builder.Services.AddSingleton<PackagesAuthoritiesFactory>();
+builder.Services.AddSingleton<MembershipAuthoritiesFactory>();
+builder.Services.AddSingleton<ReportAuthoritiesFactory>();
 builder.Services.AddSingleton<AdminAuthFactory>();
 
-builder.Services.AddTransient<MembershipService>();
+builder.Services.AddTransient<MembershipsService>();
 builder.Services.AddTransient<DashboardService>();
 builder.Services.AddTransient<ClientService>();
 builder.Services.AddTransient<ClassService>();
