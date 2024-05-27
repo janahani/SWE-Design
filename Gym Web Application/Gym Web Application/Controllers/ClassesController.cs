@@ -9,6 +9,7 @@ public class ClassesController : Controller
     private readonly ILogger<ClassesController> _logger;
     private readonly ClassService _classService;
     private readonly EmployeeService _employeeService;
+    private int? _jobTitleId;
 
 
     public ClassesController(ILogger<ClassesController> logger, ClassService classService, EmployeeService employeeService)
@@ -18,6 +19,18 @@ public class ClassesController : Controller
         _employeeService = employeeService;
     }
 
+     private void SetJobTitleId()
+        {
+            if (HttpContext.Session.GetString("EmployeeJobTitleID") != null)
+            {
+                _jobTitleId = Convert.ToInt32(HttpContext.Session.GetString("EmployeeJobTitleID"));
+            }
+            else
+            {
+                _jobTitleId = null;
+            }
+        }
+
     [HttpGet]
     public IActionResult AddClasses()
     {
@@ -25,6 +38,13 @@ public class ClassesController : Controller
             {
                 return RedirectToAction("Login");
             }
+
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClasses");
+            }
+        
         return View();
     }
 
@@ -34,6 +54,12 @@ public class ClassesController : Controller
          if (HttpContext.Session.GetString("EmployeeEmail") == null)
             {
                 return RedirectToAction("Login");
+            }
+            
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClasses");
             }
         await _classService.AddClass(classModel, ImageFile, SelectedDays);
         return RedirectToAction("AddClasses");
@@ -59,6 +85,12 @@ public class ClassesController : Controller
             {
                 return RedirectToAction("Login");
             }
+            
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClasses");
+            }
         var classObject = await _classService.GetClassById(id);
         var classDays = await _classService.GetClassDaysByClassId(id);
         ViewData["ClassDays"] = classDays.Select(cd => cd.Days).ToList();
@@ -71,6 +103,12 @@ public class ClassesController : Controller
          if (HttpContext.Session.GetString("EmployeeEmail") == null)
             {
                 return RedirectToAction("Login");
+            }
+            
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClasses");
             }
         await _classService.UpdateClass(updatedClass);
 
@@ -110,6 +148,12 @@ public class ClassesController : Controller
             {
                 return RedirectToAction("Login");
             }
+            
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClasses");
+            }
         var assignedClass = new AssignedClassModel();
         var coaches = await _employeeService.GetAllCoaches();
         var classDays = await _classService.GetClassDays(classId);
@@ -131,6 +175,12 @@ public class ClassesController : Controller
             {
                 return RedirectToAction("Login");
             }
+            
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClasses");
+            }
         var classDays = await _classService.GetClassDays(classId);
         return PartialView("GetClassDays", classDays);
     }
@@ -141,6 +191,12 @@ public class ClassesController : Controller
          if (HttpContext.Session.GetString("EmployeeEmail") == null)
             {
                 return RedirectToAction("Login");
+            }
+            
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClasses");
             }
         await _classService.AddAssignedClass(assignedClassRequest);
         return RedirectToAction("AssignClasses");
@@ -153,6 +209,12 @@ public class ClassesController : Controller
             {
                 return RedirectToAction("Login");
             }
+            
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClasses");
+            }
         var assignedClasses = await _classService.GetAllAssignedClasses();
         ViewBag.ClientId = clientId;
 
@@ -164,6 +226,12 @@ public class ClassesController : Controller
          if (HttpContext.Session.GetString("EmployeeEmail") == null)
             {
                 return RedirectToAction("Login");
+            }
+            
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClasses");
             }
         await _classService.AddReservedClass(AssignedClassID, ClientID, CoachID);
         return RedirectToAction("ReserveClasses");
