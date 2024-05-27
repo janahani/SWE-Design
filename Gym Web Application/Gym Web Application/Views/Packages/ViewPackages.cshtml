@@ -6,8 +6,19 @@
 <div class="container-fluid pt-3">
     <div class="row removable">
         <div class="col-lg">
+            @{
+    // Retrieve the JobTitleID from the session
+    int? jobTitleId = null;
+    if (ViewContext.HttpContext != null && ViewContext.HttpContext.Session != null)
+    {
+        jobTitleId = Convert.ToInt32(ViewContext.HttpContext.Session.GetString("EmployeeJobTitleID"));
+    }
+}
             <h1 class="centeredHeader">Available Packages <div class="">
+                @if(jobTitleId != 3 )
+                {
                     <a class="btn-add" asp-controller="Packages" asp-action="AddPackages">Add Package</a>
+                }
             </h1>
 
             <div class="packageContainer">
@@ -26,6 +37,8 @@
                             <p>
                                 <bold>For: <span>@package.Price</span></bold>
                             </p>
+                            @if(jobTitleId != 3 )
+                            {
                             <form method="Post" asp-controller="Packages" asp-action="Activation">
                             <!-- Check if package is activated -->
                             @if(package.IsActivated=="Activated")
@@ -40,7 +53,7 @@
                                 <input type="hidden" name="packageId" value="@package.ID" />
 
                             </form>
-
+                            }
                               
                         </div>
                     </div>

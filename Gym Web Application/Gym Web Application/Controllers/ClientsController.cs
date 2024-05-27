@@ -2,104 +2,142 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Gym_Web_Application.Models;
 
-namespace Gym_Web_Application.Controllers;
-
-public class ClientsController : Controller
+namespace Gym_Web_Application.Controllers
 {
-    private readonly ILogger<ClientsController> _logger;
-    private readonly ClientService _clientService;
-    private readonly MembershipsService _membershipService;
-
-    public ClientsController(ILogger<ClientsController> logger, ClientService clientService, MembershipsService membershipService)
+    public class ClientsController : Controller
     {
-        _logger = logger;
-        _clientService = clientService;
-        _membershipService = membershipService;
-    }
+        private readonly ILogger<ClientsController> _logger;
+        private readonly ClientService _clientService;
+        private readonly MembershipsService _membershipService;
+        private int? _jobTitleId;
 
-    [HttpGet]
-    public async Task<IActionResult> ViewClients()
-    {
-        if (HttpContext.Session.GetString("EmployeeEmail") == null)
+        public ClientsController(ILogger<ClientsController> logger, ClientService clientService, MembershipsService membershipService)
         {
-            return RedirectToAction("Login");
+            _logger = logger;
+            _clientService = clientService;
+            _membershipService = membershipService;
         }
-        var clients = await _clientService.GetAllClients();
-        List<bool> hasActiveMembership = new List<bool>();
-        foreach (var client in clients)
+
+        private void SetJobTitleId()
         {
-            if (await _membershipService.hasActiveMembership(client.ID))
+            if (HttpContext.Session.GetString("EmployeeJobTitleID") != null)
             {
-                hasActiveMembership.Add(true);
+                _jobTitleId = Convert.ToInt32(HttpContext.Session.GetString("EmployeeJobTitleID"));
             }
             else
             {
-                hasActiveMembership.Add(false);
-
+                _jobTitleId = null;
             }
         }
-        ViewBag.clients = clients;
-        ViewBag.hasActiveMembership = hasActiveMembership;
-        return View();
-    }
 
-    [HttpGet]
-    public IActionResult AddClients()
-    {
-        if (HttpContext.Session.GetString("EmployeeEmail") == null)
+        [HttpGet]
+        public async Task<IActionResult> ViewClients()
         {
-            return RedirectToAction("Login");
+            if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
+            var clients = await _clientService.GetAllClients();
+            List<bool> hasActiveMembership = new List<bool>();
+            foreach (var client in clients)
+            {
+                if (await _membershipService.hasActiveMembership(client.ID))
+                {
+                    hasActiveMembership.Add(true);
+                }
+                else
+                {
+                    hasActiveMembership.Add(false);
+                }
+            }
+            ViewBag.clients = clients;
+            ViewBag.hasActiveMembership = hasActiveMembership;
+            return View();
         }
-        return View();
-    }
 
-    [HttpPost]
-    public async Task<IActionResult> AddClients(ClientModel clientRequest)
-    {
-        if (HttpContext.Session.GetString("EmployeeEmail") == null)
+        [HttpGet]
+        public IActionResult AddClients()
         {
-            return RedirectToAction("Login");
+            if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
+            SetJobTitleId();
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClients");
+            }
+            return View();
         }
-        await _clientService.AddClientAsync(clientRequest);
-        return RedirectToAction("AddClients");
-    }
 
-    [HttpGet]
-    public async Task<IActionResult> EditClients(int id)
-    {
-        if (HttpContext.Session.GetString("EmployeeEmail") == null)
+        [HttpPost]
+        public async Task<IActionResult> AddClients(ClientModel clientRequest)
         {
-            return RedirectToAction("Login");
+            if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
+            SetJobTitleId();
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClients");
+            }
+            await _clientService.AddClientAsync(clientRequest);
+            return RedirectToAction("AddClients");
         }
-        var client = await _clientService.GetClientById(id);
-        return View(client);
-    }
 
-    [HttpPost]
-    public async Task<IActionResult> EditClients(ClientModel updatedClient)
-    {
-        if (HttpContext.Session.GetString("EmployeeEmail") == null)
+        [HttpGet]
+        public async Task<IActionResult> EditClients(int id)
         {
-            return RedirectToAction("Login");
+            if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
+            SetJobTitleId();
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClients");
+            }
+            var client = await _clientService.GetClientById(id);
+            return View(client);
         }
-        await _clientService.EditClient(updatedClient);
-        return RedirectToAction("ViewClients");
-    }
 
-    [HttpPost]
-    public async Task<ActionResult> DeleteClients(int id)
-    {
-        if (HttpContext.Session.GetString("EmployeeEmail") == null)
+        [HttpPost]
+        public async Task<IActionResult> EditClients(ClientModel updatedClient)
         {
-            return RedirectToAction("Login");
+            if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
+            SetJobTitleId();
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClients");
+            }
+            await _clientService.EditClient(updatedClient);
+            return RedirectToAction("ViewClients");
         }
-        await _clientService.DeleteClient(id);
-        return RedirectToAction("ViewClients");
-    }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        [HttpPost]
+        public async Task<ActionResult> DeleteClients(int id)
+        {
+            if (HttpContext.Session.GetString("EmployeeEmail") == null)
+            {
+                return RedirectToAction("Login");
+            }
+            SetJobTitleId();
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewClients");
+            }
+            await _clientService.DeleteClient(id);
+            return RedirectToAction("ViewClients");
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
 }

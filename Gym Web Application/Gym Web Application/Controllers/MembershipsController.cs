@@ -12,7 +12,7 @@ public class MembershipsController : Controller
     private readonly PackageService _packageService;
     private readonly MembershipsService _membershipService;
     private readonly ClientService _clientService;
-
+    private int? _jobTitleId;
 
     public MembershipsController(ILogger<MembershipsController> logger, PackageService packageService, MembershipsService membershipService, ClientService clientService)
     {
@@ -22,6 +22,18 @@ public class MembershipsController : Controller
         this._clientService = clientService;
 
     } 
+
+     private void SetJobTitleId()
+        {
+            if (HttpContext.Session.GetString("EmployeeJobTitleID") != null)
+            {
+                _jobTitleId = Convert.ToInt32(HttpContext.Session.GetString("EmployeeJobTitleID"));
+            }
+            else
+            {
+                _jobTitleId = null;
+            }
+        }
  
 
     [HttpGet]
@@ -64,6 +76,11 @@ public class MembershipsController : Controller
             {
                 return RedirectToAction("Login");
             }
+        SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewMemberships");
+            }
         _logger.LogInformation("Starting ActivateMembership method for client ID {id}", id);
         PackageModel package = await _packageService.GetPackageById(packageID);
         await _membershipService.activateMembership(id, package);
@@ -77,6 +94,11 @@ public class MembershipsController : Controller
             {
                 return RedirectToAction("Login");
             }
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewMemberships");
+            }
         await _membershipService.DeleteMembership(id);
         return RedirectToAction("ViewMemberships");
     }
@@ -86,6 +108,11 @@ public class MembershipsController : Controller
             {
                 return RedirectToAction("Login");
             }
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewMemberships");
+            }
         await _membershipService.FreezeMembership(id, freezeEndDate);
         return RedirectToAction("ViewMemberships");
     }
@@ -94,6 +121,11 @@ public class MembershipsController : Controller
          if (HttpContext.Session.GetString("EmployeeEmail") == null)
             {
                 return RedirectToAction("Login");
+            }
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("ViewMemberships");
             }
         await _membershipService.UnfreezeMembership(id);
         return RedirectToAction("ViewMemberships");

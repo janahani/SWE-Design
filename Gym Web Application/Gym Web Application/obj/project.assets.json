@@ -5024,34 +5024,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\HANI\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\malak\\.nuget\\packages\\": {}
->>>>>>> 609b427077f281f6540c6886bc75d615b47e4eed
+    "C:\\Users\\YASSMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\xampp\\htdocs\\SWE-Design-13\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
+      "projectUniqueName": "C:\\Users\\YASSMIN\\GitHub\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
       "projectName": "Gym Web Application",
-      "projectPath": "C:\\xampp\\htdocs\\SWE-Design-13\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
-      "packagesPath": "C:\\Users\\HANI\\.nuget\\packages\\",
-      "outputPath": "C:\\xampp\\htdocs\\SWE-Design-13\\Gym Web Application\\Gym Web Application\\obj\\",
+      "projectPath": "C:\\Users\\YASSMIN\\GitHub\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
+      "packagesPath": "C:\\Users\\YASSMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\YASSMIN\\GitHub\\SWE-Design\\Gym Web Application\\Gym Web Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HANI\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
-      "projectName": "Gym Web Application",
-      "projectPath": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\Gym Web Application.csproj",
-      "packagesPath": "C:\\Users\\malak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\malak\\OneDrive\\Documents\\SWE-Design\\Gym Web Application\\Gym Web Application\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\malak\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 609b427077f281f6540c6886bc75d615b47e4eed
+        "C:\\Users\\YASSMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5071,6 +5056,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -5123,12 +5113,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
->>>>>>> 609b427077f281f6540c6886bc75d615b47e4eed
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\YASSMIN\\GitHub\\SWE-Design\\Gym Web Application\\Gym Web Application\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
