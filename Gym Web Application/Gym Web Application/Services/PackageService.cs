@@ -13,7 +13,7 @@ public class PackageService
 
     public async Task<List<PackageModel>> GetAllPackages()
     {
-        return await _packageAuthoritiesFactory.GetAllPackages();
+        return await _packageAuthoritiesFactory.getAll();
     }
 
     public async Task<List<PackageModel>> GetActivatedPackages()
