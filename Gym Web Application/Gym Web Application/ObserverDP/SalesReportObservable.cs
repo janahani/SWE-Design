@@ -10,6 +10,8 @@ public class SalesReportObservable : ISalesReportObservable
     private List<ISalesEmployeeObserver> observers = new List<ISalesEmployeeObserver>();
     private SalesReportModel latestReport;
     private readonly AppDbContext _dbContext;
+    private bool emailSent = false; 
+
 
     
  public SalesReportObservable(AppDbContext dbContext, EmailService emailService)
@@ -60,9 +62,14 @@ public class SalesReportObservable : ISalesReportObservable
     {
         Console.WriteLine("Notifying sales reporters of new release of monthly sales report");
 
-        foreach (var observer in observers)
+        if (!emailSent) 
         {
-            observer.UpdateAsync(latestReport);
+            foreach (var observer in observers)
+            {
+                observer.UpdateAsync(latestReport);
+            }
+
+            emailSent = true; 
         }
     }
 }
