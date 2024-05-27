@@ -19,7 +19,7 @@ using System.Linq;
 
         public async void UpdateAsync(SalesReportModel latestReport)
         {
-            Console.WriteLine($"UpdateAsync invoked, Employee ID {AssociatedEmployee.ID} notified of new sales report: {latestReport.CreatedAt}");
+            Console.WriteLine($"UpdateAsync invoked, Employees are being notified of new sales report: {latestReport.CreatedAt}");
 
             string employeeEmail = AssociatedEmployee.Email;
 
