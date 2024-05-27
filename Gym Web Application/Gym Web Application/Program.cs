@@ -53,22 +53,13 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddSingleton<ISalesReportObservable, SalesReportObservable>(provider =>
 {
-    var observable = new SalesReportObservable();
-
     using var scope = provider.CreateScope();
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     var emailService = provider.GetRequiredService<EmailService>();
 
-    var employees = dbContext.Employees.Where(e => e.JobTitleID == 3).ToList();
-
-    foreach (var employee in employees)
-    {
-        var salesEmployee = new SalesEmployee(employee, emailService);
-        observable.AttachObserver(salesEmployee);
-    }
-
-    return observable;
+    return new SalesReportObservable(dbContext, emailService);
 });
+
 
 var app = builder.Build();
 

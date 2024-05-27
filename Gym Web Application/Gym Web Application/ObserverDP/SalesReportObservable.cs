@@ -1,15 +1,27 @@
 using Gym_Web_Application.Models;
 using Gym_Web_Application.ObserverDP;
 using System.Collections.Generic;
+using Gym_Web_Application.Data;
+
 using System;
 
 public class SalesReportObservable : ISalesReportObservable
 {
     private List<ISalesEmployeeObserver> observers = new List<ISalesEmployeeObserver>();
     private SalesReportModel latestReport;
+    private readonly AppDbContext _dbContext;
 
     
+ public SalesReportObservable(AppDbContext dbContext, EmailService emailService)
+    {
+        var employees = dbContext.Employees.Where(e => e.JobTitleID == 3).ToList();
 
+        foreach (var employee in employees)
+        {
+            var salesEmployee = new SalesEmployee(employee, emailService);
+            AttachObserver(salesEmployee);
+        }
+    }
     
 
     public SalesReportModel LatestReport
