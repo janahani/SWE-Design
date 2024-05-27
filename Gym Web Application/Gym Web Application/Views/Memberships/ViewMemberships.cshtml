@@ -19,6 +19,14 @@
                         <button class="btn btn-sm btn-freeze">Freeze</button>
                     </div>
                 </div>
+ @{
+    // Retrieve the JobTitleID from the session
+    int? jobTitleId = null;
+    if (ViewContext.HttpContext != null && ViewContext.HttpContext.Session != null)
+    {
+        jobTitleId = Convert.ToInt32(ViewContext.HttpContext.Session.GetString("EmployeeJobTitleID"));
+    }
+}
             </div>
             <div class="card">
                 <div class="card-header border-0">
@@ -44,9 +52,11 @@
                                 <th scope="col">Visits</th>
                                 <th scope="col">Inbody</th>
                                 <th scope="col">Status</th>
+                                @if(jobTitleId != 3 )
+                                {
                                 <th scope="col">Freeze</th>
                                 <th scope="col">Action</th>
-
+                                }
                             </tr>
                         </thead>
                         <tbody>
@@ -80,6 +90,8 @@
                                         <td>
                                             @membership.IsActivated
                                         </td>
+                                    @if(jobTitleId != 3 )
+                                    {
                                         <td>
                                             @if (@membership.Freezed == "Freezed")
                                             {
@@ -166,6 +178,7 @@
                                                 <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                             }
                                         </td>
+                                        }
                                     </tr>
                                 }
                             }
