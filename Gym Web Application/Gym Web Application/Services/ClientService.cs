@@ -16,7 +16,7 @@ public class ClientService
 
     public async Task<List<ClientModel>> GetAllClients()
     {
-        return await _clientAuthoritiesFactory.getClients();
+        return await _clientAuthoritiesFactory.getAll();
     }
 
     public async Task EditClient(ClientModel updatedClient)

@@ -19,7 +19,7 @@ public class ClassService
 
     public async Task<List<ClassModel>> GetAllClasses()
     {
-        return await _classAuthoritiesFactory.getClasses();
+        return await _classAuthoritiesFactory.getAll();
     }
 
     public async Task<string> GetClassName(int classId)

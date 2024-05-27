@@ -15,7 +15,7 @@ public class EmployeeService
 
     public async Task<List<EmployeeModel>> GetAllEmployees()
     {
-        return await _employeeAuthoritiesFactory.GetAllEmployees();
+        return await _employeeAuthoritiesFactory.getAll();
     }
 
     public async Task<List<EmployeeModel>> GetAllCoaches()
