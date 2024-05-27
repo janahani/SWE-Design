@@ -1,3 +1,5 @@
+@using Microsoft.AspNetCore.Http
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,12 +42,23 @@
                             <span class="nav-link-text">Clients</span>
                         </a>
                     </li>
+                   @{
+    // Retrieve the JobTitleID from the session
+    int? jobTitleId = null;
+    if (ViewContext.HttpContext != null && ViewContext.HttpContext.Session != null)
+    {
+        jobTitleId = Convert.ToInt32(ViewContext.HttpContext.Session.GetString("EmployeeJobTitleID"));
+    }
+}
+                    @if(jobTitleId != 3 && jobTitleId != 2 )
+                    {
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Employees" asp-action="ViewEmployees">
                             <i class="fas fa-id-badge"></i>
                             <span class="nav-link-text">Employees</span>
                         </a>
                     </li>
+                    }
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Packages" asp-action="ViewPackages">
                             <i class="fas fa-cog"></i>
@@ -64,12 +77,23 @@
                             <span class="nav-link-text">Classes</span>
                         </a>
                     </li>
+                     @{
+    // Retrieve the JobTitleID from the session
+    int? jobTitleId1 = null;
+    if (ViewContext.HttpContext != null && ViewContext.HttpContext.Session != null)
+    {
+        jobTitleId1 = Convert.ToInt32(ViewContext.HttpContext.Session.GetString("EmployeeJobTitleID"));
+    }
+}
+                    @if(jobTitleId1 != 2 && jobTitleId1 != 4)
+                    {
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="SalesReport" asp-action="ViewSalesReport">
                             <i class="fa fa-desktop"></i>
                             <span class="nav-link-text">Reports</span>
                         </a>
                     </li>
+                    }
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Attendance" asp-action="ViewAttendance">
                             <i class="fa fa-desktop"></i>
