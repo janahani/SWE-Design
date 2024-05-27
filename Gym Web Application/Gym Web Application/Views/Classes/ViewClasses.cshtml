@@ -12,14 +12,27 @@
                         <div class="col">
                             <h1 class="mb-0">Classes</h1>
                         </div>
+                        
+ @{
+    // Retrieve the JobTitleID from the session
+    int? jobTitleId = null;
+    if (ViewContext.HttpContext != null && ViewContext.HttpContext.Session != null)
+    {
+        jobTitleId = Convert.ToInt32(ViewContext.HttpContext.Session.GetString("EmployeeJobTitleID"));
+    }
+}
                         <div class="col text-right">
                             <input class="table-search-bar" placeholder="Search for Class">
                         </div>
                         <div class="col text-right">
+                            @if(jobTitleId != 3 )
+                            {
                             <a class="btn-add" asp-controller="Classes" asp-action="AddClasses">Add a Class</a>
+                            }
                         </div>
                     </div>
                 </div>
+
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
@@ -28,7 +41,10 @@
                                 <th scope="col">Name</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Class Days</th>
+                                @if(jobTitleId != 3 )
+                                {
                                 <th scope="col">Action</th>
+                                }
                             </tr>
                         </thead>
                         <tbody>
@@ -51,11 +67,16 @@
                                         }
                                         @classDaysString
                                     </td>
+
+                    @if(jobTitleId != 3 )
+                    {
                                     <td>
                                       @Html.ActionLink("Edit","EditClasses", new{id = Class.ID},new{@class="btn btn-sm btn-primary"})
                                      @Html.ActionLink("Assign", "AssignClasses", new { classId = Class.ID }, new { @class="btn btn-sm btn-primary" })
                                     </td>
+                    }
                                 </tr>
+                                
                             }
                         </tbody>
                     </table>
