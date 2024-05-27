@@ -2,7 +2,8 @@ using Gym_Web_Application.Models;
 using Gym_Web_Application.Data;
 using Microsoft.EntityFrameworkCore;
 
-public class PackagesAuthoritiesFactory : AuthorityModel{
+public class PackagesAuthoritiesFactory : AuthorityModel,IGetAuthority<PackageModel>
+{
 
     private readonly DbContextOptions<AppDbContext> _options;
 
@@ -11,7 +12,7 @@ public class PackagesAuthoritiesFactory : AuthorityModel{
         _options = options;
     }
 
-     public async Task<List<PackageModel>> GetAllPackages()
+     public async Task<List<PackageModel>> getAll()
     {
         using var _dbContext = new AppDbContext(_options);
         return await _dbContext.Packages.ToListAsync();

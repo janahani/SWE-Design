@@ -2,7 +2,7 @@ using Gym_Web_Application.Models;
 using Gym_Web_Application.Data;
 using Microsoft.EntityFrameworkCore;
 
-public class ClientAuthoritiesFactory : AuthorityModel
+public class ClientAuthoritiesFactory : AuthorityModel,IGetAuthority<ClientModel>
 {
     private readonly DbContextOptions<AppDbContext> _options;
 
@@ -41,7 +41,7 @@ public class ClientAuthoritiesFactory : AuthorityModel
             await _dbContext.SaveChangesAsync();
         }
     }
-    public async Task<List<ClientModel>> getClients()
+    public async Task<List<ClientModel>> getAll()
     {
         using var _dbContext = new AppDbContext(_options);
         return await _dbContext.Clients.ToListAsync();

@@ -3,9 +3,8 @@ using Gym_Web_Application.Models;
 using Gym_Web_Application.Data;
 using Microsoft.EntityFrameworkCore;
 
-
-
-public class EmployeeAuthoritiesFactory : AuthorityModel{
+public class EmployeeAuthoritiesFactory : AuthorityModel,IGetAuthority<EmployeeModel>
+{
 
     private readonly DbContextOptions<AppDbContext> _options;
 
@@ -14,7 +13,7 @@ public class EmployeeAuthoritiesFactory : AuthorityModel{
         _options = options;
     }
 
-    public async Task<List<EmployeeModel>> GetAllEmployees()
+    public async Task<List<EmployeeModel>> getAll()
     {
         using var _dbContext = new AppDbContext(_options);
         return await _dbContext.Employees.ToListAsync();

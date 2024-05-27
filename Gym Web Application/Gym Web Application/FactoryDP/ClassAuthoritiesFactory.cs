@@ -2,7 +2,7 @@ using Gym_Web_Application.Models;
 using Gym_Web_Application.Data;
 using Microsoft.EntityFrameworkCore;
 
-public class ClassAuthoritiesFactory : AuthorityModel
+public class ClassAuthoritiesFactory : AuthorityModel,IGetAuthority<ClassModel>
 {
     private readonly DbContextOptions<AppDbContext> _options;
     private readonly IWebHostEnvironment _hostingEnvironment;
@@ -53,7 +53,7 @@ public class ClassAuthoritiesFactory : AuthorityModel
         }
     }
 
-    public async Task<List<ClassModel>> getClasses()
+    public async Task<List<ClassModel>> getAll()
     {
         using var _dbContext = new AppDbContext(_options);
         return await _dbContext.Classes.ToListAsync();
@@ -219,5 +219,4 @@ public class ClassAuthoritiesFactory : AuthorityModel
 
         return nearestDate;
     }
-
 }

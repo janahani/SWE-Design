@@ -1,7 +1,7 @@
 using Gym_Web_Application.Models;
 using Gym_Web_Application.Data;
 using Microsoft.EntityFrameworkCore;
-public class MembershipAuthoritiesFactory : AuthorityModel
+public class MembershipAuthoritiesFactory : AuthorityModel,IGetAuthority<MembershipModel>
 {
     private readonly DbContextOptions<AppDbContext> _options;
     public MembershipAuthoritiesFactory(DbContextOptions<AppDbContext> options)
@@ -31,7 +31,7 @@ public class MembershipAuthoritiesFactory : AuthorityModel
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<List<MembershipModel>> GetAllMemberships()
+    public async Task<List<MembershipModel>> getAll()
     {
         using var _dbContext = new AppDbContext(_options);
 

@@ -2,7 +2,7 @@ using Gym_Web_Application.Models;
 using Gym_Web_Application.Data;
 using Microsoft.EntityFrameworkCore;
 
-public class DashboardAuthoritiesFactory : AuthorityModel
+public class DashboardAuthoritiesFactory : AuthorityModel,IDashboardAuthority
 {
     private readonly DbContextOptions<AppDbContext> _options;
 
