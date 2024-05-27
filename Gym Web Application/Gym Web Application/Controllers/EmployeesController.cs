@@ -10,7 +10,7 @@ public class EmployeesController : Controller
     private readonly EmployeeService _employeeService;
     private readonly JobTitleService _jobTitleService;
 
-
+    private int? _jobTitleId;
 
     public EmployeesController(ILogger<EmployeesController> logger, EmployeeService employeeService, JobTitleService jobTitleService)
     {
@@ -20,12 +20,29 @@ public class EmployeesController : Controller
         this._jobTitleService=jobTitleService;
     }
 
+     private void SetJobTitleId()
+        {
+            if (HttpContext.Session.GetString("EmployeeJobTitleID") != null)
+            {
+                _jobTitleId = Convert.ToInt32(HttpContext.Session.GetString("EmployeeJobTitleID"));
+            }
+            else
+            {
+                _jobTitleId = null;
+            }
+        }
+
     [HttpGet]
     public async Task<IActionResult> ViewEmployees()
     {
          if (HttpContext.Session.GetString("EmployeeEmail") == null)
             {
                 return RedirectToAction("Login");
+            }
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("Dashboard");
             }
         var employees = await _employeeService.GetAllEmployees();
         var jobTitles = await _jobTitleService.GetAllJobTitles();
@@ -39,6 +56,11 @@ public class EmployeesController : Controller
          if (HttpContext.Session.GetString("EmployeeEmail") == null)
             {
                 return RedirectToAction("Login");
+            }
+            SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("Dashboard");
             }
         EmployeeModel employee = new EmployeeModel();
         var jobTitles = await _jobTitleService.GetAllJobTitles();
@@ -54,6 +76,11 @@ public class EmployeesController : Controller
             {
                 return RedirectToAction("Login");
             }
+        SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("Dashboard");
+            }
         await _employeeService.AddEmployee(addEmployeeRequest);
         return RedirectToAction("ViewEmployees");
     }
@@ -64,6 +91,11 @@ public class EmployeesController : Controller
          if (HttpContext.Session.GetString("EmployeeEmail") == null)
             {
                 return RedirectToAction("Login");
+            }
+        SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("Dashboard");
             }
         var employee = await _employeeService.FindById(id);
         var jobTitles = await _jobTitleService.GetAllJobTitles();
@@ -78,6 +110,11 @@ public class EmployeesController : Controller
             {
                 return RedirectToAction("Login");
             }
+        SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("Dashboard");
+            }
         await _employeeService.EditEmployee(updatedEmployee);
         return RedirectToAction("ViewEmployees");
     }
@@ -88,6 +125,11 @@ public class EmployeesController : Controller
          if (HttpContext.Session.GetString("EmployeeEmail") == null)
             {
                 return RedirectToAction("Login");
+            }
+        SetJobTitleId(); // Set jobTitleId value
+            if (_jobTitleId == 3)
+            {
+                return RedirectToAction("Dashboard");
             }
         await _employeeService.DeleteEmployee(id);
         return RedirectToAction("ViewEmployees");
